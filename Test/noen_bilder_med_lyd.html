@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lyd og bilde</title>
+
+    <style>
+        body {
+            text-align: center;
+        }
+        img {
+            width: 500px;
+        }
+    </style>
+
+    <script>
+
+    </script>
+
+</head>
+<body>
+    <h1>Klikk på bildet, så lager det lyd!</h1>
+    <p>Dette er en and</p>
+    <a onclick="document.getElementById('quack').play();">
+        <img src="./Images/duck.jpg">
+   </a>
+
+   <audio id="quack" src="./Sound/quack_short.mp3"></audio>
+
+   <br>
+   <p>Dette er en hund</p>
+   <a onclick="document.getElementById('voff').play();">
+        <img src="./Images/dog.jpg">
+    </a>
+
+   <audio id="voff" src="./Sound/Didrik_voff.mp3"></audio>
+
+
+</body>
+</html>
