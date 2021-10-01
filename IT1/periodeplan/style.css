@@ -1,19 +1,17 @@
 * {
-    font-family: arial, sans-serif;
-    line-height: 1.6;
-  }
+  font-family: arial, sans-serif;
+  line-height: 1.6;
+}
 
 table {
-    border-collapse: collapse;
-    width: 100%;
-  }
-  
+  border-collapse: collapse;
+  width: 100%;
+}
+
 td, th {
-    border: 1px solid #000;
-    padding: 5px;
-  }
-
-
+  border: 1px solid #000;
+  padding: 5px;
+}
 
 /*
 li{
@@ -21,6 +19,27 @@ li{
   }
 */
 
-ul{
+ul {
   margin: 0 0;
+}
+
+.gray, .freB, .manA {
+  background-color: #ddd
+}
+
+.ferie {
+  font-size: 34px;
+  background-color: #ddd;
+}
+
+#hostferie {
+  background-color: hsl(45, 100%, 50%)
+}
+
+#juleferie {
+  background-color: hsl(0, 100%, 55%)
+}
+
+.kommentar {
+  font-style: italic;
 }
