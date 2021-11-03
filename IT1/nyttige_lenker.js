@@ -13,5 +13,14 @@ document.write(`
         <li>
             <a href="https://www.w3schools.com/html/default.asp">W3Schools</a>
         </li>
+        <li>
+            <a href="https://validator.w3.org/#validate_by_upload">HTML-validator</a>
+        </li>
+        <li>
+            <a href="https://jigsaw.w3.org/css-validator/validator.html.en#validate_by_upload">CSS-validator</a>
+        </li>
+        <li>
+            <a href="https://www.uutilsynet.no/nettsteder/losningsforslag-nettsider/36">Universell utforming</a>
+        </li>
     </ul>
 `);
