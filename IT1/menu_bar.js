@@ -1,5 +1,5 @@
 document.write(`
-<div class="menu-bar">
+<div class="menu-bar" id="menuBar">
 <h1 class="logo"><a href="index.html">IT1</a></h1>
 <ul>
     <li><a href="index.html">Hjem</a></li>
@@ -44,7 +44,19 @@ document.write(`
                 <li><a href="http://didrik147.github.io/hjelpeliste" target="_blank">Digital hjelpeliste</a></li>
             </ul>
         </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars fa-lg"></i></a>
     </li>
 </ul>
+
 </div>
 `);
+
+
+function myFunction() {
+    var x = document.getElementById("menuBar");
+    if (x.className === "menu-bar") {
+        x.className += " responsive";
+    } else {
+        x.className = "menu-bar";
+    }
+}

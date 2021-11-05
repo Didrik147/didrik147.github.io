@@ -128,12 +128,33 @@ body {
     color: var(--light);
 }
 
+.menu-bar .icon {
+    display: none;
+}
+
 @media(max-width: 800px){
     .text-box h1{
         font-size: 7vw;
     }
 
-    /* Hamburger meny? */
+    /* Hamburger menu */
+    .menu-bar ul li{
+        padding: 10px 0px;
+    }
+    .menu-bar ul a{
+        display: none;
+    }
+
+    .menu-bar ul li:hover .dropdown-menu {
+        display: none;
+    }
+
+    .menu-bar a.icon{
+        float: left;
+        display: block;
+        position: relative;
+    }
+    
 }
 
 .container {
