@@ -35,6 +35,18 @@ document.write(`
             </ul>
         </div>
     </li>
+
+    <li>
+        <a href="#">Programvare <i class="fas fa-caret-down"></i></a>
+        <div class="dropdown-menu">
+            <ul>
+                <li><a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a></li>
+                <li><a href="https://www.audacityteam.org/" target="_blank">Audacity</a></li>
+                <li><a href="https://inkscape.org/" target="_blank">Inkscape</a></li>
+            </ul>
+        </div>
+    </li>
+    
     <li><a href="filmer.html">Filmer</a></li>
     <li>
         <a href="#">Annet <i class="fas fa-caret-down"></i></a>
