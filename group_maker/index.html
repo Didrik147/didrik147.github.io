@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Lage grupper</title>
+</head>
+<body>
+    <div id="hoved">
+    <h1>Nettside som lager grupper</h1>
+
+    <h3>Skriv inn elevene her, separert med komma (',').<br>
+        Trykk på knappen når du er ferdig.</h3>
+
+    <textarea placeholder="Skriv inn elever her..." id="textarea"></textarea>
+
+    <h3>Velg antall elever per gruppe</h3>
+    <input type="number" id="tall1" value=4>
+    <button id="btn" onClick="lag()">Lag grupper</button>
+    
+    </div>
+
+    <div id="container">
+        <div class="gruppe">
+            <h3>Gruppe x</h3>
+            <p>Elev 1</p>
+            <p>Elev 2</p>
+            <p>Elev 3</p>
+            <p>Elev 4</p>
+        </div>
+        <div class="gruppe">
+            <h3>Gruppe y</h3>
+            <p>Elev 5</p>
+            <p>Elev 6</p>
+            <p>Elev 7</p>
+            <p>Elev 8</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
