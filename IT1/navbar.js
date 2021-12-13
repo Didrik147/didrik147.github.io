@@ -13,10 +13,24 @@ document.write(`
                 <li>
                     <a href="#">Periodeplan <i class="fas fa-caret-down"></i></a>
                     <ul>
-                        <li><a href="http://didrik147.github.io/IT1/periodeplan/periodeplan_blokkD.html"
-                                target="_blank">Blokk D</a></li>
-                        <li><a href="http://didrik147.github.io/IT1/periodeplan/periodeplan_blokkE.html"
-                                target="_blank">Blokk E</a></li>
+                        <li>
+                            <a href="#">Blokk D <i class="fas fa-caret-right"></i></a>
+                            <ul>
+                                <li><a href="http://didrik147.github.io/IT1/periodeplan/periodeplan_blokkD_2021h.html"
+                                target="_blank">Høsten 2021</a></li>
+                                <li><a href="http://didrik147.github.io/IT1/periodeplan/periodeplan_blokkD_2022v.html"
+                                target="_blank">Våren 2022</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Blokk E <i class="fas fa-caret-right"></i></a>
+                            <ul>
+                                <li><a href="http://didrik147.github.io/IT1/periodeplan/periodeplan_blokkE_2021h.html"
+                                target="_blank">Høsten 2021</a></li>
+                                <li><a href="http://didrik147.github.io/IT1/periodeplan/periodeplan_blokkE_2022v.html"
+                                target="_blank">Våren 2022</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </li>
 
