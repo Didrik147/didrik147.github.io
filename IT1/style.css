@@ -87,7 +87,7 @@ header .navbar ul li ul li{
 
 header .navbar ul li ul li ul{
     left: 150px;
-    top: 0;
+    top: -1px;
 }
 
 header .navbar ul li:focus-within > ul,
