@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 :root {
     /* --primary: #27a102; */
     --primary: #41fc03;
@@ -8,12 +10,12 @@
 
 * {
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: 'Poppins', sans-serif;
     text-decoration: none;
-    /*
     margin: 0;
     padding: 0; 
-    */
+
 }
 
 body {
@@ -25,68 +27,119 @@ body {
     background-position: center;
 }
 
-.header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: var(--dark);
-    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-    padding: 0px 5%;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 3;
-    
+.navbar{
+    background: #1b1b1b;
 }
 
+.navbar:after{
+    content: '';
+    clear: both;
+    display: table;
+}
+
+.navbar .logo{
+    float: left;
+    color: var(--primary);
+    font-size: 27px;
+    font-weight: 600;
+    line-height: 70px;
+    padding-left: 60px;
+    /* display: none; */
+}
+
+.navbar .logo a{
+    color: var(--primary);
+}
+
+
 .navbar ul{
-    margin: 0;
-    padding: 0;
+    float: right;
     list-style: none;
+    margin-right: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.navbar ul li:last-of-type{
+    padding-right: 50px;
 }
 
 .navbar ul li{
-    position: relative;
     float: left;
+
+    /* Trenger ikke denne? Siden vi har float: left?*/
+    /* display: inline-block; */ 
+
+    background: #1b1b1b;
+    margin: 0 20px;
 }
 
 .navbar ul li a{
-    font-size: 16px;
-    padding: 20px;
-    color: var(--light);
-    display: block;
-    transition: all 0.3s;
+    color: white;
+    text-decoration: none;
+    line-height: 70px;
+    font-size: 18px;
+
+    padding: 9px 15px;
 }
 
 .navbar ul li a:hover{
     color: var(--primary);
+    border-radius: 5px;
+    box-shadow: 0 0 5px #33ff33,
+                0 0 5px #66ff66;
 }
 
-.navbar ul li ul{
+.navbar ul ul li a:hover{
+    color: var(--primary);
+    box-shadow: none;
+}
+
+.navbar ul ul{
     position: absolute;
-    left: 0;
-    width: 150px;
-    background: var(--dark);
-    display: none;
+    top: 90px;
+    border-top: 3px solid var(--primary);
+    opacity: 0;
+    visibility: hidden;
+    transition: top .3s;
 }
 
-
-.navbar ul li ul li{
-    width: 100%;
-    border-top: 1px solid rgba(0,0,0,.1)
-}
-
-.navbar ul li ul li ul{
-    left: 150px;
-    top: 0;
+.navbar ul ul ul{
+    border-top: none;
 }
 
 .navbar ul li:hover > ul{
-    display: initial;
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
 }
 
+.navbar ul ul li a{
+    line-height: 50px;
+}
+
+.navbar ul ul li{
+    position: relative;
+    margin: 0px;
+    float: none;
+    display: list-item;
+    border-bottom: 1px solid rgba(0,0,0, 0.3);
+}
+
+.navbar ul ul ul li{
+    position: relative;
+    top: -70px;
+    left: 150px;
+}
+
+.fa-plus{
+    margin-left: 40px;
+    font-size: 15px;
+}
+
+.show, .icon, input{
+    display: none;
+}
 
 
 
@@ -121,4 +174,91 @@ body {
 
 .text-box a:hover{
     color: var(--primary);
+}
+
+
+@media all and (max-width: 1000px){
+    .text-box h1{
+        font-size: 40px;
+    }
+    .navbar ul{
+        margin-right: 0px;
+        float: left;
+    }
+
+    .navbar .logo{
+        padding-left: 30px;
+        width: 100%;
+    }
+
+    .navbar ul li, .navbar ul ul li{
+        display: block;
+        width: 100%;
+    }
+
+    .navbar ul ul{
+        top: 70px;
+        position: static;
+        border-top: none;
+        float: none;
+        display: none;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .navbar ul ul ul li{
+        position: static;
+    }
+
+    .navbar ul ul li{
+        border-bottom: 0px;
+    }
+
+    .navbar ul ul a{
+        padding-left: 40px;
+    }
+
+    #lab-btn-3{
+        padding-left: 50px;
+    }
+
+    .navbar ul ul ul a{
+        padding-left: 80px;
+    }
+
+    .show{
+        display: block;
+        color: white;
+        font-size: 18px;
+        padding: 0 20px;
+        line-height: 70px;
+        cursor: pointer;
+    }
+
+    .show:hover{
+        color: var(--primary);
+    }
+
+    .icon{
+        display: block;
+        color: white;
+        position: absolute;
+        right: 40px;
+        top: 25px;
+        line-height: 70px;
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+    .navbar ul li a:hover{
+        box-shadow: none;
+    }
+
+    .show + a, ul{
+        display: none;
+    }
+
+    [id^=btn]:checked + ul{
+        display: block;
+    }
 }
