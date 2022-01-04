@@ -205,8 +205,10 @@ body {
     
     .navbar ul li, .navbar ul ul li{
         /* display: block; */
+        margin: 0;
+        padding: 0 10px;
         display: inline-block;
-        width: 95vw;
+        width: 100%;
     }
 
     
