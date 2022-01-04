@@ -9,17 +9,17 @@
 }
 
 * {
-    box-sizing: border-box;
     /* font-family: Arial, Helvetica, sans-serif; */
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
     margin: 0;
     padding: 0; 
+    box-sizing: border-box;
 
 }
 
 body {
-    min-height: 90vh;
+    min-height: 80vh;
     background-color: #111;
     background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url("./images/github1.jpg");
     background-repeat: no-repeat;
@@ -43,7 +43,8 @@ body {
     font-size: 27px;
     font-weight: 600;
     line-height: 70px;
-    padding-left: 60px;
+    /* padding-left: 60px; */
+    padding-left: 4%;
     /* display: none; */
 }
 
@@ -55,20 +56,22 @@ body {
 .navbar ul{
     float: right;
     list-style: none;
-    margin-right: 40px;
+   /*  margin-right: 40px; */
     position: relative;
     z-index: 2;
 }
 
+
 .navbar ul li:last-of-type{
-    padding-right: 50px;
+    padding-right: 20px;
 }
+
 
 .navbar ul li{
     float: left;
 
     /* Trenger ikke denne? Siden vi har float: left?*/
-    /* display: inline-block; */ 
+    /* display: inline-block; */
 
     background: #1b1b1b;
     margin: 0 20px;
@@ -177,25 +180,37 @@ body {
 }
 
 
-@media all and (max-width: 1000px){
+@media all and (max-width: 1100px){
     .text-box h1{
         font-size: 40px;
     }
     .navbar ul{
-        margin-right: 0px;
         float: left;
     }
 
+    /*
+    .navbar ul li{
+        display: inline-block;
+        width: 100%;
+    }
+    */
+
+    /*
     .navbar .logo{
         padding-left: 30px;
         width: 100%;
     }
+    */
 
+    
     .navbar ul li, .navbar ul ul li{
-        display: block;
-        width: 100%;
+        /* display: block; */
+        display: inline-block;
+        width: 95vw;
     }
 
+    
+    
     .navbar ul ul{
         top: 70px;
         position: static;
@@ -261,4 +276,6 @@ body {
     [id^=btn]:checked + ul{
         display: block;
     }
+    
+    
 }
