@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.11.0/css/ol.css" type="text/css">
+    
+    <style>
+        .map {
+            height: 800px;
+            width: 100%;
+        }
+
+        ol.style.Style{
+            width: 10px;
+        }
+
+    </style>
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.11.0/build/ol.js"></script>
+    <title>OpenLayers example</title>
+</head>
+
+<body>
+    <h2>My Map</h2>
+    <div id="map" class="map"></div>
+
+    <script type="text/javascript">
+        // Oslo
+        let lat = 59.9139
+        let lon = 10.7522
+
+        //Rustadgrenda 17
+        //let lat = 59.8720704020124;
+        //let lon = 10.842985193394572;
+
+        var map = new ol.Map({
+            target: 'map',
+            layers: [
+                new ol.layer.Tile({
+                    source: new ol.source.OSM()
+                })
+            ],
+            view: new ol.View({
+                center: ol.proj.fromLonLat([lon, lat]),
+                zoom: 10
+            })
+        });
+
+        var markers = new ol.layer.Vector({
+            source: new ol.source.Vector(),
+            style: new ol.style.Style({
+                image: new ol.style.Icon({
+                    anchor: [0.5, 1],
+                    src: 'marker.png',
+                    scale: 0.1
+                })
+            })
+        });
+        map.addLayer(markers);
+
+        var marker = new ol.Feature(new ol.geom.Point(ol.proj.fromLonLat([lon, lat])));
+        markers.getSource().addFeature(marker);
+
+    </script>
+</body>
+
+</html>
