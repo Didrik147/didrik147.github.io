@@ -27,7 +27,7 @@ document.write(`
                             <ul>
                                 <li><a href="http://didrik147.github.io/IT1/periodeplan/periodeplan_blokkE_2021h.html"
                                 target="_blank">Høsten 2021</a></li>
-                                <li><a href="http://didrik147.github.io/IT1/periodeplan/periodeplan_blokkE_2022v.html"
+                                <li><a href="https://periodeplan.didrik147.repl.co/"
                                 target="_blank">Våren 2022</a></li>
                             </ul>
                         </li>
