@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haralds vintrekking</title>
+
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <audio preload="auto"></audio>
+    <h1>Haralds vintrekking</h1>
+
+    <div id="container">
+        <div id="top">
+            <img src="Harald_bibliotek.jpg" id="bilde1" class="Harald" alt="Bilde av Harald">
+
+            <p id="topNumber">0</p>
+        </div>
+        <div id="bottom">
+            <div class="bottom_left">
+                <p>Minimum:</p>
+                <input type="number" id="min" min="0" value="1">
+            </div>
+            <div class="bottom_middle">
+                <p>Maximum:</p>
+                <input type="number" id="max" value="200">
+            </div>
+            <div class="bottom_right">
+                <button id="btn" onClick='tilfeldigTrekk()'>Trekk!</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
