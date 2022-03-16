@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.terninger {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.terning {
+    width: 100px;
+    margin: 15px;
+    /* border: 1px solid #000; */
+}
+
+.terning img {
+    width: 100%;
+    filter: grayscale(100%);
+}
+    
+.terning.chosen {
+    filter: drop-shadow(0 0 10px rgb(5, 158, 0));
+}
+
+button {
+    margin: 10px;
+    border: 2px solid #ddd;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+button:hover{
+    cursor: pointer;
+}
