@@ -56,7 +56,7 @@ window.addEventListener('load', setHarald);
 function setHarald(){
     if (window.innerWidth <= 650) {
         /* Bildet er hentet fra Viken fylkeskommune */
-        HaraldEl.src = "./bilder./ansatte/Harald.jpg"
+        HaraldEl.src = "./bilder/ansatte/Harald.jpg"
     }
     else {
         /* Bilde er hentet fra: https://www.budstikka.no/debatt/la-biblioteket-leve/25958!/ */
