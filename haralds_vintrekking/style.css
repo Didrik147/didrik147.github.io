@@ -41,6 +41,7 @@ button {
     padding: 10px;
     background-color: #539760;
     /* background-color: #EB4040; */
+    cursor: pointer;
 }
 
 button.trukket {
@@ -73,7 +74,7 @@ button.trukket {
 
 .Harald {
     position: absolute;
-    height: 90%;
+    height: 95%;
     z-index: -1;
 }
 
@@ -85,6 +86,14 @@ button.trukket {
 #topNumber {
     position: relative;
     z-index: -2;
+}
+#topNumber p {
+    margin: 0;
+}
+
+#topNumber img {
+    width: 100px;
+    border-radius: 10px;
 }
 
 #bottom {
@@ -118,6 +127,10 @@ button.trukket {
 
     #top {
         font-size: 70px;
+    }
+    
+    #top p {
+        font-size: 45px;
     }
 
     #bottom {
