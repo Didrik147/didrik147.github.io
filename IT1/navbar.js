@@ -1,5 +1,5 @@
 document.write(`
-<a href="#" class="logo">IT1</a>
+<a href="index.html" class="logo">IT1</a>
 
         <input type="checkbox" id="hamburger">
         <label for="hamburger">
@@ -18,7 +18,7 @@ document.write(`
                             <ul>
                                 <li><a href="http://didrik147.github.io/IT1/periodeplan/periodeplan_blokkD_2021h.html"
                                 target="_blank">Høsten 2021</a></li>
-                                <li><a href="http://didrik147.github.io/IT1/periodeplan/periodeplan_blokkD_2022v.html"
+                                <li><a href="https://periodeplan.didrik147.repl.co/blokkD_2022v.html"
                                 target="_blank">Våren 2022</a></li>
                             </ul>
                         </li>
@@ -27,7 +27,7 @@ document.write(`
                             <ul>
                                 <li><a href="http://didrik147.github.io/IT1/periodeplan/periodeplan_blokkE_2021h.html"
                                 target="_blank">Høsten 2021</a></li>
-                                <li><a href="https://periodeplan.didrik147.repl.co/"
+                                <li><a href="https://periodeplan.didrik147.repl.co/blokkE_2022v.html"
                                 target="_blank">Våren 2022</a></li>
                             </ul>
                         </li>

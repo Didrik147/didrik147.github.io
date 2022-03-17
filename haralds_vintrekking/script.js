@@ -28,12 +28,13 @@ class Ansatt{
 
 
 // Lager objekter av de ansatte, og legger i et array 
+// For ansatte som har gitt samtykke, brukes ansattfoto
 let ansatte = []
 ansatte.push(new Ansatt("Asbjørn", 1, 12))
 ansatte.push(new Ansatt("Tore", 13, 24))
-ansatte.push(new Ansatt("Mari K. K.", 25, 30))
+ansatte.push(new Ansatt("Mari K. K.", 25, 30, true))
 ansatte.push(new Ansatt("Kirsti", 31, 36))
-ansatte.push(new Ansatt("Mari K. K.", 37, 42))
+ansatte.push(new Ansatt("Mari K. K.", 37, 42, true))
 ansatte.push(new Ansatt("Johanne", 43, 47))
 ansatte.push(new Ansatt("Kristin", 48, 59))
 ansatte.push(new Ansatt("Kirsti", 60, 65))
@@ -45,11 +46,11 @@ ansatte.push(new Ansatt("Otto A.", 97, 108))
 ansatte.push(new Ansatt("Anders H.", 109, 120, true))
 ansatte.push(new Ansatt("Mira", 121, 132))
 ansatte.push(new Ansatt("Turid", 133, 144))
-ansatte.push(new Ansatt("Vegard", 145, 156))
-ansatte.push(new Ansatt("Didrik", 157, 161, true))
+ansatte.push(new Ansatt("Didrik", 145, 149, true)) // meg selv
+ansatte.push(new Ansatt("Vegard", 150, 161))
 
 
-
+// Velger hvilket bilde av Harald som skal brukes basert på vindusbredde
 window.addEventListener('resize', setHarald);
 window.addEventListener('load', setHarald);
 
@@ -68,13 +69,16 @@ function setHarald(){
 
 topNumberEl = document.querySelector('#topNumber')
 
+// Lyd
 let audio = new Audio('drumroll_tada.mp3');
 audio.load()
 
+// Lager et tilfeldig heltall fra og med min til og med max
 function tilfeldigTall(min, max){
     return Math.floor(Math.random() * (max - min + 1)) + min
 }
 
+// Trekker ansatt
 function tilfeldigTrekk(){
     audio.load()
     let min = Number(minEl.value)
@@ -93,7 +97,7 @@ function tilfeldigTrekk(){
                 harBilde = ansatt.hasImage
             }
         })
-
+        
         HaraldEl.classList.toggle("zoom")
         HaraldEl.style.height = '0';
         
