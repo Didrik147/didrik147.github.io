@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dordle</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="tittel">
+        <span class="gray">D</span><span class="yellow">O</span><span class="green">R</span><span class="gray">D</span><span class="yellow">L</span><span class="green">E</span>
+    </h1>
+
+    <!-- Sette reglene inn i en sidebar? (Sparer vertikal plass) -->
+    <div id="regler">
+        <p><b>Regler:</b> Skriv inn et ord på 5 bokstaver.</p>
+        <ul>
+            <li><span class="grayBox">Grå boks:</span> Feil bokstav.</li>
+            <li><span class="yellowBox">Gul boks:</span> Rett bokstav på feil plass.</li>
+            <li><span class="greenBox">Grønn boks:</span> Rett bokstav på rett plass.</li>
+        </ul>
+        <p>Du har 6 forsøk på å finne ordet.</p>
+    </div>
+    
+    <input type="text" id="textinput" maxlength="5">
+    <div id="hoved">
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
