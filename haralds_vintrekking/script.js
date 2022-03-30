@@ -48,6 +48,7 @@ ansatte.push(new Ansatt("Mira", 121, 132))
 ansatte.push(new Ansatt("Turid", 133, 144))
 ansatte.push(new Ansatt("Didrik", 145, 149, true)) // meg selv
 ansatte.push(new Ansatt("Vegard", 150, 161))
+ansatte.push(new Ansatt("Øyvind Lunder", 162, 173))
 
 
 // Velger hvilket bilde av Harald som skal brukes basert på vindusbredde
@@ -110,7 +111,7 @@ function tilfeldigTrekk(){
                 topNumberEl.innerHTML += `<img src="./bilder/ansatte/${navn}.jpg" alt="${navn}">`
             }
 
-            topNumberEl.style.fontSize = "60px"            
+            topNumberEl.style.fontSize = "80px"            
         }
         else {
             topNumberEl.style.fontSize = "120px" 

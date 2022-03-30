@@ -11,7 +11,7 @@ https://www.sv.no/ressursbanken/grafisk-og-sosiale-medier/grafisk-profil/
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,7 +19,7 @@ body {
 }
 
 h1 {
-    font-size: 80px;
+    font-size: 70px;
     margin-bottom: 20px;
     text-align: center;
 }
@@ -51,10 +51,10 @@ button.trukket {
 
 /* With flexbox */
 #container {
-    border: 1px solid #000;
-    width: 90%;
+    /* border: 1px solid #000; */
+    width: 95%;
     max-width: 1000px;
-    min-height: 70vh;
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
 }
@@ -80,19 +80,25 @@ button.trukket {
 
 .Harald.zoom {
     /* transition: height 5s ease-in; */
-    transition: height 4s cubic-bezier(1, .19, .97, .72);
+    /* transition: height 4s cubic-bezier(1, .19, .97, .72); */
+    /* transition: height 4s cubic-bezier(1, .1, .97, .7); */
+    transition: height 4s cubic-bezier(1, .1, .97   , .5);
 }
 
 #topNumber {
     position: relative;
     z-index: -2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 #topNumber p {
     margin: 0;
 }
 
 #topNumber img {
-    width: 100px;
+    width: 150px;
     border-radius: 10px;
     margin: 10px;
 }
@@ -120,10 +126,6 @@ button.trukket {
 @media (max-width: 650px) {
     h1 {
         font-size: 50px;
-    }
-
-    #container {
-        min-height: 570px;
     }
 
     #top {
