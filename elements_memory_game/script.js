@@ -5,6 +5,7 @@ https://www.youtube.com/watch?v=DABkhfsBAWw
 
 const cardsEl = document.querySelector('.cards');
 const wrapperEl = document.querySelector('.wrapper');
+const bodyEl = document.querySelector('body');
 
 
 let colorArr = ['#FFFFFF', '#D9FFFF', '#CC80FF', '#C2FF00', '#FFB5B5', '#909090', '#3050F8', '#FF0D0D'];
@@ -19,7 +20,8 @@ function makeCards() {
     
     // sorting array items randomly
     arr.sort(() => Math.random() > 0.5 ? 1 : -1)
-
+    
+    cardsEl.innerHTML = ""
     let k;
     for(let i = 0; i < arr.length; i++){
         k = arr[i]-1
@@ -38,14 +40,26 @@ function makeCards() {
     }
 }
 
-makeCards();
-
-const cards = document.querySelectorAll('.card');
-
-
-let matchedCard = 7;
+/* Variables that will be initialized once the game starts */
+let cards;
 let cardOne, cardTwo;
-let disableDeck = false;
+let matchedCard;
+let disableDeck;
+
+function startGame(){
+    makeCards();
+    cards = document.querySelectorAll('.card');
+    matchedCard = 0;
+    disableDeck = false;
+
+    // Adding click event to all cards
+    cards.forEach(card => {
+        //card.classList.add('flip');
+        card.addEventListener('click', flipCard);
+    });
+}
+
+startGame()
 
 
 
@@ -76,6 +90,9 @@ function matchCards(id1, id2) {
         // if matched value is 8 that means user has matched all the cards (8*2 = 16 cards)
         if (matchedCard == 8) {
             console.log("You Won!")
+            bodyEl.innerHTML += `<h1>You Won!</h1>`
+            bodyEl.innerHTML += `<h2>Refresh the page to play again</h2>`
+            //bodyEl.innerHTML += `<button onClick="startGame()">Play Again?</button>`
         }
 
         cardOne.removeEventListener('click', flipCard);
@@ -104,8 +121,3 @@ function matchCards(id1, id2) {
 
 
 
-// Adding click event to all cards
-cards.forEach(card => {
-    //card.classList.add('flip');
-    card.addEventListener('click', flipCard);
-});
