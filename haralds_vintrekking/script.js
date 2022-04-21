@@ -49,6 +49,7 @@ ansatte.push(new Ansatt("Turid", 133, 144))
 ansatte.push(new Ansatt("Didrik", 145, 149, true)) // meg selv
 ansatte.push(new Ansatt("Vegard", 150, 161))
 ansatte.push(new Ansatt("Øyvind Lunder", 162, 173))
+ansatte.push(new Ansatt("Karoline", 174, 185, true))
 
 
 // Velger hvilket bilde av Harald som skal brukes basert på vindusbredde
