@@ -1,10 +1,12 @@
+collectionName = "help"
+
 function addItem(event) {
     event.preventDefault();
     let text = document.getElementById("todo-input");
 
     console.log(text);
 
-    db.collection("todo-items").add({
+    db.collection(collectionName).add({
         text: text.value,
         status: "active",
         time: Date.now()
@@ -16,8 +18,8 @@ function addItem(event) {
 
 
 function getItems() {
-    //db.collection("todo-items").onSnapshot((snapshot) => {
-    db.collection("todo-items").orderBy("time").onSnapshot((snapshot) => {
+    //db.collection(collectionName).onSnapshot((snapshot) => {
+    db.collection(collectionName).orderBy("time").onSnapshot((snapshot) => {
         //console.log(snapshot);
         let items = [];
         snapshot.docs.forEach((doc) => {
@@ -86,7 +88,7 @@ function createEventListeners() {
 function deleteTask(id) {
     console.log(id);
 
-    let item = db.collection("todo-items").doc(id);
+    let item = db.collection(collectionName).doc(id);
 
     item.get().then(function (doc) {
         if (doc.exists) {
@@ -100,7 +102,7 @@ function markCompleted(id) {
     //console.log(id);
     //console.log("Mark completed");
     // From a database
-    let item = db.collection("todo-items").doc(id);
+    let item = db.collection(collectionName).doc(id);
 
     item.get().then(function (doc) {
         if (doc.exists) {
