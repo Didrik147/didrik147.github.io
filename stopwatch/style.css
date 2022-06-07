@@ -85,11 +85,11 @@ button:hover {
     }
 
     #buttonrow>button {
-        margin: 10px;
-        width: 120px;
-        height: 50px;
-        /* padding: 5px; */
-        font-size: 25px;
+        margin: 15px;
+        /* width: 120px;
+        height: 50px; */
+        padding: 10px;
+        /* font-size: 50px; */
     }
 }
 
@@ -97,5 +97,11 @@ button:hover {
 @media (max-width: 250px) {
     #stopwatch {
         font-size: 45px;
+    }
+
+    #buttonrow>button {
+        width: 110px;
+        height: 70px;
+        font-size: 25px;
     }
 }
