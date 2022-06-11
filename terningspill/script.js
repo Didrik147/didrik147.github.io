@@ -2,12 +2,15 @@ let terningerEl = document.querySelector(".terninger");
 let remaining = 4;
 
 
+// Funksjon gir gir et tall mellom 1 og 6
 function terning(){
     return Math.floor(Math.random()*6) + 1;
 }
 
+// Variabel som holder styr på et enkelt kast
 let k;
 
+// Legger til lyttere på terningene
 function addClickEvent(){
     let terningAll = document.querySelectorAll(".terning");
 
@@ -18,26 +21,29 @@ function addClickEvent(){
     })
 }
 
-/* Bildene av terninger er hentet fra Wikipedia Commons */
-
+// Funksjon som ruller alle terningene
 function rollAllDice(){
     terningerEl.innerHTML = "";
-    for (let i=1; i<=5; i++){
-        k = terning()
-        terningerEl.innerHTML += `
-            <div class="terning" id="terning${k}">
-                <img src="./terningbilder/Dice-${k}.svg" id="${k}">
-            </div>
-        `
-    }
+    showDice(5)
 
     addClickEvent();
     calculateSum();
 }
 
-//rollAllDice();
+// Funksjon som viser n terninger
+function showDice(n){
+    for (let i = 1; i <= n; i++) {
+        k = terning()
+        /* Bildene av terninger er laget selv i Inkscape */
+        terningerEl.innerHTML += `
+            <div class="terning" id="terning${k}">
+                <img src="./terninger/die-${k}.svg" id="${k}">
+            </div>
+        `
+    }
+}
 
-
+// Funksjon som ruller terningene som ikke er valgt
 function rollNotChosenDice(){
     let terningAll = document.querySelectorAll(".terning");
     let n = 5;
@@ -50,20 +56,14 @@ function rollNotChosenDice(){
         }
     })
 
-    for (let i=1; i<=n; i++){
-        k = terning()
-        terningerEl.innerHTML += `
-            <div class="terning" id="terning${k}">
-                <img src="./terningbilder/Dice-${k}.svg" id="${k}">
-            </div>
-        `
-    }
+    showDice(n)
 
     addClickEvent();
     calculateSum();
 }
 
-// Regner ut summen av antall øyne totalt
+
+// Regner ut summen av totalt antall øyne
 function calculateSum(){
     let sum = 0;
     let terningBildeAll = document.querySelectorAll("img");
