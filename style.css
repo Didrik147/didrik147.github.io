@@ -180,7 +180,7 @@ body {
 }
 
 
-@media all and (max-width: 1100px){
+@media all and (max-width: 1020px){
     .text-box h1{
         font-size: 40px;
     }
