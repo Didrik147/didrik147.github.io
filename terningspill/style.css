@@ -31,12 +31,18 @@ h1 {
 
 .terning img {
     width: 100%;
-    filter: grayscale(100%);
+    /* filter: grayscale(100%); */
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 1px;
+
 }
-    
-.terning.chosen {
-    filter: drop-shadow(0 0 10px rgb(5, 158, 0));
+
+.terning.chosen img {
+    /* filter: drop-shadow(0 0 10px rgb(5, 158, 0)); */
+    box-shadow: 0px 0px 30px rgb(5, 158, 0);
 }
+
 
 button {
     margin: 10px;
@@ -46,6 +52,6 @@ button {
     border-radius: 5px;
 }
 
-button:hover{
+button:hover {
     cursor: pointer;
 }

@@ -18,13 +18,15 @@ function addClickEvent(){
     })
 }
 
+/* Bildene av terninger er hentet fra Wikipedia Commons */
+
 function rollAllDice(){
     terningerEl.innerHTML = "";
     for (let i=1; i<=5; i++){
         k = terning()
         terningerEl.innerHTML += `
             <div class="terning" id="terning${k}">
-                <img src="./figurer/dice${k}.png" id="${k}">
+                <img src="./terningbilder/Dice-${k}.svg" id="${k}">
             </div>
         `
     }
@@ -52,7 +54,7 @@ function rollNotChosenDice(){
         k = terning()
         terningerEl.innerHTML += `
             <div class="terning" id="terning${k}">
-                <img src="./figurer/dice${k}.png" id="${k}">
+                <img src="./terningbilder/Dice-${k}.svg" id="${k}">
             </div>
         `
     }
@@ -61,6 +63,7 @@ function rollNotChosenDice(){
     calculateSum();
 }
 
+// Regner ut summen av antall øyne totalt
 function calculateSum(){
     let sum = 0;
     let terningBildeAll = document.querySelectorAll("img");
