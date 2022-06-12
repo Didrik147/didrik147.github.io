@@ -2,37 +2,113 @@
 https://www.nytimes.com/games/wordle/index.html
 */
 
+
+import lovligeOrd from './ordliste5.json' assert {type: 'json'}
+
+
+
 // Naturfagsbegreper på 5 bokstaver
 let begreperNaturfag = [
-    "klima",
-    "tymin",
-    "radon",
-    "bryte",
-    "arver",
-    "gener",
-    "enzym",
-    "fakta",
-    "argon",
-    "titan",
-    "arsen",
-    "selen",
-    "xenon",
-    "klone",
-    "Locus",
-    "polar",
-    "fluor",
     "astat",
+    "alkan",
+    "alken",
+    "alkyn",
+    "arver",
+    "argon",
+    "arsen",
+    "amino",
+    "anode",
+    "bryte",
+    "butan",
+    "bærer",
+    "bølge",
+    "celle",
+    "enzym",
+    "farge",
+    "fakta",
+    "fluor",
+    "gamma",
+    "gener",
+    "ioner",
+    "kjemi",
+    "klima",
+    "klone",
+    "locus",
+    "masse",
+    "metan",
+    "miljø",
+    "oktan",
+    "polar",
+    "radon",
+    "speil",
+    "stoff",
+    "selen",
+    "tymin",
+    "titan",
+    "teori",
+    "væske",
+    "xenon",
 ];
 
-// Mulige ord (naturfag)
-let muligeOrd = begreperNaturfag
+console.log("Antall naturfagsbegreper:", begreperNaturfag.length)
 
+// Begreper innen matematikk på 5 bokstaver
+let begreperMatematikk = [
+    "anbud",
+    "areal",
+    "bayes",
+    "bevis",
+    "doble",
+    "euler",
+    "katet",
+    "kurve",
+    "korde",
+    "løkke",
+    "linje",
+    "minus",
+    "origo",
+    "pluss",
+    "punkt",
+    "prøve",
+    "rekke",
+    "reell",
+    "skatt",
+    "snitt",
+    "sfære",
+    "tiere",
+    "torus",
+    "tusen",
+    "teori",
+    "union",
+    "uekte",
+    "vekst",
+    "verdi",
+];
+
+console.log("Antall begreper innen matematikk:", begreperMatematikk.length)
 
 // Henter elementer fra DOM
 let inputEl = document.querySelector('#textinput')
 let hovedEl = document.querySelector('#hoved')
 //let bodyEl = document.querySelector('body')
 let reglerEl = document.querySelector('#regler')
+let meldingEl = document.querySelector('#melding')
+
+
+let r = Math.floor(Math.random()*2)
+console.log(r)
+
+
+let muligeOrd;
+if (r == 0){
+    muligeOrd = begreperNaturfag
+    meldingEl.innerHTML = "<h2>Hint: Et begrep innen naturfag<h2>"
+}else if(r == 1){
+    muligeOrd = begreperMatematikk
+    meldingEl.innerHTML = "<h2>Hint: Et begrep innen matematikk<h2>"
+}
+
+
 
 
 // Starter å telle fra 1. januar 2022
@@ -47,9 +123,15 @@ const dayOffset = msOffset / 1000 / 60 / 60 / 24
 
 // Det korrekte ordet (fasit)
 let fasit = muligeOrd[Math.floor(dayOffset) % muligeOrd.length]
-//let fasit = "LEKSE"
+//let fasit = "lekse"
 fasit = fasit.toUpperCase()
-//console.log(fasit)
+console.log(fasit)
+
+// Sikrer at fasiten er i ordlista
+if(!lovligeOrd.includes(fasit)){
+    console.log("Legger fasit til i ordlista")
+    lovligeOrd.push(fasit)
+}
 
 
 // Lengde på ordet (antall bokser i hver rad)
@@ -98,21 +180,29 @@ function skrivOrd(){
 inputEl.addEventListener('keydown', sjekk)
 
 function sjekk(e){
+    meldingEl.innerHTML = ""
     if(e.key == "Enter" && this.value.length == nLetters){
-        console.log("Sjekker rad")
-        sjekkRad(this.value.toUpperCase(), radNr)
+        if (!lovligeOrd.includes(inputEl.value.toUpperCase())){
+            console.log("Ordet finnes ikke i ordlista")
+            meldingEl.innerHTML = "<h2>Ordet finnes ikke i ordlista</h2>"
 
-        // Øker radnr
-        radNr++
+        }else {
+            console.log("Sjekker rad")
 
-        // Tømmer input feltet
-        this.value = ""
+            sjekkRad(this.value.toUpperCase(), radNr)
 
-        if (radNr > nRows && !vant){
-            console.log("Du tapte")
-            inputEl.classList.toggle('hide')
-            reglerEl.innerHTML += `<h1>Du tapte...</h1>`
-            reglerEl.innerHTML += `<h2>Ordet var: ${fasit}</h2>`
+            // Øker radnr
+            radNr++
+
+            // Tømmer input feltet
+            this.value = ""
+
+            if (radNr > nRows && !vant) {
+                console.log("Du tapte")
+                inputEl.classList.toggle('hide')
+                meldingEl.innerHTML = `<h1>Du tapte...</h1>`
+                meldingEl.innerHTML += `<h2>Ordet var: ${fasit}</h2>`
+            }
         }
     }
 }
@@ -143,7 +233,7 @@ function sjekkRad(svar, radNr){
     }
     
     // Sjekker om rett bokstav på rett plass (blir grønn)
-    for(i=0; i<nLetters; i++){
+    for(let i=0; i<nLetters; i++){
         if(svar[i]==fasit[i]){
             radEl[i].classList.add("greenBox")
             antRett++
