@@ -27,6 +27,7 @@ function lagElevArray(input){
 
 
 function lagGrupper(maksPerGruppe){
+    let antallElever = elever.length
     let maksGrupper = Math.floor(elever.length/maksPerGruppe);
     let containerEl = document.querySelector("#container")
     containerEl.innerHTML = ""
@@ -53,14 +54,27 @@ function lagGrupper(maksPerGruppe){
         // Legger elevene som er til overs inn i de første gruppene
         if (elever.length == 0 && gruppe.length != 0){
             for (let i = 0; i < gruppe.length; i++){
-                grupper[i].push(gruppe[i])
+                try {
+                    grupper[i].push(gruppe[i])
+                } catch(err){
+                    console.log(err.message)
+                    containerEl.innerHTML = `
+                        <p><b>Dette går ikke opp.</b> <br>
+                        Det er ${antallElever} elever, og maks ${maksPerGruppe} elever per gruppe.
+                        </p>
+                    `
+                    return
+                }
+                
             }
-        } 
+        }
         
     }
 
     let gruppenr = 1;
     let counter = 0;
+
+
 
     //Skriver til HTML
     for (let i = 0; i < maksGrupper; i++){
@@ -88,7 +102,7 @@ function lagGrupper(maksPerGruppe){
 
     }
 
-    console.log(counter)
+    //console.log(counter)
 }
 
 

@@ -11,13 +11,13 @@ button{
 }
 
 body {
-    margin: 30px;
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 #hoved, #container{
-    width: 80%;
+    width: 90%;
+    max-width: 750px;
     margin: 20px auto;
     text-align: center;
 }

@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo&family=Open+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-value: 16, 66, 39;
+}
+
+body {
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; */
+    font-family: 'Open Sans', sans-serif;
+    /* font-family: 'Exo', sans-serif; */
+
+    /* background: rgb(var(--color-value)); */
+    /* background-image: url('https://source.unsplash.com/1600x900/?landscape'); */
+    /*  background-image: linear-gradient(rgba(var(--color-value), 0.7), rgba(var(--color-value), 0.7)),
+        url('https://images.unsplash.com/photo-1616840388998-a514fe2175b9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');  */
+    background-image: linear-gradient(rgba(var(--color-value), 0.7), rgba(var(--color-value), 0.7)),
+        url('disc-golf-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* background-image: linear-gradient(rgba(var(--color-value), 0.1), rgba(var(--color-value), 1)); */
+}
+
+
+.text-box {
+    position: relative;
+    top: 20px;
+}
+
+.text-box h1 {
+    color: #fff;
+    text-align: center;
+    font-size: 36px;
+    text-shadow: 1px 1px 5px #000;
+}
+
+#main {
+    max-width: 800px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#main table {
+    margin: 20px 5px;
+    background: #fff;
+    color: #000;
+    border-radius: 10px;
+    /* margin: 1em; */
+    /* width: 100%; */
+    /* table-layout: fixed; */
+    text-align: center;
+    border-collapse: collapse;
+}
+
+
+td, th {
+    /* border: 1px solid #000; */
+    /* padding: 5px; */
+    padding: 5px 10px;
+}
+
+td:not(:last-child), th:not(:last-child) {
+    border-right: 1px solid #000;
+}
+
+td {
+    border-top: 1px solid #000;
+}
+
+
+.text-box {
+    text-align: center;
+}
+
+.text-box .slider {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.slider {
+    cursor: pointer;
+    -webkit-appearance: none;
+    background: #aaa;
+    height: 10px;
+    width: 200px;
+}
+
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #111;
+}
+
+
+img {
+    width: 50px;
+}
+
+@media(max-width: 500px) {
+    td:nth-child(4), th:nth-child(4) {
+        display: none;
+    }
+}
