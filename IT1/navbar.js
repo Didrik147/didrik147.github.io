@@ -81,7 +81,7 @@ document.write(`
                 <li>
                     <a href="#">Annet <i class="fas fa-caret-down"></i></a>
                     <ul>
-                        <li><a href="http://didrik147.github.io/timeplan/timeplan_2022.html" target="_blank">Didriks timeplan</a></li>
+                        <li><a href="http://didrik147.github.io/timeplan/timeplan_2022-2023.html" target="_blank">Didriks timeplan</a></li>
                         <li><a href="http://didrik147.github.io/hjelpeliste" target="_blank">Digital hjelpeliste</a>
                         </li>
                     </ul>

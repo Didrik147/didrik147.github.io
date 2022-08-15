@@ -22,11 +22,13 @@ body {
     /* background-image: url('https://source.unsplash.com/1600x900/?landscape'); */
     /*  background-image: linear-gradient(rgba(var(--color-value), 0.7), rgba(var(--color-value), 0.7)),
         url('https://images.unsplash.com/photo-1616840388998-a514fe2175b9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');  */
-    background-image: linear-gradient(rgba(var(--color-value), 0.7), rgba(var(--color-value), 0.7)),
+    /* background-image: linear-gradient(rgba(var(--color-value), 0.7), rgba(var(--color-value), 0.7)),
         url('disc-golf-background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: center; */
+    background-color: rgba(var(--color-value), 1);
+    /* background: linear-gradient(rgba(var(--color-value), 0.7), rgba(var(--color-value), 1)); */
     /* background-image: linear-gradient(rgba(var(--color-value), 0.1), rgba(var(--color-value), 1)); */
 }
 
