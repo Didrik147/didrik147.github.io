@@ -53,33 +53,34 @@ tr td:first-child {
 }
 
 .liten {
-    height: 20px;
+    height: 25px;
 }
 
 .liten > td {
     font-size: 14px;
-    padding: 1px;
+    padding: 2px;
 }
 
+
+.IT1A {
+    background-color: hsl(20, 100%, 90%);
+}
 
 .IT1D {
     background-color: hsl(57, 100%, 80%);
 }
 
-.matteR1 {
-    background-color: hsl(95, 100%, 80%);
-}
-
-.naturfag {
-    background-color: hsl(95, 100%, 80%);
-}
-
-.IT1E {
-    background-color: hsl(200, 100%, 45%);
+.IT2 {
+    background-color: hsl(95, 90%, 80%);
 }
 
 .matte1T {
     background-color: hsl(200, 100%, 90%);
+}
+
+.realfag {
+    background-color: hsl(288, 100%, 85%);
+    /* background-color: #C4B289; */
 }
 
 .møte {
