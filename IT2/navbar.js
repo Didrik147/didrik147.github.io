@@ -17,6 +17,13 @@ document.write(`
                             <a href="https://www.udir.no/lk20/inf01-02/kompetansemaal-og-vurdering/kv472" target="_blank">Læreplan IT2</a>
                         </li>
 
+                        <li>
+                            <a href="https://aunivers.lokus.no/fagpakker/realfag/programmering/python" target="_blank">Python (Aunivers)</a>
+
+                        <li>
+                            <a href="https://aunivers.lokus.no/fagpakker/realfag/programmering/python" target="_blank">Digital lærebok (Aschehoug)</a>
+                        </li>
+
                         <li><a href="https://open.kattis.com/problems" target="_blank">Kattis</a></li>
 
                         <li><a href="https://projecteuler.net/" target="_blank">Project Euler</a></li>

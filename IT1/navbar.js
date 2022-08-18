@@ -14,7 +14,7 @@ document.write(`
                     <a href="#">Periodeplan <i class="fas fa-caret-down"></i></a>
                     <ul>
                         <li>
-                            <a href="https://periodeplan.didrik147.repl.co/blokkA_2022h.html">Høsten 2022</a>
+                            <a href="https://periodeplan.didrik147.repl.co/blokkA_2022h.html" target="_blank">Høsten 2022</a>
                         </li>
                     </ul>
                 </li>
