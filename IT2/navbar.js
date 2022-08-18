@@ -11,10 +11,6 @@ document.write(`
                 <li><a href="index.html">Hjem</a></li>
 
                 <li>
-                    <a href="#">Periodeplan</a>
-                </li>
-
-                <li>
                     <a href="#">Lenker <i class="fas fa-caret-down"></i></a>
                     <ul>
                         <li>
@@ -34,6 +30,9 @@ document.write(`
                     <a href="#">Programvare <i class="fas fa-caret-down"></i></a>
                     <ul>
                         <li><a href="https://www.anaconda.com/" target="_blank">Anaconda</a></li>
+                        <li><a href="https://www.spyder-ide.org/" target="_blank">Spyder</a></li>
+                        <li><a href="https://thonny.org/" target="_blank">Thonny</a></li>
+                        <li><a href="https://codewith.mu/" target="_blank">Mu</a></li>
                     </ul>
                 </li>
 
