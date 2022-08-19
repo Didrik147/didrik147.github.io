@@ -28,7 +28,7 @@ header{
     right: 0;
     background: var(--dark);
     box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-    padding: 0px 5px;
+    padding: 0px 1%;
     padding-left: 5%;
 
     display: flex;
@@ -132,7 +132,7 @@ header label {
 
 
 
-@media(max-width: 920px){
+@media(max-width: 940px){
     .text-box h1{
         font-size: 7vw;
     }

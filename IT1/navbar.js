@@ -71,6 +71,7 @@ document.write(`
                         <li><a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a></li>
                         <li><a href="https://www.audacityteam.org/" target="_blank">Audacity</a></li>
                         <li><a href="https://inkscape.org/" target="_blank">Inkscape</a></li>
+                        <li><a href="https://www.google.com/chrome/" target="_blank">Google Chrome</a></li>
                     </ul>
                 </li>
 
@@ -78,6 +79,8 @@ document.write(`
                 <li>
                     <a href="#">Annet <i class="fas fa-caret-down"></i></a>
                     <ul>
+                        <li><a href="https://github.com/" target="_blank">GitHub</a></li>
+                        <li><a href="https://replit.com/" target="_blank">Replit</a></li>
                         <li><a href="http://didrik147.github.io/timeplan/timeplan_2022-2023.html" target="_blank">Didriks timeplan</a></li>
                         <li><a href="http://didrik147.github.io/hjelpeliste" target="_blank">Digital hjelpeliste</a>
                         </li>
