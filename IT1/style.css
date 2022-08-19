@@ -19,8 +19,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    
-    
 }
 
 header{
@@ -30,7 +28,8 @@ header{
     right: 0;
     background: var(--dark);
     box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-    padding: 0px 5%;
+    padding: 0px 5px;
+    padding-left: 5%;
 
     display: flex;
     align-items: center;
@@ -104,6 +103,7 @@ header label {
     color: var(--light);
     cursor: pointer;
     display: none;
+
 }
 
 
@@ -132,16 +132,17 @@ header label {
 
 
 
-@media(max-width: 850px){
+@media(max-width: 920px){
     .text-box h1{
         font-size: 7vw;
     }
     header{
-        padding: 17px 5%;
+        padding: 12px 5%;
     }
 
     header label{
-        display: initial;
+        /* display: initial; */
+        display: flex;
     }
 
     header .navbar{

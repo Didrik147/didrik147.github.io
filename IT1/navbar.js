@@ -14,42 +14,54 @@ document.write(`
                     <a href="#">Periodeplan <i class="fas fa-caret-down"></i></a>
                     <ul>
                         <li>
-                            <a href="https://periodeplan.didrik147.repl.co/blokkA_2022h.html" target="_blank">Høsten 2022</a>
+                            <a href="https://periodeplan.didrik147.repl.co/blokkA_2022h.html" target="_blank">
+                                Høsten 2022 (blokk A)
+                            </a>
                         </li>
                     </ul>
                 </li>
 
                 <li>
-                    <a href="#">Lenker <i class="fas fa-caret-down"></i></a>
+                    <a href="#">Fagstoff <i class="fas fa-caret-down"></i></a>
                     <ul>
-                        <li><a href="https://www.udir.no/lk20/inf01-02/kompetansemaal-og-vurdering/kv471"
-                                target="_blank">Læreplan IT1</a></li>
+                        <li><a href="https://kode-2016.cappelendamm.no/" target="_blank">Elevnettsted Kode 1</a></li>
 
-                        <li><a href="https://aunivers.lokus.no/fagpakker/realfag/informasjonsteknologi-1-2/it-1"
-                                target="_blank">Digital lærebok (Aschehoug)</a></li>
+                        <li><a href="https://aunivers.lokus.no/fagpakker/realfag/informasjonsteknologi-1-2/it-1" target="_blank">Digital lærebok (Aschehoug)</a></li>
+                        
 
                         <li><a href="https://sandvika.it/#/" target="_blank">Fagstoff IT1 (Sandvika)</a></li>
 
                         <li><a href="https://www.w3schools.com/html/default.asp" target="_blank">W3Schools</a></li>
 
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#">Ressurser <i class="fas fa-caret-down"></i></a>
+                    <ul>
+                        <li>
+                            <a href="#">Bilder <i class="fas fa-caret-right"></i></a>
+                            <ul>
+                                <li><a href="https://pixabay.com/" target="_blank">Pixabay</a></li>
+                                <li><a href="https://unsplash.com/" target="_blank">Unsplash</a></li>
+                                <li><a href="https://www.pexels.com/" target="_blank">Pexels</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="https://www.udir.no/lk20/inf01-02/kompetansemaal-og-vurdering/kv471" target="_blank">Læreplan IT1</a></li>
+
+                        <li><a href="https://www.uutilsynet.no/nettsteder/losningsforslag-nettsider/36" target="_blank">Universell utforming</a></li>
                         <li>
                             <a href="#">Validatorer <i class="fas fa-caret-right"></i></a>
 
                             <ul>
-                                <li><a href="https://validator.w3.org/#validate_by_upload"
-                                        target="_blank">HTML-validator</a></li>
+                                <li><a href="https://validator.w3.org/#validate_by_upload" target="_blank">HTML-validator</a></li>
 
-                                <li><a href="https://jigsaw.w3.org/css-validator/validator.html.en#validate_by_upload"
-                                        target="_blank">CSS-validator</a></li>
+                                <li><a href="https://jigsaw.w3.org/css-validator/validator.html.en#validate_by_upload" target="_blank">CSS-validator</a></li>
                             </ul>
 
                         </li>
 
-
-
-                        <li><a href="https://www.uutilsynet.no/nettsteder/losningsforslag-nettsider/36"
-                                target="_blank">Universell utforming</a></li>
-
+                        
                     </ul>
                 </li>
 
