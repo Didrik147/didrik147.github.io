@@ -1,0 +1,7 @@
+To do list
+[ ] Add highscore (database? Local storage?)
+[ ] Add timer?
+[ ] Add Katakana mode
+[x] Add home page
+[x] Add sound
+[ ] Add mode with words (and maybe sentences)
