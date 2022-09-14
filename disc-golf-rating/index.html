@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metrix API</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>DiscGolfMetrix API</h1>
+
+    <main>
+        <h3>Hensikten med nettsiden er å finne ut hvilken rating et gitt resultat ville vært på en bestemt bane.</h3>
+
+        <div id="banediv" class="container">
+            <label for="course">Velg en bane:</label>
+            <select id="course">
+                <option value=""></option>
+                <!-- <option value="Ekeberg">Ekeberg</option>
+                <option value="Myrdammen">Myrdammen</option>
+                <option value="Røa">Røa</option>
+                <option value="Krokhol Gold">Krokhol (Gold Layout)</option>
+                <option value="Krokhol Blue">Krokhol (Blue Layout)</option> -->
+            </select>
+        </div>
+    
+    <div id="pardiv" class="container">
+
+    </div>
+
+    <div id="kastdiv" class="container">
+        <label for="kast">Skriv inn antall kast:</label>
+        <input type="number" id="kast" min="1" value="60">
+    </div>
+    
+
+    <div id="ratingdiv" class="container">
+        
+    </div>
+    </main>
+
+    
+    <script src="script.js"></script>
+</body>
+
+</html>

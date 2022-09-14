@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* Latitude 64
+MAIN FONTS
+- HEADLINE: EXO (BOLD)
+- BODY TEXT: Open Sans (Regular)
+
+MAIN COLORS
+- White
+- Black
+- Red (#e11900)
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+main {
+    max-width: 500px;
+    width: 95%;
+    text-align: center;
+}
+
+h1 {
+    margin: 0px auto;
+    margin-top: 25px;
+}
+
+h3 {
+    margin: 15px;
+    font-style: italic;
+}
+
+label {
+    margin: 5px;
+}
+
+select {
+    font-size: 16px;
+    padding: 2px;
+}
+
+input[type=number] {
+    font-size: 16px;
+    padding: 5px;
+    width: 90px;
+
+}
+
+.container {
+    margin: 10px auto;
+    padding: 5px;
+    max-width: 700px;
+    width: 100%;
+    border: 1px none #000;
+    border-radius: 5px;
+    text-align: center;
+}

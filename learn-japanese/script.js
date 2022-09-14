@@ -229,6 +229,8 @@ function checkAnswer(e){
         <button onClick=next()>Next kana</button>
     `
 
+    responseEl.scrollIntoView()
+
     console.log(`Points: ${points}`)
 
 }

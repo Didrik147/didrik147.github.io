@@ -3,9 +3,11 @@ https://www.nytimes.com/games/wordle/index.html
 */
 
 
-import lovligeOrd from './ordliste5.json' assert {type: 'json'}
+/* //import lovligeOrd from './ordliste5.json' assert {type: 'json'}
+import * as data from './ordliste5.json'
 
-
+console.log(data)
+ */
 
 // Naturfagsbegreper på 5 bokstaver
 let begreperNaturfag = [
@@ -39,6 +41,7 @@ let begreperNaturfag = [
     "miljø",
     "oktan",
     "polar",
+    "potet",
     "radon",
     "speil",
     "stoff",
@@ -50,7 +53,7 @@ let begreperNaturfag = [
     "xenon",
 ];
 
-console.log("Antall naturfagsbegreper:", begreperNaturfag.length)
+//console.log("Antall naturfagsbegreper:", begreperNaturfag.length)
 
 // Begreper innen matematikk på 5 bokstaver
 let begreperMatematikk = [
@@ -85,7 +88,31 @@ let begreperMatematikk = [
     "verdi",
 ];
 
-console.log("Antall begreper innen matematikk:", begreperMatematikk.length)
+//console.log("Antall begreper innen matematikk:", begreperMatematikk.length)
+
+// Begreper innen programmering på 5 bokstaver
+let begreperProg = [
+    "løkke",
+    "while",
+    "input",
+    "liste",
+    "array",
+    "float",
+    "print",
+];
+
+// Begreper innen IT på 5 bokstaver
+let begreperIT = [
+    "HTTPS",
+    "width",
+    "image",
+    "bilde",
+    "color",
+    "farge",
+    "style",
+    "filer",
+];
+
 
 // Henter elementer fra DOM
 let inputEl = document.querySelector('#textinput')
@@ -93,22 +120,6 @@ let hovedEl = document.querySelector('#hoved')
 //let bodyEl = document.querySelector('body')
 let reglerEl = document.querySelector('#regler')
 let meldingEl = document.querySelector('#melding')
-
-
-let r = Math.floor(Math.random()*2)
-console.log(r)
-
-
-let muligeOrd;
-if (r == 0){
-    muligeOrd = begreperNaturfag
-    meldingEl.innerHTML = "<h2>Hint: Et begrep innen naturfag<h2>"
-}else if(r == 1){
-    muligeOrd = begreperMatematikk
-    meldingEl.innerHTML = "<h2>Hint: Et begrep innen matematikk<h2>"
-}
-
-
 
 
 // Starter å telle fra 1. januar 2022
@@ -121,17 +132,38 @@ const msOffset = Date.now() - offsetFromDate
 const dayOffset = msOffset / 1000 / 60 / 60 / 24
 //console.log(dayOffset)
 
+let antallKategorier = 4
+//let r = Math.floor(Math.random()*2)
+let r = Math.floor(dayOffset) % antallKategorier
+//console.log(r)
+
+
+let muligeOrd;
+if (r == 0){
+    muligeOrd = begreperNaturfag
+    //meldingEl.innerHTML = "<h2>Hint: Et begrep innen naturfag<h2>"
+}else if(r == 1){
+    muligeOrd = begreperMatematikk
+    //meldingEl.innerHTML = "<h2>Hint: Et begrep innen matematikk/økonomi<h2>"
+}
+
+
+
 // Det korrekte ordet (fasit)
 let fasit = muligeOrd[Math.floor(dayOffset) % muligeOrd.length]
 //let fasit = "lekse"
 fasit = fasit.toUpperCase()
-console.log(fasit)
+//console.log(fasit)
 
 // Sikrer at fasiten er i ordlista
 if(!lovligeOrd.includes(fasit)){
     console.log("Legger fasit til i ordlista")
     lovligeOrd.push(fasit)
 }
+
+
+
+
 
 
 // Lengde på ordet (antall bokser i hver rad)
@@ -241,12 +273,12 @@ function sjekkRad(svar, radNr){
     }
 
     // Hvor mange rett
-    console.log(antRett)
+    //console.log(antRett)
 
     if(antRett == nLetters){
-        console.log("Du vant!")
+        //console.log("Du vant!")
         vant = true
         inputEl.classList.toggle('hide')
-        reglerEl.innerHTML += `<h1>Du vant!</h1>`
+        reglerEl.innerHTML += `<h1>Du klarte det!</h1>`
     }
 }
