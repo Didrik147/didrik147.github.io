@@ -14,6 +14,10 @@ let startHour;
 let startMin;
 let startSec;
 
+// Lyd
+let audio = new Audio('clock-alarm.mp3');
+audio.load()
+
 let cd = setInterval(countdown, 1000)
 
 countdowninputEl.addEventListener("change", getTime)
@@ -21,6 +25,8 @@ startBtn.addEventListener("click", startTimer)
 resetBtn.addEventListener("click", resetTimer)
 
 resetTimer() // nullstimmer timeren
+
+
 
 
 
@@ -64,6 +70,8 @@ function startTimer(){
 
 
 function resetTimer(){
+    // Stopper lyden
+    audio.pause();
     startBtn.style = "display: flex;"
     timertextEl.innerText = "..."
 
@@ -89,7 +97,9 @@ function countdown() {
         timertextEl.innerHTML = output
 
         if(totalSec == 0){
-            // Legg til lydeffekter
+            // Spiller av lyd
+            audio.load();
+            audio.play();
             console.log("Tiden er ute!")
             startBtn.style="display: none;"
             run = false

@@ -39,9 +39,10 @@ body>h1 {
     font-size: 60px;
 }
 #initialtime>input {
-    width: 95%;
+    /* width: 95%;
     max-width: 300px;
-    text-align: center;
+    text-align: center; */
+    max-width: 95%;
 }
 
 #timertext {

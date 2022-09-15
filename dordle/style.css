@@ -9,8 +9,12 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
-    
+}
+
+@media(min-width: 1000px){
+    body {
+        height: 100vh;
+    }
 }
 
 div {
@@ -24,6 +28,7 @@ ul {
 ul > li {
     margin: 5px;
 }
+
 
 #regler > p {
     margin: 5px;
@@ -58,6 +63,7 @@ input {
     grid-template-columns: repeat(5, 60px);
     grid-template-rows: repeat(6, 60px);
     gap: 5px;
+    margin-bottom: 20px;
 }
 
 .hide {

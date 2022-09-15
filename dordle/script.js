@@ -3,12 +3,6 @@ https://www.nytimes.com/games/wordle/index.html
 */
 
 
-/* //import lovligeOrd from './ordliste5.json' assert {type: 'json'}
-import * as data from './ordliste5.json'
-
-console.log(data)
- */
-
 // Naturfagsbegreper på 5 bokstaver
 let begreperNaturfag = [
     "astat",
@@ -46,6 +40,7 @@ let begreperNaturfag = [
     "speil",
     "stoff",
     "selen",
+    "tesla",
     "tymin",
     "titan",
     "teori",
@@ -137,7 +132,11 @@ let antallKategorier = 4
 let r = Math.floor(dayOffset) % antallKategorier
 //console.log(r)
 
+begreper = [begreperNaturfag, begreperMatematikk, begreperIT, begreperProg]
 
+let muligeOrd = begreper[r]
+
+/*
 let muligeOrd;
 if (r == 0){
     muligeOrd = begreperNaturfag
@@ -146,6 +145,7 @@ if (r == 0){
     muligeOrd = begreperMatematikk
     //meldingEl.innerHTML = "<h2>Hint: Et begrep innen matematikk/økonomi<h2>"
 }
+*/
 
 
 
@@ -217,7 +217,7 @@ function sjekk(e){
         if (!lovligeOrd.includes(inputEl.value.toUpperCase())){
             console.log("Ordet finnes ikke i ordlista")
             meldingEl.innerHTML = "<h2>Ordet finnes ikke i ordlista</h2>"
-
+            
         }else {
             console.log("Sjekker rad")
 
@@ -271,6 +271,9 @@ function sjekkRad(svar, radNr){
             antRett++
         }
     }
+
+    // Scroller til raden
+    radEl[0].scrollIntoView()
 
     // Hvor mange rett
     //console.log(antRett)
