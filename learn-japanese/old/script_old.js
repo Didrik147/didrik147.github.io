@@ -1,10 +1,86 @@
 const gameEl = document.querySelector('.game-container')
 
+/* let kana = {
+    romaji: 'a',
+    hiragana: 'あ',
+    katakana: 'ア'
+} */
+
+class Kana {
+    constructor(romaji, hiragana, katakana){
+        this.romaji = romaji
+        this.hiragana = hiragana
+        this.katakana = katakana
+    }
+}
+
 let kanas = []
 
-const characterEl = document.querySelector('.character')
-const optionsEl = document.querySelector('.options')
-const responseEl = document.querySelector('.response')
+//let k = new Kana('a', 'あ', 'ア')
+//kanas.push(k)
+kanas.push(new Kana('a', 'あ', 'ア'))
+kanas.push(new Kana('i', 'い'))
+kanas.push(new Kana('u', 'う'))
+kanas.push(new Kana('e', 'え'))
+kanas.push(new Kana('o', 'お'))
+
+kanas.push(new Kana('ka', 'か'))
+kanas.push(new Kana('ki', 'き'))
+kanas.push(new Kana('ku', 'く'))
+kanas.push(new Kana('ke', 'け'))
+kanas.push(new Kana('ko', 'こ'))
+
+kanas.push(new Kana('sa', 'さ'))
+kanas.push(new Kana('shi', 'し'))
+kanas.push(new Kana('su', 'す'))
+kanas.push(new Kana('se', 'せ'))
+kanas.push(new Kana('so', 'そ'))
+
+kanas.push(new Kana('ta', 'た'))
+kanas.push(new Kana('chi', 'ち'))
+kanas.push(new Kana('tsu', 'つ'))
+kanas.push(new Kana('te', 'て'))
+kanas.push(new Kana('to', 'と'))
+
+kanas.push(new Kana('na', 'な'))
+kanas.push(new Kana('ni', 'に'))
+kanas.push(new Kana('nu', 'ぬ'))
+kanas.push(new Kana('ne', 'ね'))
+kanas.push(new Kana('no', 'の'))
+
+kanas.push(new Kana('ha', 'は'))
+kanas.push(new Kana('hi', 'ひ'))
+kanas.push(new Kana('fu', 'ふ'))
+kanas.push(new Kana('he', 'へ'))
+kanas.push(new Kana('ho', 'ほ'))
+
+kanas.push(new Kana('ma', 'ま'))
+kanas.push(new Kana('mi', 'み'))
+kanas.push(new Kana('mu', 'む'))
+kanas.push(new Kana('me', 'め'))
+kanas.push(new Kana('mo', 'も'))
+
+kanas.push(new Kana('ya', 'や'))
+kanas.push(new Kana('yu', 'ゆ'))
+kanas.push(new Kana('yo', 'よ'))
+
+kanas.push(new Kana('ra', 'ら'))
+kanas.push(new Kana('ri', 'り'))
+kanas.push(new Kana('ru', 'る'))
+kanas.push(new Kana('re', 'れ'))
+kanas.push(new Kana('ro', 'ろ'))
+
+kanas.push(new Kana('wa', 'わ'))
+kanas.push(new Kana('wo', 'を'))
+kanas.push(new Kana('n', 'ん'))
+
+
+
+//console.log(kanas)
+
+characterEl = document.querySelector('.character')
+optionsEl = document.querySelector('.options')
+responseEl = document.querySelector('.response')
 
 function shuffle(arr){
     return arr.sort(() => 0.5 - Math.random())
@@ -26,71 +102,15 @@ let solution;
 
 let points;
 let q;
-let difficulty;
 
 function newGame(){
     console.log('Starting new game')
     points = 0
     q = 0
 
-    characterEl.innerHTML = '<p><i>Choose difficulty</i></p>'
 
-    optionsEl.innerHTML = ''
-    optionsEl.classList.add("choose-difficulty")
-    optionsEl.innerHTML += `<button class="difficulty" id="easy">Easy</button>`
-    optionsEl.innerHTML += `<button class="difficulty" id="medium">Medium</button>`
-    optionsEl.innerHTML += `<button class="difficulty" id="hard">Hard</button>`
-
-    let difficultyEls = document.querySelectorAll('.difficulty')
-
-    difficultyEls.forEach(difficulty => {
-        difficulty.addEventListener("click", setDifficulty)
-    })
-
-    //question()
-}
-
-function setDifficulty(e){
-    optionsEl.classList.remove("choose-difficulty")
-    difficulty = e.target.id
-    /*
-    if (e.target.id == "easy"){
-        difficulty = 0
-    }else if(e.target.id == "medium"){
-        difficulty = 1
-    }else if (e.target.id == "hard") {
-        difficulty = 2
-    }
-    */
-    characterEl.classList.add('circle')
-
-    let gojuuonArr = []
-
-    manyKanas.forEach(k => {
-        if (k.type == "gojuuon") {
-            gojuuonArr.push(k)
-        }
-    })
-
-    let n;
-    if (difficulty == "easy") {
-        n = 4 * 3 // rows: a, ka,sa
-    } else if (difficulty == "medium") {
-        n = 4 * 6 // rows: a, ka, sa, ta, na, ha
-    } else if (difficulty == "hard") {
-        n = gojuuonArr.length // all gojuuon
-    }
-    
-    for(let i=0; i<n; i++){
-        kanas.push(gojuuonArr[i])
-    }
-        
-
-    console.log(`Difficulty: ${difficulty}`)
-    console.log(`Number of kanas: ${n}`)
     question()
 }
-
 
 
 function next(){
@@ -127,7 +147,7 @@ function playAudio(e){
 
 function playPronunciation(e){
     //console.log(`${e.target.id}.mp3`)
-    /* pronunciationEl.src = `./audio/pronunciation/${e.target.id}.mp3` */
+    pronunciationEl.src = `./audio/pronunciation/${e.target.id}.mp3`
     pronunciationEl.play()
 }
 
@@ -140,17 +160,17 @@ function question(){
     responseEl.innerHTML = ''
 
     let i = randint(1, kanas.length)
-    characterEl.innerHTML = kanas[i].kana
-    characterEl.id = kanas[i].roumaji
+    characterEl.innerHTML = kanas[i].hiragana
+    characterEl.id = kanas[i].romaji
     
     characterEl.addEventListener('click', playPronunciation)
     
-    solution = kanas[i].roumaji 
+    solution = kanas[i].romaji 
 
     let wrongArr = []
 
     kanas.forEach(kana => {
-        wrongArr.push(kana.roumaji)
+        wrongArr.push(kana.romaji)
     })
 
     // Fjerner det korrekte alternativet
@@ -177,9 +197,6 @@ function question(){
     buttonEls.forEach(buttonEl => {
         buttonEl.addEventListener('click', checkAnswer)
     })
-
-    pronunciationEl.src = `./audio/pronunciation/${characterEl.id}.mp3`
-    pronunciationEl.load()
 }
 
 

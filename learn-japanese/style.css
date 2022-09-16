@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 * {
     margin: 0;
@@ -24,7 +24,7 @@ nav {
     width: 100%;
 }
 
-nav ul{
+nav ul {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -47,11 +47,11 @@ nav a {
     user-select: none;
 }
 
-nav li > a:hover {
+nav li>a:hover {
     background-color: #BC002D;
 }
 
-nav > a {
+nav>a {
     /* color: #BC002D; */
     font-weight: bold;
 }
@@ -68,6 +68,154 @@ nav > a {
 }
 
 
+main div {
+    margin: 20px auto;
+}
+
+.game-container {
+    text-align: center;
+}
+
+
+.character {
+    font-size: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+#vocabulary>#info {
+    margin: 20px auto;
+    margin-bottom: 0px;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.word>div:first-of-type {
+    font-size: 50px;
+    margin: 0 auto;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 10px;
+    margin-right: -10px;
+}
+
+.word>div:last-of-type {
+    font-size: 26px;
+    margin: 0;
+}
+
+#vocabulary .options {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#vocabulary button {
+    width: fit-content;
+    height: auto;
+    padding: 10px 20px;
+    margin: 10px auto;
+}
+
+
+.circle {
+    font-size: 150px;
+    margin: 40px auto;
+    background-color: #BC002D;
+    color: #fff;
+    border-radius: 50%;
+    width: 280px;
+    height: 280px;
+}
+
+.options {
+    display: flex;
+    justify-content: space-around;
+    max-width: 500px;
+    width: 95vw;
+}
+
+.options>button {
+    font-size: 24px;
+    width: 65px;
+    height: 65px;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 5px;
+    user-select: none;
+}
+
+.options>button:hover {
+    /* background-color: #000;
+    color: #fff; */
+    /* box-shadow: 0px 0px 10px #777; */
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+
+.options>button.inactive:hover {
+    /* background-color: #000;
+    color: #fff; */
+    /* box-shadow: 0px 0px 10px #777; */
+    transform: initial;
+    cursor: default;
+}
+
+.response>h1 {
+    text-align: center;
+    font-size: 40px;
+}
+
+.correct-text {
+    color: #2f7532;
+}
+
+.wrong-text {
+    color: #BC002D;
+}
+
+
+.options>.correct-bg {
+    color: #fff;
+    background-color: #2f7532;
+}
+
+.options>.wrong-bg {
+    color: #fff;
+    background-color: #BC002D;
+}
+
+.response>button {
+    margin: 20px;
+    font-size: 20px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#again {
+    font-size: 20px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.score {
+    font-size: 28px;
+    margin: 30px;
+}
+
+.options>.difficulty {
+    width: 120px;
+}
+
+
+
 @media(max-width: 500px) {
     #heading {
         font-size: 45px;
@@ -77,6 +225,7 @@ nav > a {
         display: initial;
         float: right;
     }
+
     nav {
         padding: 0;
         display: inline-block;
@@ -101,106 +250,14 @@ nav > a {
         display: initial;
     }
 
+    .choose-difficulty {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .options>.difficulty {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
 }
-
-
-
-main div {
-    margin: 20px auto;
-}
-
-.game-container {
-    text-align: center;
-}
-
-
-.character {
-    font-size: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #BC002D;
-    color: #fff;
-    border-radius: 50%;
-    width: 280px;
-    height: 280px;
-    margin: 40px auto;
-    cursor: pointer;
-}
-
-.options {
-    display: flex;
-    justify-content: space-around;
-    max-width: 500px;
-    width: 90vw;
-}
-
-.options > button {
-    font-size: 30px;
-    width: 65px;
-    height: 65px;
-    background-color: #fff;
-    border: 1px solid #000;
-    border-radius: 5px;
-    user-select: none;
-}
-
-.options > button:hover {
-    /* background-color: #000;
-    color: #fff; */
-    /* box-shadow: 0px 0px 10px #777; */
-    cursor: pointer;
-    transform: scale(1.05);
-}
-
-
-.options > button.inactive:hover {
-    /* background-color: #000;
-    color: #fff; */
-    /* box-shadow: 0px 0px 10px #777; */
-    transform: initial;
-    cursor: default;
-}
-
-.response > h1 {
-    text-align: center;
-    font-size: 40px;
-}
-
-.correct-text {
-    color: #2f7532;
-}
-
-.wrong-text {
-    color: #BC002D;
-}
-
-
-.options > .correct-bg {
-    color: #fff;
-    background-color: #2f7532;
-}
-
-.options > .wrong-bg {
-    color: #fff;
-    background-color: #BC002D;
-}
-
-.response > button {
-    margin: 20px;
-    font-size: 20px;
-    padding: 5px 10px;
-    cursor: pointer;
-}
-
-#again {
-    font-size: 20px;
-    padding: 5px 10px;
-    cursor: pointer;
-}
-
-.score {
-    font-size: 28px;
-    margin: 30px;
-}
-

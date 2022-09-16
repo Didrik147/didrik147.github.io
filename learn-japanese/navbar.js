@@ -8,6 +8,7 @@ navEl.innerHTML = `
     <ul>
         <li><a href="hiragana.html">Hiragana</a></li>
         <li><a href="katakana.html">Katakana</a></li>
+        <li><a href="vocabulary.html">Vocabulary</a></li>
     </ul>
 `
 

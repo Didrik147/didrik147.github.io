@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,33 +10,34 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <nav></nav>
 
-    <main>
-        <h1 id="heading">What's That Katakana?</h1>
-        
+    <main id="vocabulary">
+        <h1 id="heading">Vocabulary training</h1>
+        <p id="info">Translate the following word</p>
         <section class="game-container">
-            <div class="character">
-
+            <div class="word">
+                <div>はい</div>
+                <div>(hai)</div>
             </div>
             <div class="options">
-                <button></button>
-                <button></button>
-                <button></button>
-                <button></button>
+                <button>yes</button>
+                <button>dog</button>
+                <button>vegetable</button>
+                <button>shrimp</button>
             </div>
             <div class="response"></div>
         </section>
-        
-        
     </main>
 
-    <audio id='audio' src=""></audio>
-    <audio id='pronunciation' src=""></audio>
+    <audio id='correctSound' src="./audio/yay.mp3"></audio>
+    <audio id='wrongSound' src="./audio/negative_beeps.mp3"></audio>
 
-    <script src="katakana-data.js"></script>
+    <script src="vocabulary-words.js"></script>
     <script src="navbar.js"></script>
-    <script src="script.js"></script>
+    <script src="vocabulary.js"></script>
 </body>
+
 </html>
