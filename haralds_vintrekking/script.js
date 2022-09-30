@@ -1,9 +1,9 @@
 // Lager variabler basert på DOM
-let minEl = document.querySelector('#min')
-let maxEl = document.querySelector('#max')
-let topEl = document.querySelector('#top')
-let btnEl = document.querySelector("#btn")
-let HaraldEl = document.querySelector('.Harald')
+const minEl = document.querySelector('#min')
+const maxEl = document.querySelector('#max')
+const topEl = document.querySelector('#top')
+const btnEl = document.querySelector("#btn")
+const HaraldEl = document.querySelector('.Harald')
 
 // Lager et array med heltall fra og med low til og med high
 function nArray(low, high){
@@ -48,8 +48,9 @@ ansatte.push(new Ansatt("Mira", 121, 132))
 ansatte.push(new Ansatt("Turid", 133, 144))
 ansatte.push(new Ansatt("Didrik", 145, 149, true)) // meg selv
 ansatte.push(new Ansatt("Vegard", 150, 161))
-ansatte.push(new Ansatt("Øyvind Lunder", 162, 173))
-ansatte.push(new Ansatt("Karoline", 174, 185, true))
+ansatte.push(new Ansatt("Tore", 162, 173))
+ansatte.push(new Ansatt("Marita", 174, 185))
+ansatte.push(new Ansatt("Svein", 186, 197))
 
 
 // Velger hvilket bilde av Harald som skal brukes basert på vindusbredde
