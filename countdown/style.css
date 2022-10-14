@@ -32,17 +32,25 @@ body>h1 {
     display: inline-block;
     border: 2px solid black;
     border-radius: 5px;
-    font-size: 30px;
-    padding: 10px;
+    font-size: 32px;
+    padding: 15px;
     margin: 20px;
     text-decoration: none;
     color: black;
 }
 
 #container a:nth-child(1):hover {
-    background-color: rgb(255,110,110);
+    background-color: rgb(255, 110, 110);
 }
 
 #container a:nth-child(2):hover {
     background-color: rgb(255, 255, 100);
+}
+
+
+
+@media(max-width: 500px) {
+    body>h1 {
+        font-size: 50px;
+    }
 }
