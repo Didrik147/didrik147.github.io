@@ -95,8 +95,10 @@ main div {
 
 .word>div:first-of-type {
     font-size: 50px;
+    /* font-size: 7vw; */
+    /* font-size: min(8vw, 50px); */
     margin: 0 auto;
-    height: 70px;
+    /* height: 70px; */
     display: flex;
     justify-content: center;
     align-items: center;
