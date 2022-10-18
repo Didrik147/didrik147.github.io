@@ -15,7 +15,8 @@ body {
 }
 
 header h1 {
-    margin: 30px;
+    margin: 30px 0px;
+    text-align: center;
 }
 
 main {
@@ -44,6 +45,12 @@ label, select, input {
 
 section label {
     margin-bottom: 5px;
+}
+
+#enternumber label {
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
 }
 
 select, input {
@@ -91,4 +98,19 @@ button {
 #result {
     font-size: 20px;
     /* letter-spacing: 2px; */
+}
+
+@media(max-width: 480px){
+    header h1 {
+        font-size: 28px;
+    }
+}
+@media(max-width: 320px){
+    #fromto {
+        flex-direction: column;
+    }
+
+    #fromdiv {
+        margin-bottom: 20px;
+    }
 }
