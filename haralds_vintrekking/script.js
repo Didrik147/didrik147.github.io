@@ -81,6 +81,35 @@ function tilfeldigTall(min, max){
     return Math.floor(Math.random() * (max - min + 1)) + min
 }
 
+// Tester funksjonen som trekker tilfeldige tall
+function testTilfeldig(){
+    let min = Number(minEl.value)
+    let max = Number(maxEl.value)
+
+    let l = max-min+1
+
+    tallArr = new Array(l).fill(0)
+
+    let n = 10000000
+
+    for(let i=0; i<n; i++){
+        tall = tilfeldigTall(min, max)
+        tallArr[tall-1] += 1
+    }
+
+    for(let i=0; i<l; i++){
+        console.log(`${i+1}: ${tallArr[i]*100/n} %`)
+    }
+
+    //console.log(tallArr)
+
+}
+
+// Bør gi lik sannsynlighet for alle tall
+//testTilfeldig()
+
+
+
 // Trekker ansatt
 function tilfeldigTrekk(){
     audio.load()
