@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Calculator</h1>
+    </header>
+    
+    <main>
+        <div class="display">
+            <input class="expression" type="text" value="">
+            <div class="answer"></div>
+        </div>
+        <div class="smallbuttons">
+            <button>exp</button>
+            <button>&#x1D465;&sup2;</button>
+            <button>&#x1D465;&sup3;</button>
+            <button>&#x1D465;&#x207F;</button>
+            <button>&#x1D465;&#x207B;&sup1;</button>
+            <button id="pi">&pi;</button>
+            
+            <button>(&#x2212;)</button>
+            <button>lg</button>
+            <button>ln</button>
+            <button>sin</button>
+            <button>cos</button>
+            <button>tan</button>
+
+            <button>&#x221A;</button>
+            <button>&#x221B;</button>
+            <button>(</button>
+            <button>)</button>
+            <button>S⇔D</button>
+            <button>Abs</button>
+        </div>
+        <div class="bigbuttons">
+            <button class="number">7</button>
+            <button class="number">8</button>
+            <button class="number">9</button>
+            <button class="text" id="del">DEL</button>
+            <button class="text" id="ac">AC</button>
+
+            <button class="number">4</button>
+            <button class="number">5</button>
+            <button class="number">6</button>
+            <button id="multiply">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <button id="divide">
+                <i class="fa-solid fa-divide"></i>
+            </button>
+            
+            <button class="number">1</button>
+            <button class="number">2</button>
+            <button class="number">3</button>
+            <button id="plus">
+                <i class="fa-solid fa-plus"></i>
+            </button>
+            <button id="minus">
+                <i class="fa-solid fa-minus"></i>
+            </button>
+            
+            <button class="number">0</button>
+            <button>.</button>
+            <button class="text" id="e">E</button>
+            <button class="text">Ans</button>
+            <button id="equals">
+                <i class="fa-solid fa-equals"></i>
+            </button>
+        </div>
+    </main>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
