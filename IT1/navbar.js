@@ -17,6 +17,9 @@ document.write(`
                             <a href="https://periodeplan.didrik147.repl.co/blokkA_2022h.html" target="_blank">
                                 Høsten 2022 (blokk A)
                             </a>
+                            <a href="https://periodeplan.didrik147.repl.co/fagdager_blokkA_2022h.html" target="_blank">
+                                Fagdager 2022 (blokk A)
+                            </a>
                         </li>
                     </ul>
                 </li>
