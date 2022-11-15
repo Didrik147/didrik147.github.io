@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    margin: 20px;
+}
+
+header h1 {
+    font-size: 40px;
+}
+
+main {
+    width: 95%;
+    max-width: 400px;
+    border: 3px solid #000;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ddd;
+}
+
+.display {
+    background-color: hsl(120, 50%, 95%);
+    width: 90%;
+    border: 2px solid #000;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    margin: 20px auto;
+}
+
+.display>* {
+    font-size: 40px;
+}
+
+.expression {
+    margin-bottom: 5px;
+    background-color: hsl(120, 50%, 95%);
+    outline: none;
+    border: none;
+    /* border-radius: 10px; */
+    color: #000;
+    caret-color: transparent;
+}
+
+.expression:focus-within{
+    caret-color: auto;
+}
+
+.answer {
+    text-align: right;
+    margin-top: 5px;
+    user-select: none;
+}
+
+.expression, .answer {
+    height: 55px;
+}
+
+.smallbuttons, .bigbuttons {
+    display: grid;
+    gap: 10px;
+    width: 90%;
+    margin-bottom: 20px;
+    user-select: none;
+}
+
+.smallbuttons {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+
+main button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.fa-solid {
+    pointer-events: none;
+}
+
+.smallbuttons button {
+    border-radius: 15px;
+    height: 35px;
+    font-size: 15px;
+    background-color: #999;
+
+}
+
+.bigbuttons {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.bigbuttons button {
+    border-radius: 20px;
+    height: 50px;
+    font-size: 30px;
+    background-color: #777;
+}
+
+.bigbuttons>.text {
+    font-size: 25px;
+}
+
+#del, #ac {
+    background-color: #fcba03;
+    color: #000;
+}
+
+
+@media (max-width: 350px) {
+    header {
+        margin: 10px;
+    }
+
+    header h1 {
+        display: none;
+    }
+
+    .bigbuttons button {
+        font-size: 25px;
+    }
+
+    .bigbuttons>.text {
+        font-size: 20px;
+    }
+
+}

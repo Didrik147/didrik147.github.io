@@ -4,7 +4,7 @@ function addItem(event) {
     event.preventDefault();
     let text = document.getElementById("todo-input");
 
-    console.log(text);
+    //console.log(text);
 
     db.collection(collectionName).add({
         text: text.value,
@@ -86,7 +86,7 @@ function createEventListeners() {
 }
 
 function deleteTask(id) {
-    console.log(id);
+    //console.log(id);
 
     let item = db.collection(collectionName).doc(id);
 
