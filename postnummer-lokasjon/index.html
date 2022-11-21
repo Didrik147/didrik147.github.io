@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+    <!-- Based on the following tutorial: -->
+    <!-- https://www.youtube.com/watch?v=K3GfUH7AZKs -->
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+    <title>Lokasjon fra postnummer</title>
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="hero hero-body is-dark container">
+        <h1 class="title">Postnummer lokasjon</h1>
+        <h2 class="subtitle">Skriv inn et postnummer for å finne hvor stedet er.</h2>
+
+        <form id="zipForm">
+            <div class="field">
+                <div class="control has-icons-left has-icons-right">
+                    <input class="input zip is-large" type="text" placeholder="Skriv inn postnummer">
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-map-pin"></i>
+                    </span>
+                    <span class="icon is-small is-right icon-check">
+                        <i class="fas fa-check"></i>
+                    </span>
+                    <span class="icon is-small is-right icon-remove">
+                        <i class="fas fa-remove"></i>
+                    </span>
+                </div>
+            </div>
+        </form>
+    </section>
+
+    <br>
+    <div class="container">
+        <div id="output"></div>
+    </div>
+
+    <br>
+
+    <div id='map' class="container"></div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

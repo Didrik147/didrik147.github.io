@@ -1,0 +1,7 @@
+.icon-remove, .icon-check {
+    display: none;
+}
+
+#map {
+    height: 300px;
+}
