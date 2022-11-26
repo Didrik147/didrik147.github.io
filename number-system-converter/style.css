@@ -105,7 +105,7 @@ button {
         font-size: 28px;
     }
 }
-@media(max-width: 320px){
+@media(max-width: 380px){
     #fromto {
         flex-direction: column;
     }

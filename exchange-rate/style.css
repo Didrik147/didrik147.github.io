@@ -19,7 +19,8 @@ body {
 }
 
 h1 {
-    color: var(--primary-color)   
+    color: var(--primary-color);
+    text-align: center; 
 }
 
 p {
