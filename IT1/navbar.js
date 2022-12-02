@@ -63,6 +63,9 @@ document.write(`
                             </ul>
 
                         </li>
+                        <li>
+                            <a href="https://blog.hubspot.com/website/web-safe-html-css-fonts" target="_blank">Web-Safe Fonts</a>
+                        </li>
 
                         
                     </ul>
