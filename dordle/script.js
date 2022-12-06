@@ -127,12 +127,16 @@ const msOffset = Date.now() - offsetFromDate
 const dayOffset = msOffset / 1000 / 60 / 60 / 24
 //console.log(dayOffset)
 
-let antallKategorier = 4
+
+
+//let = begreper = [begreperNaturfag, begreperMatematikk, begreperIT, begreperProg]
+let begreper = [begreperNaturfag, begreperMatematikk]
+
+let antallKategorier = begreper.length;
+
 //let r = Math.floor(Math.random()*2)
 let r = Math.floor(dayOffset) % antallKategorier
 //console.log(r)
-
-begreper = [begreperNaturfag, begreperMatematikk, begreperIT, begreperProg]
 
 let muligeOrd = begreper[r]
 
