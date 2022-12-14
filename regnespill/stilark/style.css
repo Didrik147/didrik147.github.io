@@ -1,0 +1,125 @@
+
+body {
+    font-family: 'Comic Sans MS', cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+
+    background-color: rgb(190, 205, 255);
+}
+
+/* Navbar */
+header nav {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    background-color: aqua;
+    text-align: center;
+}
+
+.logo {
+    display: flex;
+    font-weight: bold;
+    font-size: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lenker {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+header nav a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+header nav a:hover {
+    background-color: pink;
+}
+
+.fa-bars {
+    display: none;
+    color: black;
+    font-size: 30px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.fa-house {
+    font-size: 30px;
+}
+
+.lenker.vis {
+    display: flex;
+}
+
+
+.container {
+    margin-top: 50px;
+    width: 95%;
+    max-width: 500px;
+    /* border: 10px solid rgb(190, 205, 255); */
+    border-radius: 20px;
+    background-color: #fff;
+    padding: 30px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container * {
+    font-size: 18px;
+}
+
+.container h1 {
+    font-size: 40px;
+}
+.container h2 {
+    font-size: 30px;
+}
+
+input, button {
+    padding: 5px;
+}
+
+button {
+    margin: 20px;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 100px
+}
+
+.wrong {
+    background-color: rgb(255, 110, 110)
+}
+.correct {
+    background-color: rgb(110, 255, 110)
+}
+
+
+@media (max-width: 500px){
+    header nav {
+        flex-direction: column;
+    }
+
+    .lenker {
+        flex-direction: column;
+        display: none
+    }
+
+    .fa-bars {
+        display: flex;
+    }
+}

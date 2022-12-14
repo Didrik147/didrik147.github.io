@@ -74,13 +74,13 @@ function convert(){
         /* From binary to decimal */
         if(toEl.value === "Decimal"){
             let dec = bin2dec(bin)
-            resultEl.innerHTML = `<p>(${bin})<sub>2</sub> = (${dec})<sub>10</sub></p>`
+            resultEl.innerHTML = `(${bin})${sub(2)} = (${dec})${sub(10)} `
 
         /* From binary to hexadecimal */
         }else if(toEl.value == "Hexadecimal"){
             let dec = bin2dec(bin)
             let hex = dec2hex(dec)
-            resultEl.innerHTML = `<p>(${bin})<sub>2</sub> = (${hex})<sub>16</sub></p>`
+            resultEl.innerHTML = `(${bin})${sub(2)} = (${hex})${sub(16)} `
 
         }else {
             resultEl.innerHTML = `Not yet implemented`
@@ -100,14 +100,14 @@ function convert(){
         if(toEl.value === "Binary"){
             /* console.log("To binary") */
             let bin = dec2bin(dec)
-            resultEl.innerHTML = `<p>(${dec})<sub>10</sub> = (${bin})<sub>2</sub></p>`
+            resultEl.innerHTML = `(${dec})${sub(10)} = (${bin})${sub(2)} `
         
         /* From decimal to hexadecimal */
         } else if (toEl.value === "Hexadecimal"){
             /* console.log("To hexadecimal") */
             
             let hex = dec2hex(dec)
-            resultEl.innerHTML = `<p>(${dec})<sub>10</sub> = (${hex})<sub>16</sub></p>`
+            resultEl.innerHTML = `(${dec})${sub(10)} = (${hex})${sub(16)}`
         }
 
     /* From hexadecimal */
@@ -116,17 +116,32 @@ function convert(){
 
         if(toEl.value === "Decimal"){
             let dec = hex2dec(hex)
-            resultEl.innerHTML = `<p>(${hex})<sub>16</sub> = (${dec})<sub>10</sub></p>`
+            resultEl.innerHTML = `(${hex})${sub(16)} = (${dec})${sub(10)} `
 
         }else if(toEl.value === "Binary"){
             let dec = hex2dec(hex)
             let bin = dec2bin(dec)
-            resultEl.innerHTML = `<p>(${hex})<sub>16</sub> = (${bin})<sub>2</sub></p>`
+            resultEl.innerHTML = `(${hex})${sub(16)} = (${bin})${sub(2)}`
 
         }else {
             resultEl.innerHTML = `Not yet implemented`
         }
     }
+}
+
+
+
+function sub(number){
+    number = String(number)
+    let L = number.length
+    let output = ""
+
+    for(let digit of number){
+        output += `&#832${digit};`
+    }
+
+    return output
+    
 }
 
 

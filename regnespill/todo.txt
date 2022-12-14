@@ -1,0 +1,39 @@
+TO DO LIST:
+
+[x] Gjør slik at man bare kan svare én gang (da burde også fasiten komme opp). 
+Knappen "sjekk svar" burde da fjernes
+
+Hint: bruk kommandoen
+sjekkBtn.style.display = "none"
+og 
+sjekkBtn.style.display = "inline-block"
+
+[x] Legg til en knapp som trekker en ny oppgave
+
+[x] Sørg for at "konklusjon" elementet tømmes når vi trekker ny oppgave
+
+[x] Ikke sjekk svaret med mindre vi har skrevet noe i input feltet
+
+[x] Legg til poeng/streak
+
+[x] Legg til en boks som innholdet av spillet er i. Bakgrunnsfargen til resten av body skal endres
+
+[x] Lag subtraksjonssiden
+
+[x] Gjør nettsiden responsiv
+
+[x] Legg til mappestruktur
+
+[ ] La brukeren velge vanskelighetsgrad (f.eks. ved å la de tilfeldige tallene være større)
+
+[ ] Legg til mulighet for å trykke på enter etter å ha skrevet inn et tall.
+
+[ ] Legg til bilder/emojier
+
+[ ] Legg til lyd
+
+[ ] Legg til modus for divisjon (kan kreve endring i JavaScript fila for å unngå f.eks. 1/3.)
+
+[ ] Legg til timer. F.eks. skal brukeren løse så mange mattestykker hen rekker på 30 sekunder. Dette hindrer brukeren i å bruke kalkulator, da dette ikke vil lønne seg i like stor grad.
+
+[ ] Legg til lagring i localStorage

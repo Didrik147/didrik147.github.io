@@ -1,0 +1,26 @@
+body {
+    /* background-image: url('bakgrunnsbilde_tall_1920.jpg'); */
+
+    background-image: linear-gradient(
+        rgba(0,0,0, 0.7),
+        rgba(0,0,0, 0.7)),
+        url('../bilder/bakgrunnsbilde_tall_1280.jpg');
+}
+
+
+main {
+    color: white;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+main h1 {
+    font-size: 60px;
+}
+
+main h2 {
+    font-size: 30px;
+}
