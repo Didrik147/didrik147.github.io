@@ -216,9 +216,40 @@ main div {
     width: 120px;
 }
 
+h2 {
+    margin-top: 20px;
+}
 
 
-@media(max-width: 500px) {
+table {
+    margin: 10px auto;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 5px;
+    font-weight: normal;
+}
+
+th::first-letter{
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+
+
+tr p:first-child{
+    font-size: 30px;
+}
+
+
+
+
+
+@media(max-width: 900px) {
     #heading {
         font-size: 45px;
     }

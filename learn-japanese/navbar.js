@@ -6,8 +6,9 @@ navEl.innerHTML = `
         <i class="fa fa-bars fa-lg"></i>
     </a>
     <ul>
-        <li><a href="hiragana.html">Hiragana</a></li>
-        <li><a href="katakana.html">Katakana</a></li>
+        <li><a href="hiragana_table.html">Hiragana table</a></li>
+        <li><a href="hiragana.html">What's that Hiragana?</a></li>
+        <li><a href="katakana.html">What's that Katakana?</a></li>
         <li><a href="vocabulary.html">Vocabulary</a></li>
     </ul>
 `

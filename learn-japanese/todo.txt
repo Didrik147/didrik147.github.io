@@ -5,3 +5,8 @@ To do list
 [x] Add home page
 [x] Add sound
 [x] Add mode with words
+[ ] Add Hiragana table
+[ ] Add Katakana table
+[ ] Add dropdown in navbar (e.g. "Tables" and "What's that Kana?"
+[ ] Split "Vocabulary" into different topics (numbers, words, greetings etc.)
+[ ] Make sure that two letters/words to not occur in the same game
