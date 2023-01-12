@@ -225,6 +225,13 @@ table {
     margin: 10px auto;
     border-collapse: collapse;
     text-align: center;
+    table-layout: fixed;
+    width: 95%;
+    max-width: 600px;
+}
+
+th {
+    overflow-wrap: break-word;
 }
 
 th, td {
