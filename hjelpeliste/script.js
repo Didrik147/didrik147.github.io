@@ -37,6 +37,10 @@ function generateItems(items) {
     let itemsHTML = "";
 
     items.forEach((item) => {
+        let text = item.text
+        text = text.replace('>', '')
+        text = text.replace('<', '')
+        console.log(text)
         itemsHTML += `
         <div class="todo-item">
             <div class="check">
@@ -45,7 +49,7 @@ function generateItems(items) {
                 </div>
             </div>
             <div class="todo-text ${item.status == "completed" ? "checked" : ""}">
-                ${item.text}
+                ${text}
             </div>
             <div class="trash">
                 <div data-id="${item.id}" class="trash-mark">
