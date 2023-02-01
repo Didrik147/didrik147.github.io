@@ -18,7 +18,13 @@ document.write(`
                                 Høsten 2022 (blokk A)
                             </a>
                             <a href="https://periodeplan.didrik147.repl.co/fagdager_blokkA_2022h.html" target="_blank">
-                                Fagdager 2022 (blokk A)
+                                Fagdager våren 2022 (blokk A)
+                            </a>
+                            <a href="https://periodeplan.didrik147.repl.co/blokkA_2023v.html" target="_blank">
+                                Våren 2023 (blokk A)
+                            </a>
+                            <a href="https://periodeplan.didrik147.repl.co/fagdager_blokkA_2023v.html" target="_blank">
+                                Fagdager høsten 2023 (blokk A)
                             </a>
                         </li>
                     </ul>
