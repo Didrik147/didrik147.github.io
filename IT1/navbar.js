@@ -72,6 +72,12 @@ document.write(`
                         <li>
                             <a href="https://blog.hubspot.com/website/web-safe-html-css-fonts" target="_blank">Web-Safe Fonts</a>
                         </li>
+                        <li>
+                            <a href="https://fontawesome.com/" target="_blank">Font Awesome</a>
+                        </li>
+                            <li>
+                                <a href="https://cdnjs.com/" target="_blank">cdnjs</a>
+                            </li>
 
                         
                     </ul>
