@@ -8,7 +8,7 @@ document.write(`
 
         <nav class="navbar">
             <ul>
-                <li><a href="index.html">Hjem</a></li>
+                <!-- <li><a href="index.html">Hjem</a></li> -->
 
                 <li>
                     <a href="#">Lenker <i class="fas fa-caret-down"></i></a>
@@ -18,10 +18,7 @@ document.write(`
                         </li>
 
                         <li>
-                            <a href="https://aunivers.lokus.no/fagpakker/realfag/programmering/python" target="_blank">Python (Aunivers)</a>
-
-                        <li>
-                            <a href="https://aunivers.lokus.no/fagpakker/realfag/informasjonsteknologi-1-2/it-2" target="_blank">Digital lærebok (Aschehoug)</a>
+                            <a href="https://innhold.aunivers.no/fagpakker/realfag/informasjonsteknologi-1-2/it-2" target="_blank">Digital lærebok (Aschehoug)</a>
                         </li>
 
                         <li><a href="https://open.kattis.com/problems" target="_blank">Kattis</a></li>

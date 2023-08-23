@@ -8,35 +8,23 @@ document.write(`
 
         <nav class="navbar">
             <ul>
-                <li><a href="index.html">Hjem</a></li>
+                <!-- <li><a href="index.html">Hjem</a></li> -->
 
-                <li>
+                <!-- <li>
                     <a href="#">Periodeplan <i class="fas fa-caret-down"></i></a>
                     <ul>
                         <li>
-                            <a href="https://periodeplan.didrik147.repl.co/blokkA_2022h.html" target="_blank">
-                                Høsten 2022 (blokk A)
-                            </a>
-                            <a href="https://periodeplan.didrik147.repl.co/fagdager_blokkA_2022h.html" target="_blank">
-                                Fagdager våren 2022 (blokk A)
-                            </a>
-                            <a href="https://periodeplan.didrik147.repl.co/blokkA_2023v.html" target="_blank">
-                                Våren 2023 (blokk A)
-                            </a>
-                            <a href="https://periodeplan.didrik147.repl.co/fagdager_blokkA_2023v.html" target="_blank">
-                                Fagdager høsten 2023 (blokk A)
+                            <a href="https://periodeplan.didrik147.repl.co/blokkD_2023h.html" target="_blank">
+                                Høsten 2023 (blokk D)
                             </a>
                         </li>
                     </ul>
-                </li>
+                </li> -->
 
                 <li>
                     <a href="#">Fagstoff <i class="fas fa-caret-down"></i></a>
                     <ul>
-                        <li><a href="https://kode-2016.cappelendamm.no/" target="_blank">Elevnettsted Kode 1</a></li>
-
-                        <li><a href="https://aunivers.lokus.no/fagpakker/realfag/informasjonsteknologi-1-2/it-1" target="_blank">Digital lærebok (Aschehoug)</a></li>
-                        
+                        <li><a href="https://kode-2016.cappelendamm.no/" target="_blank">Elevnettsted Kode 1</a></li>                        
 
                         <li><a href="https://sandvika.it/#/" target="_blank">Fagstoff IT1 (Sandvika)</a></li>
 
@@ -97,11 +85,14 @@ document.write(`
                 <li>
                     <a href="#">Annet <i class="fas fa-caret-down"></i></a>
                     <ul>
+                        <li>
+                            <a href="http://didrik147.github.io/hjelpeliste" target="_blank">Digital hjelpeliste</a>
+                        </li>
+                        
                         <li><a href="https://github.com/" target="_blank">GitHub</a></li>
                         <li><a href="https://replit.com/" target="_blank">Replit</a></li>
-                        <li><a href="http://didrik147.github.io/timeplan/timeplan_2022-2023.html" target="_blank">Didriks timeplan</a></li>
-                        <li><a href="http://didrik147.github.io/hjelpeliste" target="_blank">Digital hjelpeliste</a>
-                        </li>
+
+                        <li><a href="https://timeplan.didrik147.repl.co/" target="_blank">Didriks timeplan</a></li>
                     </ul>
                 </li>
             </ul>
