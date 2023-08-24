@@ -24,7 +24,7 @@ document.write(`
                 <li>
                     <a href="#">Fagstoff <i class="fas fa-caret-down"></i></a>
                     <ul>
-                        <li><a href="https://kode-2016.cappelendamm.no/" target="_blank">Elevnettsted Kode 1</a></li>                        
+                        <li><a href="https://kode-2016.cappelendamm.no/elevreal/seksjon.html?tid=1943576" target="_blank">Elevnettsted Kode 1</a></li>                        
 
                         <li><a href="https://sandvika.it/#/" target="_blank">Fagstoff IT1 (Sandvika)</a></li>
 
