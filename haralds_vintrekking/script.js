@@ -30,6 +30,7 @@ class Ansatt{
 // Lager objekter av de ansatte, og legger i et array 
 // For ansatte som har gitt samtykke, brukes ansattfoto
 let ansatte = []
+/*
 ansatte.push(new Ansatt("Asbjørn", 1, 12))
 ansatte.push(new Ansatt("Tore", 13, 24))
 ansatte.push(new Ansatt("Mari K. K.", 25, 30, true))
@@ -51,7 +52,7 @@ ansatte.push(new Ansatt("Vegard", 150, 161))
 ansatte.push(new Ansatt("Tore", 162, 173))
 ansatte.push(new Ansatt("Marita", 174, 185))
 ansatte.push(new Ansatt("Svein", 186, 197))
-
+*/
 
 // Velger hvilket bilde av Harald som skal brukes basert på vindusbredde
 window.addEventListener('resize', setHarald);
@@ -146,6 +147,7 @@ function tilfeldigTrekk(){
         }
         else {
             topNumberEl.style.fontSize = "120px" 
+            topNumberEl.innerHTML += `<p class="smallerText">(sjekk lista)</p>`
         }
 
         btnEl.innerText = "Igjen?"

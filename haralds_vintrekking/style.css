@@ -24,6 +24,10 @@ h1 {
     text-align: center;
 }
 
+.smallerText {
+    font-size: 50px;
+}
+
 
 input, button {
     width: 100%;
