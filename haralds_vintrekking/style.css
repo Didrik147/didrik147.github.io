@@ -76,6 +76,10 @@ button.trukket {
     position: relative;
 }
 
+#navn {
+    font-size: 45px;
+}
+
 .Harald {
     position: absolute;
     height: 95%;

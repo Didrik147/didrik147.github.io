@@ -28,31 +28,36 @@ class Ansatt{
 
 
 // Lager objekter av de ansatte, og legger i et array 
-// For ansatte som har gitt samtykke, brukes ansattfoto
+// For ansatte som har gitt samtykke, brukes portrettfoto
 let ansatte = []
-/*
+
 ansatte.push(new Ansatt("Asbjørn", 1, 12))
 ansatte.push(new Ansatt("Tore", 13, 24))
-ansatte.push(new Ansatt("Mari K. K.", 25, 30, true))
+ansatte.push(new Ansatt("Mari Kvellestad", 25, 30, true))
 ansatte.push(new Ansatt("Kirsti", 31, 36))
-ansatte.push(new Ansatt("Mari K. K.", 37, 42, true))
+ansatte.push(new Ansatt("Mari Kvellestad", 37, 42, true))
 ansatte.push(new Ansatt("Johanne", 43, 47))
 ansatte.push(new Ansatt("Kristin", 48, 59))
 ansatte.push(new Ansatt("Kirsti", 60, 65))
 ansatte.push(new Ansatt("Johanne", 66, 69))
-ansatte.push(new Ansatt("Thomas R.", 70, 81))
+ansatte.push(new Ansatt("Thomas Riis", 70, 81))
 ansatte.push(new Ansatt("Johanne", 82, 84))
 ansatte.push(new Ansatt("Harald", 85, 96, true))
-ansatte.push(new Ansatt("Otto A.", 97, 108))
-ansatte.push(new Ansatt("Anders H.", 109, 120, true))
+ansatte.push(new Ansatt("Otto", 97, 108))
+ansatte.push(new Ansatt("Anders Huseby", 109, 120, true))
 ansatte.push(new Ansatt("Mira", 121, 132))
 ansatte.push(new Ansatt("Turid", 133, 144))
 ansatte.push(new Ansatt("Didrik", 145, 149, true)) // meg selv
-ansatte.push(new Ansatt("Vegard", 150, 161))
+ansatte.push(new Ansatt("Vegar", 150, 161))
 ansatte.push(new Ansatt("Tore", 162, 173))
-ansatte.push(new Ansatt("Marita", 174, 185))
+ansatte.push(new Ansatt("Karoline", 174, 185, true))
 ansatte.push(new Ansatt("Svein", 186, 197))
-*/
+ansatte.push(new Ansatt("Åsne", 198, 209))
+ansatte.push(new Ansatt("Hilde", 210, 214))
+ansatte.push(new Ansatt("Martine Bye", 215, 226))
+ansatte.push(new Ansatt("Anna Sofie", 227, 238))
+ansatte.push(new Ansatt("Martine", 239, 250))
+ansatte.push(new Ansatt("Live", 263, 274))
 
 // Velger hvilket bilde av Harald som skal brukes basert på vindusbredde
 window.addEventListener('resize', setHarald);
@@ -137,7 +142,7 @@ function tilfeldigTrekk(){
         topNumberEl.innerHTML = `<p>${tilfeldig}</p>`
 
         if (navn != ""){
-            topNumberEl.innerHTML += `<p>(${navn})</p>`
+            topNumberEl.innerHTML += `<p id="navn">(${navn})</p>`
 
             if(harBilde){
                 topNumberEl.innerHTML += `<img src="./bilder/ansatte/${navn}.jpg" alt="${navn}">`
