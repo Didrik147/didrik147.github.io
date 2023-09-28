@@ -17,8 +17,18 @@ let nPutters;
 function updateMain() {
     //console.log("Updating HTML")
     mainEl.innerHTML = ""
-    distance_from = Number(fromInputEl.value)
-    distance_to = Number(toInputEl.value)
+    if (fromInputEl.value == ''){
+        distance_from = Number(fromInputEl.placeholder)
+    }else {
+        distance_from = Number(fromInputEl.value)
+    }
+
+    if (toInputEl.value == ''){
+        distance_to = Number(toInputEl.placeholder)
+    }else {
+        distance_to = Number(toInputEl.value)
+    }
+    
     for (let d = distance_from; d <= distance_to; d++) {
         mainEl.innerHTML += `
         <article>
@@ -28,8 +38,12 @@ function updateMain() {
         </article>
     `
         const buttonrowEl = document.querySelector(`.row${d}`)
-
-        nPutters = Number(putterInputEl.value)
+        if (putterInputEl.value == ''){
+            nPutters = Number(putterInputEl.placeholder)
+        }else{
+            nPutters = Number(putterInputEl.value)
+        }
+        
         for (let i = 0; i <= nPutters; i++) {
             buttonrowEl.innerHTML += `
             <button>${i}</button>
@@ -41,8 +55,6 @@ function updateMain() {
 
 
         updateButtons()
-
-        window.scrollTo(0, document.body.scrollHeight);
     }
 }
 
