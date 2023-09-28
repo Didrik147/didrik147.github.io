@@ -1,0 +1,13 @@
+# TO DO
+- [x] HTML
+  - [ ] Add option to write your own mold
+- [x] CSS
+- [x] JS (without database)
+- [ ] Database
+- [ ] Local storage
+  - [ ] Putter mold
+  - [ ] Number of putts
+  - [ ] Distances
+- [ ] Visualization (Python?)
+- [ ] User authentication?
+  - [ ] My putters

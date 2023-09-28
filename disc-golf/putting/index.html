@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Putting</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>POTTIS POTTIS POW POW</h1>
+        <p>Choose putter, distance and number of putts for each distance.</p>
+        <article>
+            <label for="moldinput">Putter:</label>
+            <select name="moldinput" id="moldinput">
+                <option value="Pure">Pure</option>
+                <option value="Shield">Shield</option>
+                <option value="Deputy">Deputy</option>
+              </select>
+        </article>
+
+        <article>
+            <label for="putterinput">Number of putters:</label>
+            <input type="number" id="putterinput" value=4 min=0 max=8>
+        </article>
+
+        <article id="distance">
+            Distance from <input type="number" id="frominput" value=4 min=3 max=20>
+            <br>
+            to <input type="number" id="toinput" value=7 min=3 max=20> meters.
+        </article>
+    </header>
+
+    <main>
+        <!-- <article>
+            <h2>4 meter</h2>
+            <div class="buttonrow">
+                <button>0</button>
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>4</button>
+            </div>
+        </article>
+        <article>
+            <h2>5 meter</h2>
+            <div class="buttonrow">
+                <button>0</button>
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>4</button>
+            </div>
+        </article>
+        <article>
+            <h2>6 meter</h2>
+            <div class="buttonrow">
+                <button>0</button>
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>4</button>
+            </div>
+        </article> -->
+
+    </main>
+
+    <footer>
+        <button id="start">START</button>
+        <button id="submit" class="hide">Submit</button>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
