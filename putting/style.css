@@ -114,3 +114,8 @@ footer button {
 .center {
     text-align: center;
 }
+
+.chart-container {
+    width: 100%;
+    max-width: 600px;
+}
