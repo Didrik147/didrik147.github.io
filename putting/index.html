@@ -1,93 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Putting</title>
+    <title>POTTIS</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            min-height: 100vh;
+            /* background-image: url('https://cdn.pixabay.com/photo/2017/07/08/17/33/disc-golf-2485038_1280.jpg'); */
+            
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.1)), url('https://cdn.pixabay.com/photo/2017/07/08/17/33/disc-golf-2485038_1280.jpg');
+            
+            background-position: center;
+            background-size: cover;
+        }
+
+        header {
+            margin-top: 80px;
+            margin-bottom: 40px;
+        }
+
+
+        main {
+            text-align: center;
+        }
+
+        main a {
+            margin: 15px;
+            padding: 10px;
+            font-size: 22px;
+            border: 2px solid black;
+            border-radius: 10px;
+            min-width: 160px;
+            display: inline-block;
+            text-decoration: none;
+            color: black;
+            cursor: pointer;
+            background-color: white;
+        }
+
+        main a:hover{
+            background-color: rgb(0, 183, 255);
+        }
+    </style>
 </head>
+
 <body>
     <header>
         <h1>POTTIS POTTIS POW POW</h1>
-        <p>Choose putter, distance and number of putts for each distance.</p>
-        <article>
-            <label for="moldinput">Putter:</label>
-            <select name="moldinput" id="moldinput">
-                <option value="Pure">Pure</option>
-                <option value="Shield">Shield</option>
-                <option value="Deputy">Deputy</option>
-              </select>
-        </article>
-
-        <article>
-            <label for="putterinput">Number of putters:</label>
-            <input type="number" id="putterinput" placeholder=4 min=0 max=8>
-        </article>
-
-        <article id="distance">
-            Distance from <input type="number" id="frominput" placeholder=4 min=3 max=20>
-            <br>
-            to <input type="number" id="toinput" placeholder=7 min=3 max=20> meters.
-        </article>
+        <p>Welcome to my Pro Putting Practice Program!</p>
+        <p>Choose "New Practice" or "Summary"</p>
     </header>
 
     <main>
-        <!-- <article>
-            <h2>4 meter</h2>
-            <div class="buttonrow">
-                <button>0</button>
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
-                <button>4</button>
-            </div>
-        </article>
-        <article>
-            <h2>5 meter</h2>
-            <div class="buttonrow">
-                <button>0</button>
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
-                <button>4</button>
-            </div>
-        </article>
-        <article>
-            <h2>6 meter</h2>
-            <div class="buttonrow">
-                <button>0</button>
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
-                <button>4</button>
-            </div>
-        </article> -->
-
+        <a href='new_practice.html'>New Practice</button>
+        <a href='summary.html'>Summary</button>
     </main>
 
-    <div class="chart-container hide">
-        <canvas id="myChart"></canvas>
-    </div>
 
-    <footer>
-        <button id="start">START</button>
-        <button id="submit" class="hide">Submit</button>
-    </footer>
 
-    <!-- Audio made from TF2 voice commands -->
-    <!-- Source: https://wiki.teamfortress.com/wiki/Heavy_voice_commands -->
-    <audio src="pottis pottis pow pow.mp3" id='pottis'></audio>
-
-    
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-labels"></script>
-    
-    <script src="script.js"></script>
-
-    
 </body>
+
 </html>

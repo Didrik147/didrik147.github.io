@@ -3,11 +3,12 @@
   - [ ] Add option to write your own mold
 - [x] CSS
 - [x] JS (without database)
-- [ ] Database
-- [ ] Local storage
-  - [ ] Putter mold
-  - [ ] Number of putts
-  - [ ] Distances
-- [ ] Visualization (Python?)
+- [x] Database
+- [ ] Fix code for distances outside 4-9 meters
+- [x] Local storage
+  - [x] Putter mold
+  - [x] Number of putts
+  - [x] Distances
+- [x] Visualization of C1X percentage (pie chart)
 - [ ] User authentication?
   - [ ] My putters
