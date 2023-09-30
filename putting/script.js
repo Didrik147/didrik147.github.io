@@ -183,8 +183,12 @@ let addData = {
     '9m' : [0, 0],
 }
 
-let newData = addData
-let oldData = addData
+let newData = {
+    ...addData
+}
+let oldData = {
+    ...addData
+}
 
 let distanceArr = ['4m', '5m', '6m', '7m', '8m', '9m']
 
@@ -239,8 +243,6 @@ async function getPutterData(putterName) {
     // Get discs from database
     const q = query(collection(db, collectionName))
     const querySnapshot = await getDocs(q)
-
-  
 
     querySnapshot.forEach((doc) => {
         //console.log(doc)
@@ -318,6 +320,8 @@ function submitData() {
             console.log(`${d} m: ${nSuccess}/${nPutters}`)
         }
     }
+
+    console.log(addData)
 
     distanceArr.forEach(dist => {
         newData[dist] = [
