@@ -1,6 +1,5 @@
 /* Program is currently only working for 4-9 meters */
 
-
 /* Firebase */
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
 
@@ -31,11 +30,12 @@ const mainEl = document.querySelector("main")
 const headerEl = document.querySelector("header")
 const footerEl = document.querySelector("footer")
 
-const selectEl = document.querySelector('#moldselect')
+const moldSelectEl = document.querySelector('#moldselect')
 const putterInputEl = document.querySelector("#putterinput")
 const fromInputEl = document.querySelector("#frominput")
 const toInputEl = document.querySelector("#toinput")
 const inputEls = document.querySelectorAll("input")
+const usernameEl = document.querySelector("#username")
 
 const startBtn = document.querySelector("#start")
 const submitBtn = document.querySelector("#submit")
@@ -47,14 +47,14 @@ let C1X_percentage;
 
 let moldArr = []
 
-for(let i=0; i<selectEl.children.length; i++){
-    moldArr.push(selectEl.children[i].value)
-    if (selectEl.children[i].value == localStorage.mold){
-        selectEl.children[i].selected = true
+for(let i=0; i<moldSelectEl.children.length; i++){
+    moldArr.push(moldSelectEl.children[i].value)
+    if (moldSelectEl.children[i].value == localStorage.mold){
+        moldSelectEl.children[i].selected = true
     }
 }
 
-let putterName = selectEl.value
+let putterName = moldSelectEl.value
 
 if(localStorage.putters){
     putterInputEl.placeholder = localStorage.putters
@@ -68,15 +68,19 @@ if(localStorage.toDistance){
     toInputEl.placeholder = localStorage.toDistance
 }
 
+if(localStorage.username){
+    usernameEl.value = localStorage.username
+}
 
-selectEl.addEventListener('change', updateMoldLS)
+
+moldSelectEl.addEventListener('change', updateMoldLS)
 putterInputEl.addEventListener('input', updatePuttersLS)
 fromInputEl.addEventListener('input', updateFromDistanceLS)
 toInputEl.addEventListener('input', updateToDistanceLS)
 
 function updateMoldLS(){
     console.log("Updating mold in local storage")
-    localStorage.mold = selectEl.value
+    localStorage.mold = moldSelectEl.value
 }
 
 function updatePuttersLS(){
@@ -168,9 +172,19 @@ function updateButtons() {
 }
 
 /* Database */
-let collectionName = 'putting'
+let collectionName;
 
-let oldData = {}
+let addData = {
+    '4m' : [0, 0],
+    '5m' : [0, 0],
+    '6m' : [0, 0],
+    '7m' : [0, 0],
+    '8m' : [0, 0],
+    '9m' : [0, 0],
+}
+
+let newData = addData
+let oldData = addData
 
 let distanceArr = ['4m', '5m', '6m', '7m', '8m', '9m']
 
@@ -185,19 +199,23 @@ startBtn.addEventListener("click", startPractice)
 
 async function startPractice() {
     // Get putter name
-    putterName = selectEl.value
+    putterName = moldSelectEl.value
+    localStorage.username = usernameEl.value
+    collectionName = localStorage.username
+    //collectionName = 'putting'
+
     //console.log(putterName)
 
     // Get previous data from database
-    await getPutterData(putterName)  
+    await getPutterData(putterName)
 
     // Remove background
     document.querySelector('body').style.background='none'
     headerEl.style.margin='0px'
 
-    console.log(`Data before this putting practice (made/tried)`)
     console.log(`Putter: ${putterName}`)
-
+    console.log(`Data before this putting practice (made/tried)`)
+    
     distanceArr.forEach(d => {
         console.log(`${d}: ${oldData[d][0]}/${oldData[d][1]}`)
     })
@@ -222,7 +240,10 @@ async function getPutterData(putterName) {
     const q = query(collection(db, collectionName))
     const querySnapshot = await getDocs(q)
 
+  
+
     querySnapshot.forEach((doc) => {
+        //console.log(doc)
         //console.log(doc.id, " => ", doc.data())
 
         if (doc.id == putterName){
@@ -269,16 +290,6 @@ async function updatePutter(newData) {
 
 }
 
-let addData = {
-    '4m' : [0, 0],
-    '5m' : [0, 0],
-    '6m' : [0, 0],
-    '7m' : [0, 0],
-    '8m' : [0, 0],
-    '9m' : [0, 0],
-}
-
-let newData = addData
 
 submitBtn.addEventListener('click', submitData)
 

@@ -64,6 +64,22 @@ header article select {
     padding: 5px;
 }
 
+form {
+    text-align: center;
+}
+
+form * {
+    font-size: 20px;
+}
+
+form input{
+    padding: 5px;
+}
+
+form select {
+    padding: 5px;
+    margin-left: 5px;
+}
 
 
 /* Main */
