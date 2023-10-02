@@ -9,6 +9,11 @@
   - [x] Putter mold
   - [x] Number of putts
   - [x] Distances
-- [x] Visualization of C1X percentage (pie chart)
+  - [ ] User in summary
+  - [ ] Username
+- [ ] Visualization
+  - [x] C1X percentage (pie chart)
+  - [ ] C1X percentage (circular)
+  - [ ] Percentage for each distance (bar chart)
 - [ ] User authentication?
   - [ ] My putters

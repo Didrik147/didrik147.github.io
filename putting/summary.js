@@ -27,8 +27,20 @@ const userEl = document.querySelector('#user')
 const mainEl = document.querySelector('main')
 const tableContainerEl = document.querySelector('#table-container')
 const c1xEl = document.querySelector('#c1x')
+const bodyEl = document.querySelector('body')
 
 let username = userEl.value
+
+let distances = ["4m", "5m", "6m", "7m", "8m", "9m"]
+
+let C1X_data = {
+    '4m': [0, 0],
+    '5m': [0, 0],
+    '6m': [0, 0],
+    '7m': [0, 0],
+    '8m': [0, 0],
+    '9m': [0, 0],
+}
 
 
 
@@ -45,22 +57,31 @@ async function getUser(username) {
     const q = query(collection(db, username))
     const querySnapshot = await getDocs(q)
 
-    let items = []
+    let discs = []
 
     if (querySnapshot.size == 0) {
         console.log("User has no data")
     } else {
         querySnapshot.forEach((doc) => {
-            items.push(doc.data())
+            discs.push(doc.data())
         })
     }
-    getData(items)
+    getData(discs)
 }
 
 
 getUser(username)
 
-function getData(items) {
+function getData(discs) {
+    C1X_data = {
+        '4m': [0, 0],
+        '5m': [0, 0],
+        '6m': [0, 0],
+        '7m': [0, 0],
+        '8m': [0, 0],
+        '9m': [0, 0],
+    }
+    
     tableContainerEl.innerHTML = `<h2 class="center">Data</h2>`
 
     // Lager et tabellelement
@@ -89,20 +110,17 @@ function getData(items) {
     // Lager tbody element
     let tbodyEl = document.createElement('tbody')
 
-    let fields = ["4m", "5m", "6m", "7m", "8m", "9m"]
-
     let madeTotal = 0
     let triedTotal = 0
 
     // Går gjennom alle objektene i arrayet
     // Dette er alle de ulike putterne
-    for (let i = 0; i < items.length; i++) {
+    discs.forEach(disc => {
         let trEl = document.createElement('tr')
 
         // Navnet på discen
         let tdEl = document.createElement('td')
-        //console.log(items[i].name)
-        tdEl.innerHTML = items[i].name
+        tdEl.innerHTML = disc.name
 
         // Legger kolonnen til raden
         trEl.appendChild(tdEl)
@@ -111,20 +129,23 @@ function getData(items) {
         let tried = 0
 
         // Lager kolonner
-        // Går gjennom alle fieldene (dette er distansene)
-        fields.forEach(field => {
+        // Går gjennom alle distansene
+        distances.forEach(distance => {
             // Putting stats
             tdEl = document.createElement('td')
-            tdEl.innerHTML = `${items[i][field][0]}/${items[i][field][1]}`
+            tdEl.innerHTML = `${disc[distance][0]} / ${disc[distance][1]}`
 
-            made += items[i][field][0]
-            tried += items[i][field][1]
+            made += disc[distance][0]
+            tried += disc[distance][1]
 
             // Legger kolonnen til raden
             trEl.appendChild(tdEl)
+
+            C1X_data[distance][0] += disc[distance][0]
+            C1X_data[distance][1] += disc[distance][1]
         })
 
-        let C1X_percentage = (made/tried)*100
+        let C1X_percentage = (made / tried) * 100
         C1X_percentage = Math.round(C1X_percentage)
 
         // Siste kolonne (C1X percentage)
@@ -133,15 +154,15 @@ function getData(items) {
         trEl.appendChild(tdEl)
 
         // Legger raden til tbody hvis den ikke er helt tom
-        if (!isNaN(C1X_percentage)){
+        if (!isNaN(C1X_percentage)) {
             tbodyEl.appendChild(trEl)
         }
 
         madeTotal += made
         triedTotal += tried
-    }
+    })
 
-    let C1X_percentage_total = (madeTotal/triedTotal)*100
+    let C1X_percentage_total = (madeTotal / triedTotal) * 100
     console.log(C1X_percentage_total)
 
     C1X_percentage_total = Math.round(C1X_percentage_total)
@@ -153,5 +174,46 @@ function getData(items) {
     tableContainerEl.appendChild(tableEl)
 
     c1xEl.innerHTML = ''
-    c1xEl.innerHTML += `<h3>Total C1X percentage: ${C1X_percentage_total} %</h3>`
+    c1xEl.innerHTML += `<h3 class='center'>Total C1X percentage: <br>${C1X_percentage_total} %</h3>`
+
+    //console.log(C1X_data)
+    drawBarChart(makeData(C1X_data))
 }
+
+
+
+function makeData(dataObj) {
+    let dataArr = []
+    distances.forEach(distance => {
+        dataArr.push(100 * (dataObj[distance][0] / dataObj[distance][1]))
+    })
+
+    return dataArr
+}
+
+const canvasEl = document.querySelector('canvas')
+let ctx = canvasEl.getContext('2d');
+
+let barChart = new Chart(ctx)
+
+// Function for drawing bar chart
+function drawBarChart(dataArr) {   
+    barChart.destroy();
+    barChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ["4 m", "5 m", "6 m", "7 m", "8 m", "9 m"],
+            datasets: [{
+                label: 'Putting percentage',
+                data: dataArr,
+            }]
+        },
+        scales: {
+            y: {
+                beginAtZero: true,
+            }
+        }
+    })
+}
+
+//let dataArr = [95, 80, 70, 60, 40, 10]

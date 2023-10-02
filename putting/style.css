@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/cgf-locust-resistance');
 
 * {
     margin: 0;
@@ -10,7 +11,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
     font-family: 'Open Sans', sans-serif;
 }
@@ -19,6 +20,59 @@ body {
 h1, h2, h3 {
     font-family: 'Exo', sans-serif;
 }
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #000;
+    height: 68px;
+}
+
+nav .logo {
+    font-family: 'CGF Locust Resistance', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+nav .logo a {
+    text-decoration: none;
+    color: white;
+    font-size: 44px;
+    margin-left: 3vw;
+    padding: 0px 1.5vw;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    margin-right: 1vw;
+}
+
+nav ul li {
+    padding: 0px 2vw;
+}
+
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: rgb(0, 183, 255);
+}
+
 
 /* Header */
 header {
@@ -46,6 +100,7 @@ header article {
 
 header p {
     margin: 10px 0;
+    font-size: 18px;
     font-style: italic;
     text-align: center;
 }
@@ -140,11 +195,42 @@ footer button {
     max-width: 700px;
 }
 
-table {
-    border-collapse: collapse;
+#barChart {
+    margin: 10px;
+    max-width: 1000px;
+    max-height: 500px;
 }
 
-table th, td{
+/* Summary table */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table th, table td{
     border: 1px solid black;
     padding: 5px;
+}
+
+
+
+@media(max-width: 500px) {
+    table tr > *:nth-child(2) {
+        display: none;
+    }
+    /* table tr > *:nth-child(3) {
+        display: none;
+    } */
+    table tr > *:nth-child(4) {
+        display: none;
+    }
+    /* table tr > *:nth-child(5) {
+        display: none;
+    } */
+    table tr > *:nth-child(6) {
+        display: none;
+    }
+    table tr > *:nth-child(7) {
+        display: none;
+    }
 }

@@ -340,11 +340,12 @@ function submitData() {
     mainEl.innerHTML = '<h2 class="center">Data sent</h2>'
     mainEl.innerHTML += `<h3 class="center">C1X percentage: ${C1X_percentage} %</h3>`
 
-    drawChart(C1X_percentage)
+    drawPieChart(C1X_percentage)
 
     mainEl.innerHTML += `<br>`
 
-    footerEl.innerHTML = '<button onclick="location.reload()">Try again?</button>'
+    submitBtn.classList.toggle('hide')
+    /* footerEl.innerHTML = '<button onclick="location.reload()">Try again?</button>' */
 
     //console.log(data)
 }
@@ -352,21 +353,19 @@ function submitData() {
 
 
 // Function for drawing pie chart
-function drawChart(p) {
+function drawPieChart(p) {
     document.querySelector('.chart-container').classList.remove('hide')
 
-    let ctx = document.getElementById('myChart').getContext('2d');
-    let labels = ['Putt made', 'Putts missed']
-    let colorHex = ['#43AA8B', '#FB3640']
+    let ctx = document.getElementById('pieChart').getContext('2d');
 
-    let myChart = new Chart(ctx, {
+    let pieChart = new Chart(ctx, {
         type: 'pie',
         data: {
             datasets: [{
                 data: [p, 100-p],
-                backgroundColor: colorHex
+                backgroundColor: ['#43AA8B', '#FB3640']
             }],
-            labels: labels
+            labels: ['Putt made', 'Putts missed']
         },
         options: {
             responsive: true,
@@ -389,7 +388,7 @@ function drawChart(p) {
                     showZero: true,
 
                     // font size, default is defaultFontSize
-                    fontSize: 20,
+                    fontSize: 18,
 
                     // font color, can be color array for each data or function for dynamic color, default is defaultFontColor
                     fontColor: '#fff',
