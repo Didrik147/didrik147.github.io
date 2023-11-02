@@ -31,7 +31,7 @@ class Ansatt{
 // For ansatte som har gitt samtykke, brukes portrettfoto
 let ansatte = []
 
-ansatte.push(new Ansatt("Asbjørn", 1, 12))
+ansatte.push(new Ansatt("Asbjørn", 1, 12, true))
 ansatte.push(new Ansatt("Tore", 13, 24))
 ansatte.push(new Ansatt("Mari Kvellestad", 25, 30, true))
 ansatte.push(new Ansatt("Kirsti", 31, 36))
@@ -44,7 +44,7 @@ ansatte.push(new Ansatt("Thomas Riis", 70, 81))
 ansatte.push(new Ansatt("Johanne", 82, 84))
 ansatte.push(new Ansatt("Harald", 85, 96, true))
 ansatte.push(new Ansatt("Otto", 97, 108))
-ansatte.push(new Ansatt("Anders Huseby", 109, 120, true))
+//ansatte.push(new Ansatt("Anders Huseby", 109, 120, true))
 ansatte.push(new Ansatt("Mira", 121, 132))
 ansatte.push(new Ansatt("Turid", 133, 144))
 ansatte.push(new Ansatt("Didrik", 145, 149, true)) // meg selv
@@ -56,7 +56,7 @@ ansatte.push(new Ansatt("Åsne", 198, 209))
 ansatte.push(new Ansatt("Hilde", 210, 214))
 ansatte.push(new Ansatt("Martine Bye", 215, 226))
 ansatte.push(new Ansatt("Anna Sofie", 227, 238))
-ansatte.push(new Ansatt("Martine", 239, 250))
+ansatte.push(new Ansatt("Martine Sandvold", 239, 250))
 ansatte.push(new Ansatt("Live", 263, 274))
 
 // Velger hvilket bilde av Harald som skal brukes basert på vindusbredde
