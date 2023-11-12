@@ -197,6 +197,10 @@ body {
     background-color: var(--primary);
 }
 
+.navbar > ul > li:last-of-type {
+    width: 240px;
+}
+
 
 @media all and (max-width: 800px){
     .text-box h1{
