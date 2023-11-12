@@ -1,0 +1,174 @@
+@import url('https://fonts.cdnfonts.com/css/trajan-pro');
+@import url('https://fonts.cdnfonts.com/css/minion-pro');
+
+
+:root {
+    --blue: #3031df;
+    --brown: #B8A27D;
+    --yellow: #EEDD00;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    /* font-family: sans-serif; */
+    font-family: 'Minion Pro', serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    background-color: var(--brown);
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo img{
+    height: 50px;
+    padding: 5px;
+    padding-left: 3vw;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    height: 100%;
+}
+
+
+nav ul li a {
+    font-family: 'Trajan Pro', serif;
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    color: var(--blue);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    background-color: var(--yellow);
+}
+
+/* Utility classes */
+.text-center {
+    text-align: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+
+h1, h2, h3 {
+    margin: 1rem 0;
+    font-family: 'Trajan Pro', serif;
+    text-align: center;
+}
+
+h2 {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+h2 img {
+    height: 30px;
+    padding-left: 10px;
+}
+
+header, .container {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container {
+    margin-bottom: 40px;
+}
+
+
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 15px 20px;
+    text-align: center;
+}
+
+table th {
+    font-size: 1.2rem;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+/* Hamburger */
+.fa-bars {
+    color: white;
+    font-size: 30px;
+    padding: 5px 20px;
+    display: none;
+}
+
+
+@media(max-width: 580px){
+    h1 {
+        font-size: 1.5rem
+    }
+
+    table {
+        min-width: 260px;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav .logo {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav .logo img{
+        padding: 5px;
+        padding-left: 20px;
+    }
+
+    .fa-bars {
+        display: flex;
+        align-items: center;
+        color: var(--blue);
+    }
+}
