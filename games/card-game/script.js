@@ -20,32 +20,26 @@ function createRandomCard() {
 }
 
 class Card {
-    constructor(name, type, attack, defence) {
+    constructor(name, color, attack, defence) {
         this.name = name
-        this.type = type
+        this.color = color
         this.attack = attack
         this.defence = defence
     }
 }
 
 
-let unicorn = {
-    "name": "Unicorn",
-    "type": "Beast",
-    "attack": 3,
-    "defence": 2
-}
+let unicorn = new Card("Unicorn", 'White', '3', '2')
 
-let evilPumpkin = {
-    "name": "Evil Pumpkin",
-    "type": "Plant",
-    "attack": 4,
-    "defence": 4
-}
+let fire = new Card("Little Bonfire", 'Red', '5', '1')
 
-let didrik147 = new Card("Didrik147", 'Human', '1', '47')
+let sassyPumpkin = new Card("Sassy Pumpkin", 'Green', '0', '8')
 
-let handArr = [unicorn, didrik147]
+let handArr = [unicorn, 
+    fire, 
+    sassyPumpkin,
+    new Card("Happy Mail", 'Blue', '1', '1')
+]
 /* 
 for(let i=0; i<2; i++){
     handArr.push(createRandomCard())
@@ -58,7 +52,7 @@ myHandEl.innerHTML = ""
 handArr.forEach(card => {
     console.log(card)
     myHandEl.innerHTML += `
-    <div class="card">
+    <div class="card ${card.color.toLowerCase()}">
         <div class="name">
             <h2>${card.name}</h2>
         </div>
