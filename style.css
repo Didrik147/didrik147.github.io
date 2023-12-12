@@ -21,7 +21,7 @@
 body {
     /* min-height: 100vh; */
     background-color: #111;
-    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url("./images/github1.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url("./assets/github1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
