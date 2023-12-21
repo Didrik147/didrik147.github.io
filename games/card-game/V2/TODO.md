@@ -5,8 +5,7 @@
 - [ ] Add game logic for next round
 - [ ] Add enemy
 
-
-## Other
+## Design
 - [ ] Add graphics for player
 - [ ] Rotating cards
 

@@ -110,7 +110,6 @@ function dragDrop(e){
   //console.log('drop')
   if (e.target.className === "middle") {
     let id = dragged.children[0].id
-    console.log(dragged)
     
     // Add card to discard
     discardArr.push(handArr.find((card) => card.id == id))
