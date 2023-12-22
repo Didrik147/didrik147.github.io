@@ -63,6 +63,30 @@ function drawCards(n) {
   } */
 }
 
+// Function that draws 1 card
+/* function drawCard(){
+  let newCard = deckArr.splice(-1, 1)[0]
+  handArr.push(newCard)
+
+  myHandEl.innerHTML += `
+    <div class="card before-draw" draggable="true">
+        <div class="name" id="${newCard.id}">
+            <h1>${newCard.name}</h1>
+        </div>
+        <div class="image-container" style="background-image: url('${newCard.src}');">
+            
+        </div>
+        <div class="text-container">
+          <p>${newCard.text}</p>
+        </div>
+    </div>
+    `
+} */
+
+function emptyHand(){
+  myHandEl.innerHTML = ""
+}
+
 
 function updateDeckHTML(){
   deckEl.innerHTML = deckArr.length
