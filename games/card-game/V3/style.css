@@ -29,6 +29,14 @@ main {
 /* Middle zone */
 main .middle {
   flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#canvas {
+  position: relative;
+  z-index: -1;
 }
 
 

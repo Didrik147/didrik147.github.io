@@ -3,8 +3,11 @@
 ## Main gameplay
 - [x] Add button to end turn
 - [x] Add game logic for next round
-- [ ] Add logic for drawing cards
-- [ ] Add enemy
+- [x] Add logic for drawing cards
+- [x] Add enemy
+- [ ] Add enemy attack and messages
+- [ ] Add combat messages
+- [ ] Add reshuffling when empty
 
 ## Design
 - [x] Add animation for draw
