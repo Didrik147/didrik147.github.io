@@ -17,6 +17,8 @@
 - [x] Add discard on bottom right side
 - [ ] Rotating cards
 
+## For Mobile
+- [ ] Play cards with double-click
 
 ## Ideas
 - Deckbuilding? Need to add a site for this. To start, I'm thinking premade decks (choose your characters)
