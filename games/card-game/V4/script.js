@@ -73,9 +73,8 @@ class Enemy {
   }
 
   turn() {
-    let randomInt = randomInteger(1, 100)
 
-    if (randomInt <= 40) {
+    if (Math.random() < 0.4) {
       console.log("Peck")
       setTimeout(() => {
         dialogBoxEl.innerHTML = `
