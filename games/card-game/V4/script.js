@@ -6,40 +6,105 @@ const middleEl = document.querySelector('.middle')
 const topEl = document.querySelector('.top')
 const deckEl = document.querySelector('.deck')
 const discardPileEl = document.querySelector('.discard-pile')
+const dialogBoxEl = document.querySelector('.dialog-box')
 let cardEls;
 let enemyEls;
 let enemyEl;
+
+
+// Room number is saved in localStorage
+
+let roomNumber = 1
+
+if(!localStorage.roomNumber){
+  localStorage.roomNumber = 1
+}else {
+  roomNumber = Number(localStorage.roomNumber)
+}
+
+
+// Function that creates a random number between a and b (inclusive)
+function randomInteger(a, b) {
+  return Math.floor(Math.random() * b) + a
+}
 
 // Class for player
 class Player {
   constructor(name, health) {
     this.name = name
     this.maxHealth = health
-    this.currentHealth = health
+    this.currentHealth = 8
+  }
+
+  heal(h){
+    console.log(`You restored ${h} health`)
+    this.currentHealth += h
+
+    if (this.currentHealth > this.maxHealth){
+      this.currentHealth = this.maxHealth
+    }
+    
+    updateTopHTML()
   }
 }
 
 
 let player = new Player('Didrik', 10)
-let roomNumber = 1
 
-function updateTopHTML(player){
+
+function updateTopHTML() {
   topEl.innerHTML = `
     <h3>Your health: ${player.currentHealth}/${player.maxHealth}</h3>
     <h3>Room: ${roomNumber}</h3>
   `
 }
 
-updateTopHTML(player)
+updateTopHTML()
 
 
 // Class for enemies
 class Enemy {
   constructor(name, health, src) {
     this.name = name
-    this.health = health
+    this.maxHealth = health
+    this.currentHealth = health
 
     this.src = src
+  }
+
+  turn() {
+    let randomInt = randomInteger(1, 100)
+
+    if (randomInt <= 40) {
+      console.log("Peck")
+      setTimeout(() => {
+        dialogBoxEl.innerHTML = `
+        <p>${this.name} uses its beak to peck</p>
+      `
+      }, 200)
+      setTimeout(() => {
+        dialogBoxEl.innerHTML += `
+        <p>It deals 2 damage</p>
+      `
+        player.currentHealth -= 2
+        updateTopHTML()
+      }, 1200)
+
+    } else {
+      console.log("Scratch")
+      setTimeout(() => {
+        dialogBoxEl.innerHTML = `
+        <p>${this.name} uses its claw to scratch</p>
+      `
+      }, 200)
+      setTimeout(() => {
+        dialogBoxEl.innerHTML += `
+        <p>It deals 1 damage</p>
+      `
+        player.currentHealth -= 1
+        updateTopHTML()
+      }, 1200)
+    }
   }
 }
 
@@ -69,70 +134,35 @@ updateEnemiesHTML()
 
 
 
-// Class to make card objects
-class Card {
-  constructor(name, text, src, id) {
-    this.name = name
-    this.text = text
-    this.src = src
-    this.id = id
-  }
-
-  play() {
-    console.log(this.text)
-  }
-}
-
-class CardDraw extends Card {
-  constructor(name, text, src, id) {
-    super(name, text, src, id)
-  }
-
-  play() {
-    console.log(this.text)
-    drawCard()
-  }
-}
-
-class CardDamage extends Card {
-  constructor(name, text, src, id) {
-    super(name, text, src, id)
-  }
-
-  play() {
-    console.log(this.text)
-    dealDamage(2, enemy)
-  }
-}
-
-function dealDamage(dmg, enemy) {
-  console.log("Enemy lost " + dmg + " health")
-  enemy.health -= dmg
-
-  checkEnemyDeath(enemy)
-}
-
 
 function checkEnemyDeath(enemy) {
-  if (enemy.health <= 0) {
-    enemyEl.style.opacity = 0
+  if (enemy.currentHealth <= 0) {
+    enemyEl.classList.add('dead')
   }
 
   setTimeout(() => {
     if (checkVictory()) {
+      middleEl.classList.add('flex')
       middleEl.innerHTML = `
         <h2>You defeated all enemies!</h2>
-        <button>Next room</button>
+        <button onClick='nextRoom()'>Next room</button>
       `
     }
   }, 1200)
+}
+
+function nextRoom(){
+  roomNumber += 1
+  localStorage.roomNumber = roomNumber
+
+  location.reload()
 }
 
 
 function checkVictory() {
   let allDead = true
   enemies.forEach(enemy => {
-    if (enemy.health > 0) {
+    if (enemy.currentHealth > 0) {
       allDead = false
     }
   })
@@ -155,16 +185,16 @@ let deckArr = []
 // Filling the deck
 let deck_size = 40
 for (let id = 0; id < deck_size; id++) {
-  if (id < deck_size * 0.6) {
+  if (id < deck_size * 0.4) {
     deckArr.push(new CardDamage("Sword", 'Deal 2 damage', './assets/sword.png', id))
-  } else if (id < deck_size * 0.8) {
+  } else if (id < deck_size * 0.6) {
     deckArr.push(new CardDraw("Tea", 'Draw a card', './assets/tea.png', id))
-  } else if (id < deck_size * 0.9) {
-    deckArr.push(new Card("Cake", 'Restore 3 health', './assets/chocolate-cake.png', id))
+  } else if (id < deck_size * 1) {
+    deckArr.push(new CardHeal("Cake", 'Restore 3 health', './assets/chocolate-cake.png', id))
   }
-  else {
+/*   else {
     deckArr.push(new Card("Healing Potion", 'Restore 6 health', './assets/potion.png', id))
-  }
+  } */
 }
 
 
@@ -306,10 +336,22 @@ function endTurn() {
 
     // Empty my hand
     handArr = []
+
+    enemies.forEach(enemy => {
+      enemy.turn()
+    })
+  }, 500)
+
+  setTimeout(() => {
     drawCards(5)
     updateHandHTML()
+  }, 3000)
 
-  }, 500)
+  setTimeout(() => {
+    dialogBoxEl.innerHTML = ''
+  }, 4500)
+
+
 }
 
 
