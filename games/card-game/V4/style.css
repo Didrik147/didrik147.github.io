@@ -67,7 +67,7 @@ main .middle {
 
 
 /* Enemies */
-.middle .enemy {
+.middle .enemies .enemy {
   width: 15rem;
   margin: 17vh auto 1vh;
 }
@@ -94,6 +94,7 @@ main .middle {
   font-size: 1.3rem;
   text-align: center;
 }
+
 
 
 /* Bottom zone */

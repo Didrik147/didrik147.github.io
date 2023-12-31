@@ -6,22 +6,35 @@
 - [x] Add logic for drawing cards
 - [x] Add enemy
 - [x] Add enemy attack and messages
-- [ ] Add player combat messages
-- [ ] Add reshuffling when deck is empty
-- [ ] Add some sort of mana/energy cost of cards
+- [x] Add player combat messages
+- [x] Add reshuffling when deck is empty
+- [x] Add some sort of mana/energy restriction
+- [x] Check if dead
+- [ ] Add multiple enemies in the same room?
+- [ ] Add more rooms (2 basic enemies and a boss?)
+- [ ] Add possibility to exhaust cards
+- [ ] Choose character
+- [ ] Potions?
+- [ ] Relics?
 
 
 ## Design
 - [x] Add animation for draw
 - [x] Add animation for discard
-- [ ] Add graphics for player
 - [x] Add deck on bottom left side
 - [x] Add discard on bottom right side
-- [ ] Rotating cards in hand
+- [ ] Add health bar for enemies
+- [ ] Add healing message under your own health?
+- [ ] Add graphics for player?
+- [ ] Add possibility to play card on top of enemy
+- [ ] When energy is at 0, make the "End turn" button more prominent
+- [ ] Rotate cards in hand? 
+- [ ] Add music
+- [ ] Add main screen with (character selection?)
 
 
 ## For Mobile
-- [ ] Play cards with double-click
+- [ ] Possibility to play cards (double-click? Touchmove?)
 
 
 ## Ideas
