@@ -23,14 +23,17 @@
 - [x] Add animation for discard
 - [x] Add deck on bottom left side
 - [x] Add discard on bottom right side
-- [ ] Add health bar for enemies
+- [x] Add health bar for enemies
 - [ ] Add healing message under your own health?
 - [ ] Add graphics for player?
-- [ ] Add possibility to play card on top of enemy
-- [ ] When energy is at 0, make the "End turn" button more prominent
+- [x] Add possibility to play card on top of enemy
+- [x] When energy is at 0, make the "End turn" button more prominent
+- [x] Add energy cost symbol
 - [ ] Rotate cards in hand? 
 - [ ] Add music
-- [ ] Add main screen with (character selection?)
+- [ ] Add main screen (with character selection?)
+- [ ] Add zoom in on card with e.g. left click
+- [ ] Add attack animation for enemies (change between two images?)
 
 
 ## For Mobile
