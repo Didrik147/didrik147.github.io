@@ -10,16 +10,19 @@ document.write(`
             <ul>
                 <!-- <li><a href="index.html">Hjem</a></li> -->
 
-                <!-- <li>
+                <li>
                     <a href="#">Periodeplan <i class="fas fa-caret-down"></i></a>
                     <ul>
                         <li>
-                            <a href="https://periodeplan.didrik147.repl.co/blokkD_2023h.html" target="_blank">
+                            <a href="./periodeplan/blokkD_2023h.html" target="_blank">
                                 Høsten 2023 (blokk D)
+                            </a>
+                            <a href="./periodeplan/blokkD_2024v.html" target="_blank">
+                                Våren 2023 (blokk D)
                             </a>
                         </li>
                     </ul>
-                </li> -->
+                </li>
 
                 <li>
                     <a href="#">Fagstoff <i class="fas fa-caret-down"></i></a>
