@@ -215,22 +215,6 @@ table th, table td{
 
 
 @media(max-width: 500px) {
-    header h1 {
-        font-size: 36px;
-    }
-
-    nav ul li a{
-        font-size: 18px;
-    }
-
-    nav .logo a {
-        font-size: 38px;
-    }
-
-    main a:last-child{
-        margin-bottom: 0;
-    }
-
     table tr > *:nth-child(2) {
         display: none;
     }
