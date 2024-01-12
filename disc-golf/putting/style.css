@@ -211,6 +211,11 @@ table {
 table th, table td{
     border: 1px solid black;
     padding: 5px;
+    text-align: center;
+}
+
+table td:first-child{
+  text-align: left;
 }
 
 

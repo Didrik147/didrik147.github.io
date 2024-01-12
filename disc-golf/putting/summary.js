@@ -41,6 +41,7 @@ button.addEventListener('click', (e) => {
   let username = inputEl.value
 
   if (username.length > 0){
+    localStorage.username = username
     getUserData(username)
   }
 })
@@ -51,6 +52,12 @@ window.addEventListener("load", (e) => {
     inputEl.value = localStorage.username
   }else{
     inputEl.value = userEl.value
+  }
+
+  let username = inputEl.value
+
+  if (username.length > 0){
+    getUserData(username)
   }
 })
 
@@ -95,6 +102,7 @@ async function getUserData(username) {
 
 
 function createTable(discData) {
+
   let C1X_data = {
     '4m': [0, 0],
     '5m': [0, 0],
@@ -138,7 +146,9 @@ function createTable(discData) {
   // Går gjennom data for alle de ulike putterne
   let discs = Object.keys(discData)
 
+  
   discs.forEach(disc => {
+    console.log(disc)
     let trEl = document.createElement('tr')
 
     // Navnet på discen
@@ -156,7 +166,7 @@ function createTable(discData) {
     distances.forEach(distance => {
       // Putting stats
       tdEl = document.createElement('td')
-      tdEl.innerHTML = `${discData[disc][distance][0]} / ${discData[disc][distance][1]}`
+      tdEl.innerHTML = `${discData[disc][distance][0]}/${discData[disc][distance][1]}`
 
       made += discData[disc][distance][0]
       tried += discData[disc][distance][1]

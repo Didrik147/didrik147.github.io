@@ -264,7 +264,7 @@ function submitData() {
     /* footerEl.innerHTML = '<button onclick="location.reload()">Try again?</button>' */
 
     //console.log(data)
-  }else {
+  } else {
     alert('No data to be stored')
   }
 }
@@ -279,6 +279,37 @@ async function updateDB(data) {
   // Add a new document with a specified ID
   await setDoc(doc(db, collectionName, timestamp), data)
 }
+
+
+// Function to manually add data
+async function addManualData() {
+  let choice = prompt('Add manual data? (y/n):')
+
+  if (choice == 'y') {
+
+
+    console.log("Manually adding data")
+    let collectionName = "Didrik147"
+
+    let data = {
+      "name": "Reko",
+      '4m': [19, 20],
+      '5m': [17, 20],
+      '6m': [14, 20],
+      '7m': [12, 20],
+      '8m': [2, 12],
+      '9m': [0, 0]
+    }
+
+    let timestamp = new Date().getTime().toString()
+    console.log("Timestamp:", timestamp)
+
+    // Add a new document with a specified ID
+    await setDoc(doc(db, collectionName, timestamp), data)
+  }
+}
+
+//addManualData()
 
 
 // Function for drawing pie chart
