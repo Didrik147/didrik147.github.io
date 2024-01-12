@@ -2,48 +2,66 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Summary</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Summary</title>
 
-    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 
-    <style>
-        h2, h3 {
-            margin: 20px;
-        }
+  <style>
+    h2,
+    h3 {
+      margin: 20px;
+    }
 
-        header {
-            margin: 0;
-        }
-    </style>
+    header {
+      margin: 0;
+    }
+
+    form input {
+      width: 200px;
+      margin: 5px;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+
+    button {
+      font-size: 20px;
+      padding: 5px;
+    }
+  </style>
 </head>
 
 <body>
-    <nav>
+  <nav>
 
-    </nav>
+  </nav>
 
-    <header>
-        <h1>Summary</h1>
-    </header>
+  <header>
+    <h1>Summary</h1>
+  </header>
 
-    <form>
-        <label for="user">Choose a user:</label>
-        <select name="user" id="user">
-            <option value="Didrik">Didrik</option>
-            <option value="Test">Test</option>
-            <option value="Test1">Test1</option>
-            <option value="Test2">Test2</option>
-            <option value="Test3">Test3</option>
-            <option value="Test5">Test5</option>
-            <option value="Test8">Test8</option>
-        </select>
-    </form>
+  <form onSubmit="return false;">
+    <label for="user">Choose a user:</label>
+    <select name="user" id="user">
+      <option value="Didrik">Didrik</option>
+      <option value="Test" selected>Test</option>
+      <option value="Test1">Test1</option>
+      <option value=""></option>
+    </select>
+    <br><br>
+    <label for="user">Or write the username:</label>
+    <input type="text" id="input">
+    <br><br>
+    <button>Retrieve data</button>
+  </form>
 
-    <section id="table-container">
-        <h2 class="center">Data</h2>
-        <!-- <table>
+  <section id="table-container">
+    <h2 class="center">Data</h2>
+    <!-- <table>
             <thead>
                 <tr>
                     <th>Mold</th>
@@ -89,24 +107,24 @@
                 </tr>
             </tbody>
         </table> -->
-    </section>
+  </section>
 
-    <section id="c1x">
-        
-    </section>
+  <section id="c1x">
 
-    <!-- <div class="bar-container chart-container">
+  </section>
+
+  <!-- <div class="bar-container chart-container">
         <canvas id="barChart"></canvas>
     </div> -->
 
-    <canvas id="barChart"></canvas>
+  <canvas id="barChart"></canvas>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 
-    <script src="navbar.js"></script>
+  <script src="navbar.js"></script>
 
-    <script type='module' src="summary.js"></script>
+  <script type='module' src="summary.js"></script>
 </body>
 
 </html>

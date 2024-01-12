@@ -197,6 +197,7 @@ footer button {
 
 #barChart {
     margin: 10px;
+    margin-top: 0;
     max-width: 1000px;
     max-height: 500px;
 }
@@ -231,21 +232,21 @@ table th, table td{
         margin-bottom: 0;
     }
 
-    table tr > *:nth-child(2) {
-        display: none;
-    }
-    /* table tr > *:nth-child(3) {
+    /* table tr > *:nth-child(2) {
         display: none;
     } */
-    table tr > *:nth-child(4) {
+    table tr > *:nth-child(3) {
         display: none;
     }
-    /* table tr > *:nth-child(5) {
+    /* table tr > *:nth-child(4) {
         display: none;
     } */
-    table tr > *:nth-child(6) {
+    table tr > *:nth-child(5) {
         display: none;
     }
+    /* table tr > *:nth-child(6) {
+        display: none;
+    } */
     table tr > *:nth-child(7) {
         display: none;
     }
