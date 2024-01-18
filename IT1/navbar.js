@@ -18,7 +18,7 @@ document.write(`
                                 Høsten 2023 (blokk D)
                             </a>
                             <a href="./periodeplan/blokkD_2024v.html" target="_blank">
-                                Våren 2023 (blokk D)
+                                Våren 2024 (blokk D)
                             </a>
                         </li>
                     </ul>
