@@ -34,7 +34,7 @@ let math_question1 = {
 let math_question2 = {
     query: "Hva er den deriverte av 4-4x ?",
     options: ["-4", "-1", "4", "1"],
-    solution: "1"
+    solution: "-4"
 }
 
 let math_question3 = {
@@ -66,7 +66,35 @@ let math_questions = [
 ]
 
 
+let science_question1 = {
+    query: "Hva kalles det å bytte ut syke gener med friske gener som fungerer?",
+    options: [
+        "Genetikk", "Genterapi", "Kloning", "DNA-testing"
+    ],
+    solution: "Genterapi"
+}
+
+let science_question2 = {
+    query: "Hva er den komplementære basen til guanin (G)?",
+    options: [
+        "Cytosin (C)", "Adenin (A)", "Tymin (T)", "Uracil (U)"
+    ],
+    solution: "Cytosin (C)"
+}
+
+let science_questions = [
+    science_question1,
+    science_question2
+]
+
+
 let questions;
+
+let tema_ordbok = {
+    "it" : IT_questions,
+    "matematikk" : math_questions,
+    "naturfag" : science_questions
+}
 
 
 // Henter elementer fra DOM
@@ -83,11 +111,7 @@ let temaSelectEl = document.querySelector('#tema-select')
 getBtn.addEventListener('click', getQuestions)
 
 function getQuestions() {
-    if (temaSelectEl.value === "it"){
-        questions = IT_questions
-    }else if(temaSelectEl.value === "matematikk"){
-        questions = math_questions
-    }
+    questions = tema_ordbok[temaSelectEl.value]
 
 
     temaContainerEl.classList.add('hide')
@@ -183,6 +207,9 @@ function finnPoeng() {
                 poeng++ // samme som poeng += 1
             }
         }
+
+        // Gjør slik at man ikke kan trykke på radioknappene lenger
+        radioEls[i].disabled = true
     }
 
     // Skriver til resultat-elementet
