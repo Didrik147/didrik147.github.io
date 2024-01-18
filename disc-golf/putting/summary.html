@@ -23,12 +23,12 @@
       margin: 5px;
     }
 
-    button {
-      cursor: pointer;
+    form input[type="number"] {
+      width: 80px;
     }
 
-
     button {
+      cursor: pointer;
       font-size: 20px;
       padding: 5px;
     }
@@ -46,18 +46,26 @@
 
   <form onSubmit="return false;">
     <label for="user">Choose a user:</label>
-    <select name="user" id="user">
-      <option value="Didrik">Didrik</option>
+    <input list="users" name="user" id="user">
+    <datalist id="users">
       <option value="Didrik147">Didrik147</option>
       <option value="Test">Test</option>
       <option value="Test1">Test1</option>
-      <option value="" selected></option>
-    </select>
+    </datalist>
+
     <br><br>
-    <label for="user">Or write the username:</label>
-    <input type="text" id="input">
+
+    <label for="date">Retrieve data for date:</label>
+    <input type="date" id="date">
+    
     <br><br>
-    <button>Retrieve data</button>
+    
+    <p>Retrieve last <input type="number" min="1"> practices.
+    </p>
+    
+    <br>
+
+    <button id="btn-all">Retrieve all data</button>
   </form>
 
   <section id="table-container">

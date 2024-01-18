@@ -26,43 +26,149 @@ const db = getFirestore(app);
 const userEl = document.querySelector('#user')
 const tableContainerEl = document.querySelector('#table-container')
 const c1xEl = document.querySelector('#c1x')
-const inputEl = document.querySelector('#input')
-const button = document.querySelector('button')
+const btnAll = document.querySelector('#btn-all')
+const dateEl = document.querySelector('input[type="date"]')
+const numberEl = document.querySelector('input[type="number"]')
 
-let username = userEl.value
+//dateEl.valueAsDate = new Date();
 
 let distances = ["4m", "5m", "6m", "7m", "8m", "9m"]
 
 userEl.addEventListener('change', (e) => {
-  inputEl.value = e.target.value
+  userEl.value = e.target.value
 })
 
-button.addEventListener('click', (e) => {
-  let username = inputEl.value
+btnAll.addEventListener('click', (e) => {
+  let username = userEl.value
 
-  if (username.length > 0){
+  if (username.length > 0) {
     localStorage.username = username
-    getUserData(username)
+    getUserDataAll(username)
+  }
+})
+
+dateEl.addEventListener('change', (e) => {
+  let username = userEl.value
+
+  if (username.length > 0) {
+    localStorage.username = username
+    getUserDataDate(username)
+  }
+})
+
+numberEl.addEventListener('change', (e) => {
+  let username = userEl.value
+
+  if (username.length > 0) {
+    localStorage.username = username
+    getUserDataSome(username)
   }
 })
 
 
 window.addEventListener("load", (e) => {
-  if(localStorage.username){
-    inputEl.value = localStorage.username
-  }else{
-    inputEl.value = userEl.value
+  if (localStorage.username) {
+    userEl.value = localStorage.username
+  } else {
+    userEl.value = userEl.value
   }
 
-  let username = inputEl.value
+  let username = userEl.value
 
-  if (username.length > 0){
-    getUserData(username)
+  if (username.length > 0) {
+    getUserDataAll(username)
   }
 })
 
 
-async function getUserData(username) {
+async function getUserDataAll(username) {
+  let discData = {}
+
+  // Get information about user from database
+  const q = query(collection(db, username))
+  const querySnapshot = await getDocs(q)
+
+  //console.log(`Number of practices: ${querySnapshot.size}`)
+  if (querySnapshot.size == 0) {
+    alert("User has no data")
+  } else {
+    querySnapshot.forEach((doc) => {
+        let practice = doc.data()
+        let mold = practice.name
+
+        if (!(mold in discData)) {
+          discData[mold] = {
+            '4m': [0, 0],
+            '5m': [0, 0],
+            '6m': [0, 0],
+            '7m': [0, 0],
+            '8m': [0, 0],
+            '9m': [0, 0],
+          }
+        }
+
+        distances.forEach(distance => {
+          if (distance in practice) {
+            discData[mold][distance][0] += practice[distance][0]
+            discData[mold][distance][1] += practice[distance][1]
+          }
+        })
+      
+    })
+
+
+    //console.log(discData)
+    createTable(discData)
+  }
+}
+
+
+async function getUserDataSome(username) {
+  let discData = {}
+
+  // Get information about user from database
+  const q = query(collection(db, username))
+  const querySnapshot = await getDocs(q)
+  if (querySnapshot.size == 0) {
+    alert("User has no data")
+  } else {
+    let i = 0
+    querySnapshot.forEach((doc) => {
+      i += 1
+      
+      if (i > (querySnapshot.size - Number(numberEl.value))) {
+        let practice = doc.data()
+        let mold = practice.name
+
+        if (!(mold in discData)) {
+          discData[mold] = {
+            '4m': [0, 0],
+            '5m': [0, 0],
+            '6m': [0, 0],
+            '7m': [0, 0],
+            '8m': [0, 0],
+            '9m': [0, 0],
+          }
+        }
+
+        distances.forEach(distance => {
+          if (distance in practice) {
+            discData[mold][distance][0] += practice[distance][0]
+            discData[mold][distance][1] += practice[distance][1]
+          }
+        })
+      }
+    })
+  
+    //console.log(discData)
+    createTable(discData)
+  }
+}
+
+async function getUserDataDate(username) {
+  //let today = new Date().toLocaleDateString("no-NO")
+  let target_date = dateEl.value
+
   let discData = {}
 
   // Get information about user from database
@@ -72,29 +178,36 @@ async function getUserData(username) {
     alert("User has no data")
   } else {
     querySnapshot.forEach((doc) => {
-      let practice = doc.data()
-      let mold = practice.name
+      let doc_timestamp = Number(doc.id)
+      //let doc_date = new Date(doc_timestamp).toLocaleDateString("no-NO")
+      let doc_date = new Date(doc_timestamp).toISOString().split('T')[0]
 
-      if (!(mold in discData)) {
-        discData[mold] = {
-          '4m': [0, 0],
-          '5m': [0, 0],
-          '6m': [0, 0],
-          '7m': [0, 0],
-          '8m': [0, 0],
-          '9m': [0, 0],
+      if (doc_date == target_date) {
+        let practice = doc.data()
+        let mold = practice.name
+
+        if (!(mold in discData)) {
+          discData[mold] = {
+            '4m': [0, 0],
+            '5m': [0, 0],
+            '6m': [0, 0],
+            '7m': [0, 0],
+            '8m': [0, 0],
+            '9m': [0, 0],
+          }
         }
+
+        distances.forEach(distance => {
+          if (distance in practice) {
+            discData[mold][distance][0] += practice[distance][0]
+            discData[mold][distance][1] += practice[distance][1]
+          }
+        })
       }
-
-      distances.forEach(distance => {
-        if (distance in practice) {
-          discData[mold][distance][0] += practice[distance][0]
-          discData[mold][distance][1] += practice[distance][1]
-        }
-      })
     })
 
-    console.log(discData)
+
+    //console.log(discData)
     createTable(discData)
   }
 }
@@ -146,9 +259,9 @@ function createTable(discData) {
   // Går gjennom data for alle de ulike putterne
   let discs = Object.keys(discData)
 
-  
+
   discs.forEach(disc => {
-    console.log(disc)
+    //console.log(disc)
     let trEl = document.createElement('tr')
 
     // Navnet på discen
@@ -197,7 +310,7 @@ function createTable(discData) {
   })
 
   let C1X_percentage_total = (madeTotal / triedTotal) * 100
-  console.log(C1X_percentage_total)
+  //console.log(C1X_percentage_total)
 
   C1X_percentage_total = Math.round(C1X_percentage_total)
 

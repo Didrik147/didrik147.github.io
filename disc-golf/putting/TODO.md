@@ -1,6 +1,6 @@
 # TO DO
 - [x] HTML
-  - [ ] Add option to write your own mold
+  - [x] Add option to write your own mold
 - [x] CSS
 - [x] JS (without database)
 - [x] Database
@@ -17,13 +17,15 @@
   - [x] Percentage for each distance (bar chart)
 - [ ] User authentication?
   - [ ] My putters
+- [ ] Avoid repetition of code (getUserData)
 
 
 ## IDEAS
 - [x] Restructure to have one document for each putting session?
 - [x] Possibility to add timestamp (as an ID?)
 - [x] Possible to edit individual sessions later in the database (e.g. if someone mistyped their putter)
-  - Can be done in the Firebase. Is it useful to have a dedicated site for this?
+  - [x] Can be done in the Firebase.
+  - [ ] Is it useful to have a dedicated website for this?
 - [x] Variable number of fields (based on distances putted). Could make it easier to expand to other distances?
 
 

@@ -111,9 +111,8 @@ header article input {
     padding: 5px;
 }
 
-header article select {
-    font-size: 16px;
-    padding: 5px;
+#mold {
+    width: 170px;
 }
 
 form {
@@ -128,10 +127,11 @@ form input{
     padding: 5px;
 }
 
-form select {
-    padding: 5px;
-    margin-left: 5px;
+form input[type="date"]{
+    font-size: 16px;
+    width: auto;
 }
+
 
 
 /* Main */

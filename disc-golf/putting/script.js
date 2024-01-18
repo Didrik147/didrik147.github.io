@@ -30,11 +30,11 @@ const mainEl = document.querySelector("main")
 const headerEl = document.querySelector("header")
 const footerEl = document.querySelector("footer")
 
-const moldSelectEl = document.querySelector('#moldselect')
+const moldEl = document.querySelector('#mold')
+const datalistEl = document.querySelector('datalist')
 const putterInputEl = document.querySelector("#putterinput")
 const fromInputEl = document.querySelector("#frominput")
 const toInputEl = document.querySelector("#toinput")
-const inputEls = document.querySelectorAll("input")
 const usernameEl = document.querySelector("#username")
 
 const startBtn = document.querySelector("#start")
@@ -49,14 +49,12 @@ let C1X_percentage;
 
 let moldArr = []
 
-for (let i = 0; i < moldSelectEl.children.length; i++) {
-  moldArr.push(moldSelectEl.children[i].value)
-  if (moldSelectEl.children[i].value == localStorage.mold) {
-    moldSelectEl.children[i].selected = true
-  }
+if (localStorage.mold){
+  moldEl.value = localStorage.mold
 }
 
-let putterName = moldSelectEl.value
+
+let putterName = moldEl.value
 
 if (localStorage.putters) {
   putterInputEl.placeholder = localStorage.putters
@@ -75,14 +73,14 @@ if (localStorage.username) {
 }
 
 
-moldSelectEl.addEventListener('change', updateMoldLS)
+moldEl.addEventListener('change', updateMoldLS)
 putterInputEl.addEventListener('input', updatePuttersLS)
 fromInputEl.addEventListener('input', updateFromDistanceLS)
 toInputEl.addEventListener('input', updateToDistanceLS)
 
 function updateMoldLS() {
   console.log("Updating mold in local storage")
-  localStorage.mold = moldSelectEl.value
+  localStorage.mold = moldEl.value
 }
 
 function updatePuttersLS() {
@@ -185,7 +183,7 @@ startBtn.addEventListener("click", startPractice)
 
 async function startPractice() {
   // Get putter name
-  putterName = moldSelectEl.value
+  putterName = moldEl.value
   localStorage.username = usernameEl.value
   collectionName = localStorage.username
   //collectionName = 'new_test'
@@ -286,22 +284,14 @@ async function addManualData() {
   let choice = prompt('Add manual data? (y/n):')
 
   if (choice == 'y') {
-
-
     console.log("Manually adding data")
     let collectionName = "Didrik147"
 
-    let data = {
-      "name": "Reko",
-      '4m': [19, 20],
-      '5m': [17, 20],
-      '6m': [14, 20],
-      '7m': [12, 20],
-      '8m': [2, 12],
-      '9m': [0, 0]
-    }
-
-    let timestamp = new Date().getTime().toString()
+    //let data = {"name": "Pure", '4m': [87, 90], '5m': [97, 114], '6m': [78, 114], '7m': [67, 114], '8m': [29, 83], '9m': [1, 4]}
+    let data = {"name": "Deputy", '4m': [27, 28], '5m': [41, 48], '6m': [31, 48], '7m': [28, 48], '8m': [21, 44], '9m': [4, 8]}
+    //let timestamp = new Date().getTime().toString()
+    
+    let timestamp = Date.parse("2023-09-24T14:01:00").toString()
     console.log("Timestamp:", timestamp)
 
     // Add a new document with a specified ID
