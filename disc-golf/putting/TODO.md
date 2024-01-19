@@ -17,7 +17,10 @@
   - [x] Percentage for each distance (bar chart)
 - [ ] User authentication?
   - [ ] My putters
-- [ ] Avoid repetition of code (getUserData)
+- [x] Avoid repetition of code (getUserData)
+- [x] Favicon
+- [ ] Add timestamp to database (as field, not only ID)
+
 
 
 ## IDEAS

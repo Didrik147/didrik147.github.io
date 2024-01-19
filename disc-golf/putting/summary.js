@@ -82,6 +82,7 @@ window.addEventListener("load", (e) => {
 
 
 async function getUserDataAll(username) {
+  //console.log("Getting all data")
   let discData = {}
 
   // Get information about user from database
@@ -93,31 +94,9 @@ async function getUserDataAll(username) {
     alert("User has no data")
   } else {
     querySnapshot.forEach((doc) => {
-        let practice = doc.data()
-        let mold = practice.name
-
-        if (!(mold in discData)) {
-          discData[mold] = {
-            '4m': [0, 0],
-            '5m': [0, 0],
-            '6m': [0, 0],
-            '7m': [0, 0],
-            '8m': [0, 0],
-            '9m': [0, 0],
-          }
-        }
-
-        distances.forEach(distance => {
-          if (distance in practice) {
-            discData[mold][distance][0] += practice[distance][0]
-            discData[mold][distance][1] += practice[distance][1]
-          }
-        })
-      
+      getDiscData(doc.data(), discData)
     })
 
-
-    //console.log(discData)
     createTable(discData)
   }
 }
@@ -135,32 +114,12 @@ async function getUserDataSome(username) {
     let i = 0
     querySnapshot.forEach((doc) => {
       i += 1
-      
+
       if (i > (querySnapshot.size - Number(numberEl.value))) {
-        let practice = doc.data()
-        let mold = practice.name
-
-        if (!(mold in discData)) {
-          discData[mold] = {
-            '4m': [0, 0],
-            '5m': [0, 0],
-            '6m': [0, 0],
-            '7m': [0, 0],
-            '8m': [0, 0],
-            '9m': [0, 0],
-          }
-        }
-
-        distances.forEach(distance => {
-          if (distance in practice) {
-            discData[mold][distance][0] += practice[distance][0]
-            discData[mold][distance][1] += practice[distance][1]
-          }
-        })
+        getDiscData(doc.data(), discData)
       }
     })
-  
-    //console.log(discData)
+
     createTable(discData)
   }
 }
@@ -183,33 +142,36 @@ async function getUserDataDate(username) {
       let doc_date = new Date(doc_timestamp).toISOString().split('T')[0]
 
       if (doc_date == target_date) {
-        let practice = doc.data()
-        let mold = practice.name
-
-        if (!(mold in discData)) {
-          discData[mold] = {
-            '4m': [0, 0],
-            '5m': [0, 0],
-            '6m': [0, 0],
-            '7m': [0, 0],
-            '8m': [0, 0],
-            '9m': [0, 0],
-          }
-        }
-
-        distances.forEach(distance => {
-          if (distance in practice) {
-            discData[mold][distance][0] += practice[distance][0]
-            discData[mold][distance][1] += practice[distance][1]
-          }
-        })
+        getDiscData(doc.data(), discData)
       }
     })
 
-
-    //console.log(discData)
     createTable(discData)
   }
+}
+
+function getDiscData(practice, discData) {
+  let mold = practice.name
+
+  if (!(mold in discData)) {
+    discData[mold] = {
+      '4m': [0, 0],
+      '5m': [0, 0],
+      '6m': [0, 0],
+      '7m': [0, 0],
+      '8m': [0, 0],
+      '9m': [0, 0],
+    }
+  }
+
+  distances.forEach(distance => {
+    if (distance in practice) {
+      discData[mold][distance][0] += practice[distance][0]
+      discData[mold][distance][1] += practice[distance][1]
+    }
+  })
+
+  return discData
 }
 
 
