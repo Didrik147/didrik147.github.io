@@ -290,10 +290,12 @@ async function addManualData() {
     let collectionName = "Didrik147"
 
     //let data = {"name": "Pure", '4m': [87, 90], '5m': [97, 114], '6m': [78, 114], '7m': [67, 114], '8m': [29, 83], '9m': [1, 4]}
-    let data = {"name": "Deputy", '4m': [27, 28], '5m': [41, 48], '6m': [31, 48], '7m': [28, 48], '8m': [21, 44], '9m': [4, 8]}
+    //let data = {"name": "Deputy", '4m': [27, 28], '5m': [41, 48], '6m': [31, 48], '7m': [28, 48], '8m': [21, 44], '9m': [4, 8]}
+    let data = {"name": "Reko", '4m': [19, 20], '5m': [17, 20], '6m': [14, 20], '7m': [12, 20], '8m': [2, 12], '9m': [0, 0]}
+
     //let timestamp = new Date().getTime().toString()
     
-    let timestamp = Date.parse("2023-09-24T14:01:00").toString()
+    let timestamp = Date.parse("2023-09-24T16:35:02").toString()
     console.log("Timestamp:", timestamp)
 
     // Add a new document with a specified ID
