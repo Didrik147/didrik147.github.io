@@ -19,7 +19,7 @@
   - [ ] My putters
 - [x] Avoid repetition of code (getUserData)
 - [x] Favicon
-- [ ] Add timestamp to database (as field, not only ID)
+- [x] Add timestamp to database (as field, not only ID)
 
 
 

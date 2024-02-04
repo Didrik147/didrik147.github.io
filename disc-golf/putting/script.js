@@ -274,6 +274,8 @@ async function updateDB(data) {
   let timestamp = new Date().getTime().toString()
   console.log("Timestamp:", timestamp)
 
+  data.timestamp = timestamp
+
   // Add a new document with a specified ID
   await setDoc(doc(db, collectionName, timestamp), data)
 }
