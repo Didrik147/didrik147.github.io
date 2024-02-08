@@ -55,7 +55,6 @@ ansatte.push(new Ansatt("Svein", 186, 197))
 ansatte.push(new Ansatt("Åsne", 198, 209))
 ansatte.push(new Ansatt("Hilde", 210, 214))
 ansatte.push(new Ansatt("Martine Bye", 215, 226))
-ansatte.push(new Ansatt("Anna Sofie", 227, 238))
 ansatte.push(new Ansatt("Martine Sandvold", 239, 250))
 ansatte.push(new Ansatt("Live", 263, 274))
 
