@@ -95,7 +95,7 @@ document.write(`
                         <li><a href="https://github.com/" target="_blank">GitHub</a></li>
                         <li><a href="https://replit.com/" target="_blank">Replit</a></li>
 
-                        <li><a href="https://timeplan.didrik147.repl.co/" target="_blank">Didriks timeplan</a></li>
+                        <li><a href="https://didrik147.github.io/timeplan" target="_blank">Didriks timeplan</a></li>
                     </ul>
                 </li>
             </ul>
