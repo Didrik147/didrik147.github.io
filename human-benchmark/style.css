@@ -1,0 +1,143 @@
+:root {
+    --green-dark: rgb(10, 104, 71);
+    --green-light: rgb(122, 186, 120);
+    --yellow: rgb(243, 202, 82);
+    --beige: rgb(246, 233, 178);
+}
+
+* {
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+nav {
+    background-color: white;
+    display: flex;
+    padding-left: 4%;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    padding: 1rem;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    background-color: lightgray;
+}
+
+nav .fa-bolt-lightning {
+    color: gray;
+}
+
+/* Hero Section */
+.hero {
+    background-color: var(--green-dark);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.hero h1, .hero h2 {
+    font-weight: 400;
+    color: white;
+    font-size: 3.5rem;
+    margin: .5rem;
+}
+
+.hero h1 {
+    margin-top: 1rem;
+}
+
+.hero h2 {
+    font-size: 1.3rem;
+}
+
+.hero button {
+    background-color: var(--yellow);
+    padding: .8rem 1.4rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: .2rem;
+    margin: 1rem auto;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.hero button:hover {
+    background-color: white;
+}
+
+.hero .fa-solid {
+    font-size: 5rem;
+    color: white;
+}
+
+main {
+    background-color: lightgray;
+    padding: 2rem 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(7rem, 14rem));
+    justify-content: center;
+    gap: 1.4rem;
+}
+
+main a {
+    height: 14rem;
+    background-color: white;
+    border-radius: .4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    transition: .2s;
+    text-align: center;
+}
+
+main a * {
+    margin: .5rem;
+}
+
+main a h3 {
+    font-size: 1.3rem;
+}
+
+.fa-bolt-lightning {
+    font-style: italic;
+}
+
+main a .fa-solid {
+    opacity: .5;
+    font-size: 3rem;
+    color: var(--green-light);
+}
+
+main a:hover {
+    transform: translateY(-.5rem);
+    box-shadow: .1rem .2rem .5rem .1rem black;
+}
+
+main a:hover .fa-solid {
+    opacity: 1;
+    color: var(--green-dark);
+}
+
+@media(max-width: 700px){
+    main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 400px){
+    main {
+        grid-template-columns: 1fr;
+    }
+}
