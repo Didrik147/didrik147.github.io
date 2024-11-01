@@ -1,14 +1,28 @@
-let manufacturers = ["ultimate-guard", 
-    "ultra-pro", 
-    "gamegenic_side-holder", 
-    "gamegenic", 
+let manufacturers = [
+    "blackfire",
     "dragon-shield",
     "dragon-shield_dragon",
-    "blackfire"];
+    "gamegenic_side-holder", 
+    "gamegenic", 
+    "ultimate-guard", 
+    "ultra-pro"];
 
 manufacturers.sort();
 
-let colors = ["purple", "orange", "red", "yellow", "lime-green", "white", "blue", "green", "black", "clear", "pink"];
+let colors = [
+    "black", 
+    "blue",
+    "brown",
+    "green",
+    "lime-green",
+    "orange", 
+    "pink",
+    "purple", 
+    "red",
+    "silver",
+    "transparent",
+    "yellow", 
+    "white"];
 
 colors.sort();
 

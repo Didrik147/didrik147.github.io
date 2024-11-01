@@ -1,18 +1,36 @@
-let manufacturers = ["ultimate-guard", 
-    "ultra-pro", 
-    "gamegenic_side-holder", 
-    "gamegenic", 
+let manufacturers = [
+    "blackfire",
     "dragon-shield",
     "dragon-shield_dragon",
-    "blackfire"];
+    "gamegenic_side-holder", 
+    "gamegenic", 
+    "ultimate-guard",
+    "ultimate-guard_boulder", 
+    "ultimate-guard_deck-n-tray", 
+    "ultra-pro",
+    "ultra-pro_2piece"];
 
 manufacturers.sort();
 
-let colors = ["purple", "orange", "red", "yellow", "lime-green", "white", "blue", "green", "black", "clear", "pink"];
+let colors = [
+    "black", 
+    "blue",
+    "brown",
+    "clear",
+    "green",
+    "lime-green",
+    "orange", 
+    "pink",
+    "purple", 
+    "red",
+    "silver",
+    "transparent",
+    "white",
+    "yellow"];
 
 colors.sort();
 
-let sizes = [60, 80, 100];
+let sizes = [60, 80, 100, 133];
 
 let possibleExtensions = ["jpg", "png", "webp"];
 
@@ -54,6 +72,12 @@ sizes.forEach(size => {
 
 function fixManufacturer(manufacturer) {
     switch(manufacturer){
+        case "ultimate-guard_boulder":
+            return "Ultimate Guard Boulder"
+        case "ultimate-guard_deck-n-tray":
+            return "Ultimate Guard Deck 'n' Tray"
+        case "ultra-pro_2piece":
+            return "Ultra PRO 2-Piece"
         case "ultra-pro":
             return "Ultra PRO"
         case "gamegenic_side-holder":

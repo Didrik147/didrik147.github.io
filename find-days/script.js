@@ -16,6 +16,7 @@ function findDays(){
     
     if (!isNaN(days)){
         resultatEl.innerHTML = `Det er ${days} dager mellom disse to datoene.`
+        resultatEl.innerHTML += `<br>(${days+1} hvis man inkluderer sluttdato)`
     }
 }
 
