@@ -1,0 +1,11 @@
+@import "colors.scss";
+@import "images.scss";
+@import "text.scss";
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+.dropdown {
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        margin: 0 auto;
+    }
+}

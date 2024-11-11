@@ -1,0 +1,20 @@
+$starry-night: #111f2e;
+$frog: #6EBE45;
+$mint-green: #bbe6e4ff;
+$antiflash-white: #f0f6f6ff;
+$hot-pink: #ff66b3ff;
+
+$theme-colors: (
+  "primary": $starry-night,
+  "secondary": $frog,
+  "success": $mint-green,
+  "info": $antiflash-white,
+  "warning": $hot-pink,
+  "danger": $hot-pink,
+  "light": $antiflash-white,
+  "dark": $frog
+);
+
+.shadow-box {
+    background-color: #111f2ec3;
+}
