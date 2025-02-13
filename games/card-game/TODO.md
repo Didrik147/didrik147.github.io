@@ -30,7 +30,8 @@
 - [x] When energy is at 0, make the "End turn" button more prominent
 - [x] Add energy cost symbol
 - [ ] Rotate cards in hand? 
-- [ ] Add music
+- [x] Add music
+- [ ] Add sound effects
 - [ ] Add main screen (with character selection?)
 - [ ] Add zoom in on card with e.g. left click
 - [ ] Add attack animation for enemies (change between two images?)
