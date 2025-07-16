@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fargegjetting</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h2>Fargegjettingsspillet</h2>
+        <h3>Trykk på boksen som korresponderer til fargekoden</h3>
+        <h1 id="targetColor"></h1>
+        <h3>Gjenværende liv:
+            <div id="life-container">
+                <i class="fa-solid fa-heart"></i>
+                <i class="fa-solid fa-heart"></i>
+                <i class="fa-solid fa-heart"></i>
+            </div>
+        </h3>
+    </header>
+
+    <!-- <div>
+        <h2>Antall poeng: </h2>
+        <h2 id="resultat">Trykk på en boks</h2>
+        <button id="new" class="hide">Ny farge</button>
+    </div> -->
+    <div class="stripe">
+        
+        <div id="poeng">Antall poeng: 0</div>
+        <div id="resultat">Trykk på en boks</div>
+        <div id="highscore">High score: 0</div>
+    </div>
+    
+    <div class="container">
+        <div class="fargeboks"></div>
+        <div class="fargeboks"></div>
+        <div class="fargeboks"></div>
+        <div class="fargeboks"></div>
+        <div class="fargeboks"></div>
+        <div class="fargeboks"></div>
+    </div>
+
+    <button id="new" class="hide">Ny farge</button>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

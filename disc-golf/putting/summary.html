@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Summary</title>
+
+  <link rel="icon" href="./assets/disc-golf.svg" sizes="any" type="image/svg+xml">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    h2,
+    h3 {
+      margin: 20px;
+    }
+
+    header {
+      margin: 0;
+    }
+
+    form input {
+      width: 200px;
+      margin: 5px;
+    }
+
+    form input[type="number"] {
+      width: 80px;
+    }
+
+    button {
+      cursor: pointer;
+      font-size: 20px;
+      padding: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+
+  </nav>
+
+  <header>
+    <h1>Summary</h1>
+  </header>
+
+  <form onSubmit="return false;">
+    <label for="user">Choose a user:</label>
+    <input list="users" name="user" id="user">
+    <datalist id="users">
+      <option value="Didrik147">Didrik147</option>
+      <option value="Test">Test</option>
+      <option value="Test1">Test1</option>
+    </datalist>
+
+    <br><br>
+
+    <label for="date">Retrieve data for date:</label>
+    <input type="date" id="date">
+    
+    <br><br>
+    
+    <p>Retrieve last <input type="number" min="1"> practices.
+    </p>
+    
+    <br>
+
+    <button id="btn-all">Retrieve all data</button>
+  </form>
+
+  <section id="table-container">
+    <h2 class="center">Data</h2>
+    <!-- <table>
+            <thead>
+                <tr>
+                    <th>Mold</th>
+                    <th>4 m</th>
+                    <th>5 m</th>
+                    <th>6 m</th>
+                    <th>7 m</th>
+                    <th>8 m</th>
+                    <th>9 m</th>
+                    <th>C1X</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Pure</td>
+                    <td>4/4 = 100 %</td>
+                    <td>4/4 = 100 %</td>
+                    <td>3/4 = 75 %</td>
+                    <td>2/4 = 50 %</td>
+                    <td>1/4 = 25 %</td>
+                    <td>0/4 = 0 %</td>
+                    <td>58.3 %</td>
+                </tr>
+                <tr>
+                    <td>Deputy</td>
+                    <td>4/4 = 100 %</td>
+                    <td>4/4 = 100 %</td>
+                    <td>3/4 = 75 %</td>
+                    <td>2/4 = 50 %</td>
+                    <td>1/4 = 25 %</td>
+                    <td>0/4 = 0 %</td>
+                    <td>58.3 %</td>
+                </tr>
+                <tr>
+                    <td>All</td>
+                    <td>40/40 = 100 %</td>
+                    <td>40/40 = 100 %</td>
+                    <td>30/40 = 75 %</td>
+                    <td>20/40 = 50 %</td>
+                    <td>10/40 = 25 %</td>
+                    <td>0/40 = 0 %</td>
+                    <td>58.3 %</td>
+                </tr>
+            </tbody>
+        </table> -->
+  </section>
+
+  <section id="c1x">
+
+  </section>
+
+  <!-- <div class="bar-container chart-container">
+        <canvas id="barChart"></canvas>
+    </div> -->
+
+  <canvas id="barChart"></canvas>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+  <script src="navbar.js"></script>
+
+  <script type='module' src="summary.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon_io/site.webmanifest">
+    <link rel="stylesheet" href="dist/css/style.css">
+    <title>Kvekk</title>
+</head>
+<body class="bg-primary">
+  <div class="container d-flex flex-column min-vh-100 bg-frog-image">
+
+    <!-- HEADER -->
+    <header class="row bg-primary text-bg-info text-white">
+        <div class="col-12">
+            <div class="row">
+                <div class="col-lg-2 col-12 d-flex justify-content-center align-items-center">
+                    <a href="index.html">
+                        <img src="assets/logo/kvekk_logo_nighteyes.svg" alt="logo" height="40px" class="mt-5">
+                    </a>
+                </div>
+                <!-- This frog is visible only on large screens: -->
+                <div class="col-lg-8 d-none d-lg-flex justify-content-center pt-4">
+                    <img src="assets/logo/kvegg_logg_header.svg" alt="frog" style="height: 120px;">
+                </div>
+                <!-- Dropdown menu -->
+                <div class="col-lg-2 col-12 p-3 d-flex justify-content-center justify-content-md-start align-items-center">
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Meny
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="index.html">Hjem</a></li>
+                            <li><a class="dropdown-item" href="kvekk.html">Gi et lite kvekk</a></li>
+                            <li><a class="dropdown-item" href="minlogg.html">Min logg</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="row">
+        <div class="col-lg-5 col-md-8 col-12 m-3 talking-bubble-opacity-80">
+            <div class="p-4 bubble-text-area">
+                <h1 class="amatic-sc-bold">Gi et lite kvekk</h1>
+                <p>
+                    Har du noe du gir et lite kvekk om? Del dine tanker og innvendinger med folk som vil diskutere dine kvekk - og hopp på andre folks diskusjoer. Det kan være så enkelt som Pepsi VS. Cola, eller så stort som Trump VS. Kamala. Hva er din mening?
+                </p>
+                <a href="kvekk.html">
+                    <button class="btn btn-primary">Gi et lite kvekk</button>
+                </a>
+                <div class="d-flex justify-content-center align-items-center" style="height: 180px;">
+                    <img src="assets/logo/frog-head.svg" alt="Frog" class="rotate-image m-2 drop-shadow mx-auto img-fluid" width="120">
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-7 col-md-4 col-12"></div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="row mt-auto">
+        <div class="col-12 bg-primary text-white">
+            <div class="text-center py-5 text-white">
+                &#169 2024
+            </div>
+        </div>
+    </footer>
+  </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

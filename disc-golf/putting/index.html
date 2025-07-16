@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Putting</title>
+
+    <link rel="icon" href="./assets/disc-golf.svg" sizes="any" type="image/svg+xml">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            height: 100vh;
+            /* background-image: url('https://cdn.pixabay.com/photo/2017/07/08/17/33/disc-golf-2485038_1280.jpg'); */
+            
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.1)), url('./assets/disc-golf-2485038_1280.jpg');
+            
+            background-position: center;
+            background-size: cover;
+
+            overflow: hidden;
+        }
+
+
+        main {
+            text-align: center;
+        }
+
+        main a {
+            margin: 15px;
+            padding: 10px;
+            font-size: 22px;
+            border: 2px solid black;
+            border-radius: 10px;
+            min-width: 160px;
+            display: inline-block;
+            text-decoration: none;
+            color: black;
+            cursor: pointer;
+            background-color: white;
+        }
+
+        main a:hover{
+            background-color: rgb(0, 183, 255);
+        }
+
+        @media(min-width:600px){
+            header {
+                margin-top: 80px;
+                margin-bottom: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        
+    </nav>
+    <header>
+        <h1>POTTIS POTTIS POW POW</h1>
+        <p>Welcome to my Pro Putting Practice Program!</p>
+        <p>Choose "New Practice" or "Summary"</p>
+    </header>
+
+    <main>
+        <a href='new_practice.html'>New Practice</a>
+        <a href='summary.html'>Summary</a>
+    </main>
+
+
+    <script src="navbar.js"></script>
+</body>
+
+</html>

@@ -11,6 +11,8 @@ let baner = {
     "Myrdammen": [59.8665, 11.0806],
     "Holmenkollen": [59.9658, 10.6664],
     "Nannestad": [60.2190, 11.0175],
+    "Jessheim" : [60.1534, 11.1647],
+    "Solliskogen" : [59.4201, 10.6954], // Moss
     "Maple&nbsp;Hill": [42.2759, -71.8949],
 };
 
@@ -32,9 +34,8 @@ function update(){
     myHour = Number(sliderEl.value)
 
     getWeather(banerArr[0]) // Ekeberg
-    getWeather(banerArr[1]) // Røa
-    getWeather(banerArr[4]) // Nannestad
-    //getWeather(banerArr[5]) // Maple Hill
+    getWeather(banerArr[5]) // Jessheim
+    getWeather(banerArr[6]) // Solliskogen
 }
 
 update()

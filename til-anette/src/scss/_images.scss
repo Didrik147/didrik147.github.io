@@ -1,0 +1,46 @@
+.bg-frog-image {
+    background-image: url('../../assets/images/frog-jump.png'); 
+    background-size: cover;
+}
+
+.bg-frog-image-small-frog {
+    background-image: url('../../assets/images/left-frog.png'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.talking-bubble {
+    background-image: url('../../assets/images/talking_bubble_right.png'); 
+}
+
+.talking-bubble-opacity {
+    background-image: url('../../assets/images/talking_bubble_opacity50.png'); 
+    background-size: 550px 500px;
+    background-repeat: no-repeat;
+}
+
+.talking-bubble-opacity-80 {
+    background-image: url('../../assets/images/talking_bubble_80opacity.png');
+    background-size: 550px 500px;
+    background-repeat: no-repeat;
+}
+
+.talking-bubble-opacity-flipped {
+    background-image: url('../../assets/images/talking_bubble_opacity50_flipped_talk_to_left.png'); // Correct path
+    background-size: 550px 500px;
+    background-repeat: no-repeat;
+}
+
+.rotate-image {
+    -webkit-animation: spin 10s linear infinite;
+    -moz-animation: spin 10s linear infinite;
+    animation: spin 10s linear infinite;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); } }
+
+.drop-shadow {
+    filter: drop-shadow(5px 10px 4px #0000006c);
+}

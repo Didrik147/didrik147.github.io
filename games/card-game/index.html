@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roguelike Card Game</title>
+
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <header>
+    <h1>Welcome to "Roguelike Card Game"</h1>
+    <p>Choose your character. Game will start when character is chosen.</p>
+  </header>
+
+  <main>
+    <div class="characters">
+      <div class="card character" id="lorekeeper">
+        <div class="name">
+          <h1>Lorekeeper</h1>
+        </div>
+        <div class="image-container" style="background-image: url('./assets/happy-book.png');">
+
+        </div>
+        <div class="text-container">
+          <p>Use your knowledge to deal massive damage.</p>
+        </div>
+      </div>
+
+      <div class="card character" id="potions-master">
+        <div class="name">
+          <h1>Potions Master</h1>
+        </div>
+        <div class="image-container" style="background-image: url('./assets/purple-potion.png');">
+
+        </div>
+        <div class="text-container">
+          <p>Potions can be useful.</p>
+        </div>
+      </div>
+
+      <div class="card character" id="bread-knight">
+        <div class="name">
+          <h1>Bread Knight</h1>
+        </div>
+        <div class="image-container" style="background-image: url('./assets/chocolate-cake.png');">
+
+        </div>
+        <div class="text-container">
+          <p>Have you ever heard about a bread knight?</p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script>
+    const characterEls = document.querySelectorAll('.character')
+
+    characterEls.forEach(characterEl => {
+      characterEl.addEventListener('click', function(e){
+          localStorage.character = e.currentTarget.id
+
+          window.location.href = 'game.html'
+      })
+    })
+  </script>
+</body>
+
+</html>

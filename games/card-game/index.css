@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Kreon:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: 'Kreon', serif;
+}
+
+header {
+  text-align: center;
+}
+
+header * {
+  margin: 1rem;
+}
+
+header p {
+  font-size: 1.3rem;
+}
+
+main {
+  width: 95%;
+  margin: 1.5rem auto;
+}
+
+.characters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+
+.card {
+  height: calc(3.5*5em);
+  width: calc(2.5*5em);
+  border: .2em solid #000;
+  border-radius: .4em;
+  background-color: white;
+  cursor: pointer;
+  transition: .4s;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.card .name {
+  font-size: .9em;
+  padding: .2em;
+  background-color: #fff;
+  border-bottom: .1em solid #000;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card .image-container {
+  text-align: center;
+  flex-grow: 5;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.card .text-container {
+  border-top: .1em solid #000;
+  font-size: 1.2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: .2em;
+  flex-grow: 1;
+}
+
+.green {
+  background-color: #0a0;;
+}

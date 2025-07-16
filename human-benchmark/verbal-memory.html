@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Human Benchmark</title>
+
+    <!-- Inspired by the following website:
+    https://humanbenchmark.com/tests/verbal-memory -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .hero p {
+            color: white;
+            font-size: 1.2rem;
+            line-height: 1.5;
+        }
+
+        main {
+            display: flex;
+        }
+
+        main div {
+            background-color: white;
+            border-radius: .4rem;
+            padding: 1rem;
+            max-width: 600px;
+        }
+
+        main div * {
+            margin: 1rem;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#">Dashboard</a>
+        </nav>
+        <div class="hero">
+            <i class="fa-solid fa-book"></i>
+            <h1>Verbal Memory Test</h1>
+            <p>You will be shown words, one at a time. <br>If you've seen a word during the test, click SEEN. <br>If
+                it's a new word, click NEW.</p>
+
+            <button>Start</button>
+        </div>
+    </header>
+    <main>
+        <div>
+            <h1>About the test</h1>
+            <p>This test measures how many words you can keep in short term memory at once.</p>
+
+            <p>The number of words you need to remember grows continually, until you can't keep them in your head anymore. </p>
+
+            <p>Go as long as you can. You have 3 strikes until game over.</p>
+
+            <p>Your score is how many turns you lasted.</p>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+
+</html>

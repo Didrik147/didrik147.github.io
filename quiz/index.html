@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <h1>Multiple Choice Quiz</h1>
+
+        <div class="tema-container">
+            <label for="tema-select">Velg tema:</label>
+            <select name="tema" id="tema-select">
+                <option value="it">IT</option>
+                <option value="matematikk">Matematikk</option>
+                <option value="naturfag">Naturfag</option>
+            </select>
+        </div>
+
+        <button id="btn-get">Hent spørsmål</button>
+
+
+        <div class="quiz-container">
+            <!-- <div class="question-container">
+                <h3>1. Hvem oppfant JavaScript?</h3>
+                <label>
+                    <input type="radio" name="q1">Brendan Eich
+                </label>
+                <label>
+                    <input type="radio" name="q1">Larry Wall
+                </label>
+                <label>
+                    <input type="radio" name="q1">Rasmus Lerdorf
+                </label>
+            </div>
+            <div class="question-container">
+                <h3>2. JavaScript er det samme som Java</h3>
+                <label>
+                    <input type="radio" name="q2">Ja
+                </label>
+                <label>
+                    <input type="radio" name="q2">Nei
+                </label>
+            </div> -->
+        </div>
+
+        <button id="btn-check" class="hide">Sjekk svar</button>
+
+        <p id="resultat"></p>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

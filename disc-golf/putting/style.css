@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/cgf-locust-resistance');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+h1, h2, h3 {
+    font-family: 'Exo', sans-serif;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #000;
+    height: 68px;
+}
+
+nav .logo {
+    font-family: 'CGF Locust Resistance', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+nav .logo a {
+    text-decoration: none;
+    color: white;
+    font-size: 44px;
+    margin-left: 3vw;
+    padding: 0px 1.5vw;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    margin-right: 1vw;
+}
+
+nav ul li {
+    padding: 0px 2vw;
+}
+
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: rgb(0, 183, 255);
+}
+
+
+/* Header */
+header {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    width: 95%;
+    max-width: 600px;
+    background-color: rgba(255,255,255, 0.8);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+header h1 {
+    font-size: 40px;
+    text-align: center;
+    margin: 20px auto;
+}
+
+header article {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+header p {
+    margin: 10px 0;
+    font-size: 18px;
+    font-style: italic;
+    text-align: center;
+}
+
+header article input {
+    font-size: 20px;
+    width: 60px;
+    padding: 5px;
+}
+
+#mold {
+    width: 170px;
+}
+
+form {
+    text-align: center;
+}
+
+form * {
+    font-size: 20px;
+}
+
+form input{
+    padding: 5px;
+}
+
+form input[type="date"]{
+    font-size: 16px;
+    width: auto;
+}
+
+
+
+/* Main */
+main {
+    width: 95%;
+    max-width: 600px;
+    /* border: 1px solid #000; */
+}
+
+main h2 {
+    margin: 10px 0px;
+}
+
+main article {
+    margin: 20px auto;
+}
+
+.buttonrow {
+    display: flex;
+    justify-content: space-between;
+    /* gap: 20px */
+}
+button {
+    cursor: pointer;
+}
+
+button.clicked {
+    background-color: rgb(0, 183, 255);
+}
+
+.buttonrow button {
+    font-size: 25px;
+    flex-grow: 1;
+    padding: 10px 0px;
+    border-radius: 5px;
+}
+
+
+/* Footer */
+footer {
+    margin-top: 30px;
+    padding-bottom: 20px;
+}
+
+footer button {
+    padding: 5px 20px;
+    font-size: 30px;
+    min-width: 200px;
+}
+
+.hide {
+    display: none;
+}
+
+.center {
+    text-align: center;
+}
+
+.chart-container {
+    width: 100%;
+    max-width: 700px;
+}
+
+#barChart {
+    margin: 10px;
+    margin-top: 0;
+    max-width: 1000px;
+    max-height: 500px;
+}
+
+/* Summary table */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table th, table td{
+    border: 1px solid black;
+    padding: 5px;
+    text-align: center;
+}
+
+table td:first-child{
+  text-align: left;
+}
+
+
+
+@media(max-width: 500px) {
+    header h1 {
+        font-size: 36px;
+    }
+
+    nav ul li a{
+        font-size: 18px;
+    }
+
+    nav .logo a {
+        font-size: 38px;
+    }
+
+    main a:last-child{
+        margin-bottom: 0;
+    }
+
+    /* table tr > *:nth-child(2) {
+        display: none;
+    } */
+    table tr > *:nth-child(3) {
+        display: none;
+    }
+    /* table tr > *:nth-child(4) {
+        display: none;
+    } */
+    table tr > *:nth-child(5) {
+        display: none;
+    }
+    /* table tr > *:nth-child(6) {
+        display: none;
+    } */
+    table tr > *:nth-child(7) {
+        display: none;
+    }
+}
