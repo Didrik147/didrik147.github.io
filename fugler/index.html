@@ -1,28 +1,27 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fugler</title>
+  <title>Fuglekort</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <main>
-    <div class="container cards mx-auto flex justify-center gap-4 flex-wrap my-8">
-      <div class="container border-2 border-black rounded-md p-4 w-64 h-96">
-      <h1 class="text-center text-4xl font-bold my-2">Ærfugl</h1>
-      <h2 class="text-center italic my-2">Somateria mollissima</h2>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Somateria_mollissima_male_female.jpg/1280px-Somateria_mollissima_male_female.jpg" alt="Bilde av Ærfugl" class="h-48 w-full object-cover object-left rounded-md">
-      <p>Informasjon om fuglen.</p>
+<body class="m-2 p-2">
+  <!-- Card -->
+  <div class="bg-[#d7a842cc] rounded-md border-solid border-4 border-black w-[2.5in] h-[3.5in]">
+    <h1 class="font-bold text-lg text-center">Skjære</h1>
+    <img src="./bilder/Skjære.jpg" class="w-full h-[150px] object-cover" alt="Skjære">
+    <!-- Abilities -->
+    <div class="px-1 py-2 text-xs h-[110px]">
+      <ul class="list-disc mx-5">
+        <li>Når denne fuglen kommer i spill, trekk 1 kort.</li>
+      </ul>
     </div>
-    <div class="container border-2 border-black rounded-md p-4 w-64 h-96">
-      <h1 class="text-center text-4xl font-bold my-2">Tjeld</h1>
-      <h2 class="text-center italic my-2">Haematopus ostralegus</h2>
-      <img src="https://media.snl.no/media/284627/standard_compressed_Tjeld.jpg" alt="Bilde av Tjeld" class="h-48 w-full object-cover object-left rounded-md">
-      <p>Informasjon om fuglen.</p>
+    <!-- Flavor text -->
+    <div class="p-2 text-[8px] italic border-t border-black">
+      En utpreget standfugl som beveger seg lite i løpet av året.
     </div>
-    </div>
-    
-  </main>
+  </div>
 </body>
 </html>
