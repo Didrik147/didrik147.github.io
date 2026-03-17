@@ -1,27 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fuglekort</title>
-  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="m-2 p-2">
+<body>
+  <div class="card-grid">
+
   <!-- Card -->
-  <div class="bg-[#d7a842cc] rounded-md border-solid border-4 border-black w-[2.5in] h-[3.5in]">
-    <h1 class="font-bold text-lg text-center">Skjære</h1>
-    <img src="./bilder/Skjære.jpg" class="w-full h-[150px] object-cover" alt="Skjære">
+  <div class="card bg-yellow-light">
+
+    <!-- Cost -->
+    <div class="circle bg-yellow-dark text-white">2</div>
+
+    <!-- Name -->
+    <h1 class="text-center bg-yellow-dark">Skjære</h1>
+
+    <!-- Image -->
+    <img src="./bilder/Skjære.jpg" alt="Skjære">
+
     <!-- Abilities -->
-    <div class="px-1 py-2 text-xs h-[110px]">
-      <ul class="list-disc mx-5">
+    <div class="abilities">
+      <ul>
         <li>Når denne fuglen kommer i spill, trekk 1 kort.</li>
       </ul>
     </div>
+    
     <!-- Flavor text -->
-    <div class="p-2 text-[8px] italic border-t border-black">
+    <p class="flavor">
       En utpreget standfugl som beveger seg lite i løpet av året.
-    </div>
+    </p>
+    
   </div>
+
+  </div>
+
+
+  <script src="script.js"></script>
 </body>
 </html>
