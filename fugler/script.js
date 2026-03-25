@@ -60,6 +60,19 @@ birds.push(magpie)
 birds.push(blueTit)
 birds.push(muteSwan)
 
+/*let emptyBird = new Bird (
+  "",
+  "",
+  "",
+  "white",
+  "",
+  "", "",
+  ""
+)
+
+birds = [emptyBird, emptyBird, emptyBird, emptyBird, emptyBird, emptyBird, emptyBird, emptyBird, emptyBird]
+*/
+
 for (let i = 0; i < birds.length; i++) {
   let bird = birds[i]
 

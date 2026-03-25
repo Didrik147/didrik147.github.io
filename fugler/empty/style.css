@@ -1,0 +1,235 @@
+/* @import url('https://fonts.cdnfonts.com/css/libre-baskerville'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap');
+
+:root {
+  --yellow-light: hsl(41, 65%, 65%);
+  --yellow-dark: hsl(41, 65%, 55%);
+
+  --green-light: hsl(138, 18%, 60%);
+  --green-dark: hsl(138, 18%, 40%);
+
+  --blue-light: hsl(214, 49%, 60%);
+  --blue-dark: hsl(214, 49%, 40%);
+
+  --black: #000;
+  --grey: #ccc;
+  --white: #fff;
+}
+
+* {
+  font-family: "Libre Baskerville", serif;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 8px;
+  padding: 8px;
+}
+
+.bg-green-radial {
+  background-image: radial-gradient(
+    var(--white), 
+    var(--green-dark) 70%);
+}
+.bg-yellow-radial {
+  background-image: radial-gradient(
+    var(--white), 
+    var(--yellow-dark) 70%);
+}
+.bg-blue-radial {
+  background-image: radial-gradient(
+    var(--white), 
+    var(--blue-dark) 70%);
+}
+
+h1 {
+  font-size: 16px;
+  padding: 3px;
+
+  border-bottom-left-radius: 20px;
+  /* border-bottom-right-radius: 20px; */
+  
+  /* clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 99.8% 54.9%, 99% 59.8%, 97.8% 64.5%, 96.2% 69.1%, 94.1% 73.6%, 91.6% 77.8%, 88.7% 81.7%, 85.4% 85.4%, 81.7% 88.7%, 77.8% 91.6%, 73.6% 94.1%, 69.1% 96.2%, 64.5% 97.8%, 59.8% 99%, 54.9% 99.8%, 50% 100%, 45.1% 99.8%, 40.2% 99%, 35.5% 97.8%, 30.9% 96.2%, 26.4% 94.1%, 22.2% 91.6%, 18.3% 88.7%, 14.6% 85.4%, 11.3% 81.7%, 8.4% 77.8%, 5.9% 73.6%, 3.8% 69.1%, 2.2% 64.5%, 1% 59.8%, 0.2% 54.9%, 0% 50%); */
+  position: absolute;
+  right: 0;
+  width: 95%;
+  z-index: 5;
+}
+
+p {
+  padding: 4px 6px;
+}
+
+.image-container {
+  height: 180px;
+  position: relative;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* margin-top: 16px */
+}
+
+.type {
+  position: absolute;
+  bottom: 0;
+
+  font-size: 10px;
+  font-style: italic;
+  padding: 2px 6px;
+  padding-right: 8px;
+  border: 1px solid var(--black);
+  border-left: 0px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  /* clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%); */
+}
+
+.abilities {
+  font-size: 10px;
+
+  /* padding: 2px 10px; */
+}
+
+/* ul {
+  font-size: 10px;
+  
+  margin-top: 2px;
+  margin-left: 10px;
+
+  padding-left: 10px;
+  padding-right: 10px;
+} */
+
+/* ul {
+  list-style-position: inside;
+  font-size: 10px;
+  padding: 4px 6px;
+} */
+
+.mb-1 {
+  margin-bottom: 4px;
+}
+.mb-2 {
+  margin-bottom: 8px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.bg-black {
+  background-color: var(--black);
+}
+.bg-white {
+  background-color: var(--white);
+}
+
+.bg-grey {
+  background-color: var(--grey);
+}
+
+.bg-yellow-light {
+  background-color: var(--yellow-light);
+}
+.bg-yellow-dark {
+  background-color: var(--yellow-dark);
+}
+
+.bg-green-light {
+  background-color: var(--green-light);
+}
+.bg-green-dark {
+  background-color: var(--green-dark);
+}
+
+.bg-blue-light {
+  background-color: var(--blue-light);
+}
+.bg-blue-dark {
+  background-color: var(--blue-dark);
+}
+
+.text-white  {
+  color: var(--white);
+}
+
+.circle {
+  position: absolute;
+  left: -4.5px;
+  top: -4.5px;
+  z-index: 11;
+
+  border-radius: 50%;
+  border: 2px solid var(--black);
+
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  
+  /* -webkit-text-stroke: .3px var(--black); */
+
+  /* offset-x | offset-y | blur-radius | color */
+  text-shadow: 0px 0px 1.5px var(--black);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 2.5in);
+  grid-auto-rows: 3.5in;
+  justify-content: start;
+  gap: 1px;
+}
+
+.card {
+  height: 3.5in;
+  width: 2.5in;
+  border-radius: 6px;
+  border: 8px solid black;
+  position: relative;
+  
+}
+
+.flavor {
+  width: 100%;
+  font-size: 7px;
+  font-style: italic;
+  position: absolute;
+  bottom: 24px;
+  border-top: 1px solid var(--black);
+}
+
+.power {
+  width: fit-content;
+  /* top right bottom left */
+  padding: 4px 14px 0 4px;
+  font-size: 16px;
+  font-weight: bold;
+  position: absolute;
+  bottom: 0;
+  /* clip-path: polygon(0 0, 75% 0, 100% 100%, 0% 100%); */
+  border-top-right-radius: 20px;
+}
+
+.border-top {
+  width: 100%;
+  border-radius: 0px;
+  border-top: 1px solid var(--black);
+}
+
+.food .power {
+  font-size: 14px;
+}
+
+.food .image-container {
+  height: 270px;
+}
