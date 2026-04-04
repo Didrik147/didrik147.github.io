@@ -18,7 +18,7 @@ class Bird {
 let magpie = new Bird(
   "Skjære", 
   "Kråkefugler", 
-  "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Eurasian_magpie_%2810860%29.jpg/330px-Eurasian_magpie_%2810860%29.jpg",
+  "https://live.staticflickr.com/65535/55185848180_1fc575d377_b.jpg",
   "yellow",
   "Når denne fuglen kommer i spill, trekk 1 kort.", 
   2, 200, 
@@ -30,7 +30,7 @@ let birds = [magpie]
 let blueTit = new Bird (
   "Blåmeis",
   "Meisefugler",
-  "https://media.snl.no/media/21048/standard_compressed_Parus_caeruleus1_1_.jpg",
+  "https://live.staticflickr.com/65535/55185710904_c076e564ee_b.jpg",
   "green",
   "",
   1, 100,
@@ -43,7 +43,7 @@ birds.push(blueTit)
 let muteSwan = new Bird (
   "Knoppsvane",
   "Andefamilien",
-  "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Mute_Swan_Emsworth2.JPG/330px-Mute_Swan_Emsworth2.JPG",
+  "https://live.staticflickr.com/65535/55184563177_6ae0e9b49c_b.jpg",
   "blue",
   "",
   4, 400,
