@@ -3,14 +3,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap');
 
 :root {
+  /* Litt mer gult? F.eks. tørt gress */
   --yellow-light: hsl(41, 65%, 65%);
   --yellow-dark: hsl(41, 65%, 55%);
 
-  --green-light: hsl(138, 18%, 60%);
-  --green-dark: hsl(138, 18%, 40%);
+  /* Litt mer grønt? Se på trær i naturen */
+  /* --green-light: hsl(138, 18%, 60%);
+  --green-dark: hsl(138, 18%, 40%); */
+  --green-light: rgba(202, 223, 130, 1);
+  --green-dark: rgba(156, 204, 60, 1);
 
-  --blue-light: hsl(214, 49%, 60%);
-  --blue-dark: hsl(214, 49%, 40%);
+  /* OK */
+  /* --blue-light: hsl(214, 49%, 60%); */
+  /* --blue-dark: hsl(214, 49%, 40%); */
+  --blue-light: rgb(133, 172, 213);
+  --blue-dark: rgb(41, 119, 183);
 
   --black: #000;
   --grey: #ccc;
@@ -51,9 +58,7 @@ h1 {
   padding: 3px;
 
   border-bottom-left-radius: 20px;
-  /* border-bottom-right-radius: 20px; */
-  
-  /* clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 99.8% 54.9%, 99% 59.8%, 97.8% 64.5%, 96.2% 69.1%, 94.1% 73.6%, 91.6% 77.8%, 88.7% 81.7%, 85.4% 85.4%, 81.7% 88.7%, 77.8% 91.6%, 73.6% 94.1%, 69.1% 96.2%, 64.5% 97.8%, 59.8% 99%, 54.9% 99.8%, 50% 100%, 45.1% 99.8%, 40.2% 99%, 35.5% 97.8%, 30.9% 96.2%, 26.4% 94.1%, 22.2% 91.6%, 18.3% 88.7%, 14.6% 85.4%, 11.3% 81.7%, 8.4% 77.8%, 5.9% 73.6%, 3.8% 69.1%, 2.2% 64.5%, 1% 59.8%, 0.2% 54.9%, 0% 50%); */
+
   position: absolute;
   right: 0;
   width: 95%;
@@ -61,12 +66,13 @@ h1 {
 }
 
 p {
-  padding: 4px 6px;
+  padding: 5px 8px;
 }
 
 .image-container {
-  height: 180px;
+  height: 170px;
   position: relative;
+  top: 18px;
 }
 
 img {
@@ -82,36 +88,19 @@ img {
 
   font-size: 10px;
   font-style: italic;
-  padding: 2px 6px;
+  padding: 2px 8px;
   padding-right: 8px;
   border: 1px solid var(--black);
   border-left: 0px;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
-  /* clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%); */
 }
 
 .abilities {
   font-size: 10px;
-
-  /* padding: 2px 10px; */
+  position: relative;
+  top: 18px;
 }
-
-/* ul {
-  font-size: 10px;
-  
-  margin-top: 2px;
-  margin-left: 10px;
-
-  padding-left: 10px;
-  padding-right: 10px;
-} */
-
-/* ul {
-  list-style-position: inside;
-  font-size: 10px;
-  padding: 4px 6px;
-} */
 
 .mb-1 {
   margin-bottom: 4px;
@@ -169,16 +158,15 @@ img {
   border-radius: 50%;
   border: 2px solid var(--black);
 
-  width: 26px;
-  height: 26px;
+  width: 30px;
+  height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: bold;
-  
-  /* -webkit-text-stroke: .3px var(--black); */
 
-  /* offset-x | offset-y | blur-radius | color */
+  font-size: 18px;
+  font-weight: bold;
+
   text-shadow: 0px 0px 1.5px var(--black);
 }
 
@@ -187,14 +175,15 @@ img {
   grid-template-columns: repeat(3, 2.5in);
   grid-auto-rows: 3.5in;
   justify-content: start;
-  gap: 1px;
+  gap: 0px;
 }
 
+/* 240 px * 336 px */
 .card {
-  height: 3.5in;
-  width: 2.5in;
-  border-radius: 6px;
-  border: 8px solid black;
+  width: 2.5in;   /* 63.5 mm */
+  height: 3.5in;  /* 88.9 mm */
+  border-radius: 4px; /* Ca. 1.1 mm */
+  border: 10px solid var(--black); /* Ca. 2.6 mm */
   position: relative;
   
 }
@@ -205,7 +194,7 @@ img {
   font-style: italic;
   position: absolute;
   bottom: 24px;
-  border-top: 1px solid var(--black);
+  /* border-top: 1px solid var(--black); */
 }
 
 .power {
@@ -216,20 +205,6 @@ img {
   font-weight: bold;
   position: absolute;
   bottom: 0;
-  /* clip-path: polygon(0 0, 75% 0, 100% 100%, 0% 100%); */
+
   border-top-right-radius: 20px;
-}
-
-.border-top {
-  width: 100%;
-  border-radius: 0px;
-  border-top: 1px solid var(--black);
-}
-
-.food .power {
-  font-size: 14px;
-}
-
-.food .image-container {
-  height: 270px;
 }

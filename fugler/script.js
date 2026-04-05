@@ -2,92 +2,40 @@ let cardGridEl = document.querySelector('.card-grid');
 
 cardGridEl.innerHTML = ''
 
-class Bird {
-  constructor(name, family, img, color, ability, cost, power, flavor) {
-    this.name = name;
-    this.family = family;
-    this.img = img;
-    this.color = color;
-    this.ability = ability;
-    this.cost = cost;
-    this.power = power;
-    this.flavor = flavor;
+const fileUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTNeV8IOdFb29xK4JS0tvnTk4uijz0DQ80XOqRqyaonYOzhhUdxmUApJwHjePNk9GCfA8MKSI78g79H/pub?gid=310952346&single=true&output=csv';
+
+let birds = []; // Your target array
+
+Papa.parse(fileUrl, {
+  download: true,
+  header: true,      // This turns each row into an object instead of an array
+  dynamicTyping: true, // Automatically converts numbers/booleans from strings
+  skipEmptyLines: true,
+  complete: (results) => {
+    // results.data is already an array of objects!
+    birds = results.data;
+
+    console.log("Birds:", birds);
+    processData(birds); // Call your next function here
   }
-}
+});
 
-let magpie = new Bird(
-  "Skjære", 
-  "Kråkefugler", 
-  "https://live.staticflickr.com/65535/55185848180_1fc575d377_b.jpg",
-  "yellow",
-  "Når denne fuglen kommer i spill, trekk 1 kort.", 
-  2, 200, 
-  "En utpreget standfugl som beveger seg lite i løpet av året."
-);
+function processData(birds) {
+  for (let i = 0; i < birds.length; i++) {
+    let bird = birds[i]
 
-let birds = [magpie]
+    // Create card element
+    let cardEl = document.createElement('div');
+    cardEl.classList.add('card');
+    cardEl.classList.add(`bg-${bird.color.toLowerCase()}-light`);
 
-let blueTit = new Bird (
-  "Blåmeis",
-  "Meisefugler",
-  "https://live.staticflickr.com/65535/55185710904_c076e564ee_b.jpg",
-  "green",
-  "",
-  1, 100,
-  "Ligner på kjøttmeis, men er tydelig mindre og gjennomgående mer intenst blå."
-)
-
-birds.push(blueTit)
-
-
-let muteSwan = new Bird (
-  "Knoppsvane",
-  "Andefamilien",
-  "https://live.staticflickr.com/65535/55184563177_6ae0e9b49c_b.jpg",
-  "blue",
-  "",
-  4, 400,
-  "Knoppsvanen kan bli mer enn 10 kilo og ha et vingespenn på over 2 meter. Det gjør den til vår tyngste hekkefugl."
-)
-
-birds.push(muteSwan)
-
-birds.push(magpie)
-birds.push(blueTit)
-birds.push(muteSwan)
-
-birds.push(magpie)
-birds.push(blueTit)
-birds.push(muteSwan)
-
-/*let emptyBird = new Bird (
-  "",
-  "",
-  "",
-  "white",
-  "",
-  "", "",
-  ""
-)
-
-birds = [emptyBird, emptyBird, emptyBird, emptyBird, emptyBird, emptyBird, emptyBird, emptyBird, emptyBird]
-*/
-
-for (let i = 0; i < birds.length; i++) {
-  let bird = birds[i]
-
-// Create card element
-let cardEl = document.createElement('div');
-cardEl.classList.add('card');
-cardEl.classList.add(`bg-${bird.color}-light`);
-
-// Card content
-cardEl.innerHTML += `
+    // Card content
+    cardEl.innerHTML += `
     <!-- Cost -->
-    <div class="circle bg-${bird.color}-dark text-white">${bird.cost}</div>
+    <div class="circle bg-${bird.color.toLowerCase()}-dark text-white">${bird.cost}</div>
 
     <!-- Name -->
-    <h1 class="text-center bg-${bird.color}-radial">${bird.name}</h1>
+    <h1 class="text-center bg-${bird.color.toLowerCase()}-radial">${bird.name}</h1>
 
     <!-- Image -->
     <div class="image-container">
@@ -112,24 +60,6 @@ cardEl.innerHTML += `
     <!-- Power -->
     <div class="power bg-black text-white">${bird.power}</div>
 `
-cardGridEl.appendChild(cardEl)
+    cardGridEl.appendChild(cardEl)
+  }
 }
-
-
-let cardEl = document.createElement('div');
-cardEl.classList.add('card');
-cardEl.classList.add('food');
-
-cardEl.innerHTML += `
-    <!-- Name -->
-    <h2 class="text-center bg-white">Mat</h2>
-
-    <!-- Image -->
-    <div class="image-container">
-      <img src="https://avianreport.com/wp-content/uploads/2020/07/hulled-sunflower-seed_optimized.jpg" class="border-top" alt="Mat">
-    </div>
-
-    <!-- Power -->
-    <div class="power bg-white mb-1 border-top">+100 på din tur</div>
-`
-cardGridEl.appendChild(cardEl)
