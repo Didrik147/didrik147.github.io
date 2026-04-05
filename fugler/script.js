@@ -28,7 +28,7 @@ function processData(birds) {
     let cardEl = document.createElement('div');
     cardEl.classList.add('card');
     cardEl.classList.add(`bg-${bird.color.toLowerCase()}-light`);
-
+    
     // Card content
     cardEl.innerHTML += `
     <!-- Cost -->
