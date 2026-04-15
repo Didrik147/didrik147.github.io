@@ -14,8 +14,6 @@ Papa.parse(fileUrl, {
   complete: (results) => {
     // results.data is already an array of objects!
     birds = results.data;
-
-    console.log("Birds:", birds);
     processData(birds); // Call your next function here
   }
 });
@@ -24,42 +22,49 @@ function processData(birds) {
   for (let i = 0; i < birds.length; i++) {
     let bird = birds[i]
 
-    // Create card element
-    let cardEl = document.createElement('div');
-    cardEl.classList.add('card');
-    cardEl.classList.add(`bg-${bird.color.toLowerCase()}-light`);
+    let excludedBirds = ["Lomvi", "Grågås", "Granmeis", "Spettmeis"]
     
-    // Card content
-    cardEl.innerHTML += `
-    <!-- Cost -->
-    <div class="circle bg-${bird.color.toLowerCase()}-dark text-white">${bird.cost}</div>
-
-    <!-- Name -->
-    <h1 class="text-center bg-${bird.color.toLowerCase()}-radial">${bird.name}</h1>
-
-    <!-- Image -->
-    <div class="image-container">
-      <img src="${bird.img}" alt="${bird.name}">
-
-      <!-- Type -->
-      <div class="type bg-grey">${bird.family}</div>
-    </div>
-
+    if (!excludedBirds.includes(bird.name)){
     
+      bird.img = `./bilder/${bird.name}.JPG`
 
-    <!-- Abilities -->
-    <div class="abilities">
-      <p>${bird.ability}</p>
-    </div>
-    
-    <!-- Flavor text -->
-    <p class="flavor">
-      ${bird.flavor}
-    </p>
+      // Create card element
+      let cardEl = document.createElement('div');
+      cardEl.classList.add('card');
+      cardEl.classList.add(`bg-${bird.color.toLowerCase()}-light`);
+      
+      // Card content
+      cardEl.innerHTML += `
+      <!-- Cost -->
+      <div class="circle bg-${bird.color.toLowerCase()}-dark text-white">${bird.cost}</div>
 
-    <!-- Power -->
-    <div class="power bg-black text-white">${bird.power}</div>
-`
-    cardGridEl.appendChild(cardEl)
+      <!-- Name -->
+      <h1 class="text-center bg-${bird.color.toLowerCase()}-radial">${bird.name}</h1>
+
+      <!-- Image -->
+      <div class="image-container">
+        <img src="${bird.img}" alt="${bird.name}">
+
+        <!-- Type -->
+        <div class="type bg-grey">${bird.family}</div>
+      </div>
+
+      
+
+      <!-- Abilities -->
+      <div class="abilities">
+        <p>${bird.ability}</p>
+      </div>
+      
+      <!-- Flavor text -->
+      <p class="flavor">
+        ${bird.flavor}
+      </p>
+
+      <!-- Power -->
+      <div class="power bg-black text-white">${bird.power}</div>
+      `
+      cardGridEl.appendChild(cardEl)
+    }
   }
 }

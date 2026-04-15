@@ -19,6 +19,9 @@
   --blue-light: rgb(133, 172, 213);
   --blue-dark: rgb(41, 119, 183);
 
+  --white-light: #fff;
+  --white-dark: #aaa;
+
   --black: #000;
   --grey: #ccc;
   --white: #fff;
@@ -51,6 +54,11 @@ body {
   background-image: radial-gradient(
     var(--white), 
     var(--blue-dark) 70%);
+}
+.bg-white-radial {
+  background-image: radial-gradient(
+    var(--white), 
+    var(--white-dark) 70%);
 }
 
 h1 {
@@ -143,6 +151,13 @@ img {
 }
 .bg-blue-dark {
   background-color: var(--blue-dark);
+}
+
+.bg-white-light {
+  background-color: var(--white-light);
+}
+.bg-white-dark {
+  background-color: var(--white-dark);
 }
 
 .text-white  {
