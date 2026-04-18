@@ -14,6 +14,9 @@ Papa.parse(fileUrl, {
   complete: (results) => {
     // results.data is already an array of objects!
     birds = results.data;
+    console.log("Number of birds:", birds.length)
+    console.log(birds.length + "/9 = " + birds.length/9)
+    console.log("Number of A4 sheets:", Math.ceil(birds.length/9))
     processData(birds); // Call your next function here
   }
 });
@@ -22,7 +25,7 @@ function processData(birds) {
   for (let i = 0; i < birds.length; i++) {
     let bird = birds[i]
 
-    let excludedBirds = ["Lomvi", "Grågås", "Granmeis", "Spettmeis"]
+    let excludedBirds = ["Lomvi", "Spettmeis", "Gravand", "Rødstrupe"]
     
     if (!excludedBirds.includes(bird.name)){
     
