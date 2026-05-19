@@ -63,9 +63,10 @@ function processData(birds) {
       <p class="flavor">
         ${bird.flavor}
       </p>
+      
+      <!-- Points -->
+      <div class="power bg-black text-white">${bird.points}</div>
 
-      <!-- Power -->
-      <div class="power bg-black text-white">${bird.power}</div>
       `
       cardGridEl.appendChild(cardEl)
     }
