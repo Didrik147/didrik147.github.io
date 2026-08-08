@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+  <title>Fuglekort</title>
+</head>
+
+<body>
+  <div class="card-grid">
+    {% for card in cards %}
+    <div class="card">
+      <!-- Image -->
+      <div class="image-container">
+        <img src="{{ card.img }}" alt="{{ card.name }}" loading="lazy">
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</body>
+
+</html>
