@@ -1,0 +1,40 @@
+@import url('https://fonts.cdnfonts.com/css/trajan-pro');
+@import url('https://fonts.cdnfonts.com/css/minion-pro');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    /* font-family: sans-serif; */
+    font-family: 'Minion Pro', serif;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.text-center {
+    text-align: center;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+    margin: 1rem 0;
+    font-family: 'Trajan Pro', serif;
+    text-align: center;
+}
+
+img {
+  width: 100%;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 160px);
+    gap: 1rem;
+    padding: 1rem;
+}
